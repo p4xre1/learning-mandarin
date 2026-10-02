@@ -1,0 +1,12 @@
+{
+  "title": "Míngdào — Thoughtful Mandarin Learning",
+  "description": "Explore a thoughtful Mandarin learning preview with beginner lessons, daily vocabulary review, progress tracking, and cultural stories.",
+  "language": "en",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
