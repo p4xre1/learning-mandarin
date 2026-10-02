@@ -1,0 +1,50 @@
+{
+  "name": "figma-make-app",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "oxfmt",
+    "hsk:generate": "node scripts/generate-hsk-packs.mjs",
+    "assets:generate": "capacitor-assets generate --ios --android --iconBackgroundColor '#f8faf7' --iconBackgroundColorDark '#243024' --splashBackgroundColor '#f8faf7' --splashBackgroundColorDark '#243024'",
+    "test": "vitest run",
+    "native:sync": "pnpm build && cap sync",
+    "android:open": "cap open android",
+    "ios:open": "cap open ios"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.5.2",
+    "@capacitor/app": "^8.1.2",
+    "@capacitor/core": "^8.5.2",
+    "@capacitor/ios": "^8.5.2",
+    "@capacitor/local-notifications": "^8.3.1",
+    "@capacitor/preferences": "^8.0.1",
+    "@capacitor/share": "^8.0.3",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^8.5.2",
+    "@tailwindcss/vite": "^4.0.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^6.0.0",
+    "cedict-json": "^1.3.20251213",
+    "hsk3.1-syllabus": "^0.1.0",
+    "oxfmt": "^0.2.0",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.7.0",
+    "vite": "^8.0.5",
+    "vitest": "^5.0.3"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "sharp"
+    ]
+  }
+}
