@@ -6,6 +6,7 @@ export type LearningProgress = {
   dailySeconds: Record<string, number>
   dailyXp: Record<string, number>
   completedLessonIds: string[]
+  lessonMastery: Record<string, number>
   reviewedWords: string[]
   wordNextReview: Record<string, string>
   dailyReviewedWords: Record<string, string[]>
@@ -16,9 +17,45 @@ const emptyProgress: LearningProgress = {
   dailySeconds: {},
   dailyXp: {},
   completedLessonIds: [],
+  lessonMastery: {},
   reviewedWords: [],
   wordNextReview: {},
   dailyReviewedWords: {},
+}
+
+function stringArray(value: unknown) {
+  return Array.isArray(value)
+    ? value.filter((item): item is string => typeof item === "string")
+    : []
+}
+
+function numberMap(value: unknown) {
+  if (!value || typeof value !== "object") return {}
+  return Object.fromEntries(
+    Object.entries(value).filter(
+      ([, item]) =>
+        typeof item === "number" && Number.isFinite(item) && item >= 0,
+    ),
+  ) as Record<string, number>
+}
+
+function stringMap(value: unknown) {
+  if (!value || typeof value !== "object") return {}
+  return Object.fromEntries(
+    Object.entries(value).filter(
+      ([, item]) => typeof item === "string" && !Number.isNaN(Date.parse(item)),
+    ),
+  ) as Record<string, string>
+}
+
+function stringArrayMap(value: unknown) {
+  if (!value || typeof value !== "object") return {}
+  return Object.fromEntries(
+    Object.entries(value).flatMap(([key, item]) => {
+      if (!Array.isArray(item)) return []
+      return [[key, stringArray(item)]]
+    }),
+  ) as Record<string, string[]>
 }
 
 export function dayKey(date = new Date()) {
@@ -31,15 +68,22 @@ export function dayKey(date = new Date()) {
 export function parseProgress(value: string | null): LearningProgress {
   if (!value) return emptyProgress
   try {
-    const parsed = JSON.parse(value) as Partial<LearningProgress>
+    const parsed = JSON.parse(value) as Partial<LearningProgress> | null
+    if (!parsed || typeof parsed !== "object") return emptyProgress
     return {
       version: 2,
-      dailySeconds: parsed.dailySeconds ?? {},
-      dailyXp: parsed.dailyXp ?? {},
-      completedLessonIds: parsed.completedLessonIds ?? [],
-      reviewedWords: parsed.reviewedWords ?? [],
-      wordNextReview: parsed.wordNextReview ?? {},
-      dailyReviewedWords: parsed.dailyReviewedWords ?? {},
+      dailySeconds: numberMap(parsed.dailySeconds),
+      dailyXp: numberMap(parsed.dailyXp),
+      completedLessonIds: stringArray(parsed.completedLessonIds),
+      lessonMastery: Object.fromEntries(
+        Object.entries(numberMap(parsed.lessonMastery)).map(([id, mastery]) => [
+          id,
+          Math.min(3, Math.max(0, Math.floor(mastery))),
+        ]),
+      ),
+      reviewedWords: stringArray(parsed.reviewedWords),
+      wordNextReview: stringMap(parsed.wordNextReview),
+      dailyReviewedWords: stringArrayMap(parsed.dailyReviewedWords),
     }
   } catch {
     return emptyProgress
@@ -53,12 +97,18 @@ export function applyLessonCompletion(
 ): LearningProgress {
   const today = dayKey(now)
   const completedLessonIds = current.completedLessonIds ?? []
+  const lessonMastery = current.lessonMastery ?? {}
+  const mastery = Math.min(3, (lessonMastery[id] ?? 0) + 1)
   const isNew = !completedLessonIds.includes(id)
   return {
     ...current,
     completedLessonIds: isNew
       ? [...completedLessonIds, id]
       : completedLessonIds,
+    lessonMastery: {
+      ...lessonMastery,
+      [id]: mastery,
+    },
     dailyXp: {
       ...(current.dailyXp ?? {}),
       [today]: (current.dailyXp?.[today] ?? 0) + (isNew ? 20 : 0),

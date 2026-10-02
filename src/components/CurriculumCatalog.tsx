@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react"
 import { ArrowIcon, Button } from "./ui"
+import { basicChineseUnits } from "../data/basicChineseUnits"
 
 type Locale = "en" | "ar" | "ary"
 type LocalText = {
@@ -455,70 +456,129 @@ export function CurriculumCatalog({
   )
 
   return (
-    <section className="curriculum-catalog">
-      <header>
-        <p className="eyebrow">{t.eyebrow}</p>
-        <h2>{t.title}</h2>
-        <p>{t.intro}</p>
-      </header>
-      <div className="curriculum-filters">
-        <button
-          aria-pressed={level === "all"}
-          onClick={() => setLevel("all")}
-          type="button"
-        >
-          {t.all}
-        </button>
-        {[1, 2, 3, 4, 5, 6].map((item) => (
+    <div className="curriculum-stack">
+      <section className="curriculum-catalog">
+        <header>
+          <p className="eyebrow">{t.eyebrow}</p>
+          <h2>{t.title}</h2>
+          <p>{t.intro}</p>
+        </header>
+        <div className="curriculum-filters">
           <button
-            aria-pressed={level === item}
-            key={item}
-            onClick={() => setLevel(item as 1 | 2 | 3 | 4 | 5 | 6)}
+            aria-pressed={level === "all"}
+            onClick={() => setLevel("all")}
             type="button"
           >
-            HSK {item}
+            {t.all}
           </button>
-        ))}
-      </div>
-      <div className="unit-catalog-grid">
-        {filtered.map((unit) => (
-          <details className="unit-outline" key={unit.id} open={unit.id === 1}>
-            <summary>
-              <span className="unit-index">
-                {String(unit.id).padStart(2, "0")}
-              </span>
-              <div>
-                <small>
-                  HSK {unit.hsk} · {t.unit} {unit.id}
-                </small>
-                <strong>{unit.title[locale]}</strong>
-                <p>{unit.summary[locale]}</p>
+          {[1, 2, 3, 4, 5, 6].map((item) => (
+            <button
+              aria-pressed={level === item}
+              key={item}
+              onClick={() => setLevel(item as 1 | 2 | 3 | 4 | 5 | 6)}
+              type="button"
+            >
+              HSK {item}
+            </button>
+          ))}
+        </div>
+        <div className="unit-catalog-grid">
+          {filtered.map((unit) => (
+            <details
+              className="unit-outline"
+              key={unit.id}
+              open={unit.id === 1}
+            >
+              <summary>
+                <span className="unit-index">
+                  {String(unit.id).padStart(2, "0")}
+                </span>
+                <div>
+                  <small>
+                    HSK {unit.hsk} · {t.unit} {unit.id}
+                  </small>
+                  <strong>{unit.title[locale]}</strong>
+                  <p>{unit.summary[locale]}</p>
+                </div>
+                <span
+                  className={
+                    unit.interactive ? "unit-status is-live" : "unit-status"
+                  }
+                >
+                  {unit.interactive ? t.interactive : t.guide}
+                </span>
+              </summary>
+              <div className="unit-outline-body">
+                <div>
+                  <span>{t.objective}</span>
+                  <p>{unit.objective[locale]}</p>
+                </div>
+                <div className="unit-key-language">
+                  <span>{t.key}</span>
+                  <strong>{unit.phrase}</strong>
+                  <small>{unit.pinyin}</small>
+                </div>
+                {unit.interactive && (
+                  <Button onClick={onStart}>
+                    {t.start} <ArrowIcon />
+                  </Button>
+                )}
               </div>
-              <span
-                className={
-                  unit.interactive ? "unit-status is-live" : "unit-status"
-                }
-              >
-                {unit.interactive ? t.interactive : t.guide}
-              </span>
-            </summary>
-            <div className="unit-outline-body">
-              <div>
-                <span>{t.objective}</span>
-                <p>{unit.objective[locale]}</p>
-              </div>
-              <div className="unit-key-language">
-                <span>{t.key}</span>
-                <strong>{unit.phrase}</strong>
-                <small>{unit.pinyin}</small>
-              </div>
-              {unit.interactive && (
-                <Button onClick={onStart}>
-                  {t.start} <ArrowIcon />
-                </Button>
-              )}
-            </div>
-          </details>
+            </details>
+          ))}
+        </div>
+      </section>
+      <BookGrammarPath locale={locale} />
+    </div>
+  )
+}
+
+function BookGrammarPath({ locale }: { locale: Locale }) {
+  const copy = {
+    en: {
+      eyebrow: "Book grammar path",
+      title: "25 grammar units from Basic Chinese",
+      intro:
+        "A concise map of the supplied book's progression. Use each unit as a study target, then practise it in your own sentences.",
+      source: "Source: Basic Chinese: A Grammar and Workbook",
+      unit: "Unit",
+    },
+    ar: {
+      eyebrow: "مسار قواعد الكتاب",
+      title: "25 وحدة قواعد من Basic Chinese",
+      intro:
+        "خريطة مختصرة لتدرّج الكتاب المرفق. اجعل كل وحدة هدفاً للدراسة ثم طبّقها في جملك.",
+      source: "المصدر: Basic Chinese: A Grammar and Workbook",
+      unit: "الوحدة",
+    },
+    ary: {
+      eyebrow: "مسار قواعد الكتاب",
+      title: "25 وحدة قواعد من Basic Chinese",
+      intro:
+        "خريطة مختصرة للتدرّج ديال الكتاب المرفق. خذ كل وحدة كهدف وطبّقها فجملك.",
+      source: "المصدر: Basic Chinese: A Grammar and Workbook",
+      unit: "الوحدة",
+    },
+  }[locale]
+
+  return (
+    <section className="book-grammar-path">
+      <header>
+        <p className="eyebrow">{copy.eyebrow}</p>
+        <h2>{copy.title}</h2>
+        <p>{copy.intro}</p>
+        <small>{copy.source}</small>
+      </header>
+      <div className="book-unit-grid">
+        {basicChineseUnits.map((unit) => (
+          <article className="book-unit-card" key={unit.id}>
+            <span>{String(unit.id).padStart(2, "0")}</span>
+            <small>
+              HSK {unit.hsk} · {copy.unit} {unit.id}
+            </small>
+            <h3>{unit.title}</h3>
+            <p>{unit.focus}</p>
+          </article>
         ))}
       </div>
     </section>

@@ -1,3 +1,4 @@
+import { Capacitor } from "@capacitor/core"
 import { LocalNotifications } from "@capacitor/local-notifications"
 import { Preferences } from "@capacitor/preferences"
 import { Share } from "@capacitor/share"
@@ -21,7 +22,9 @@ export async function shareLearningData(data: unknown) {
       text,
       dialogTitle: "Export learning data",
     })
-  } catch {
+  } catch (error) {
+    // A cancelled native share must not silently create an export file.
+    if (Capacitor.isNativePlatform()) throw error
     const url = URL.createObjectURL(
       new Blob([text], { type: "application/json" }),
     )
@@ -35,9 +38,13 @@ export async function shareLearningData(data: unknown) {
 
 export async function clearLearningPreferences() {
   await Promise.all(
-    ["mingdao-progress", "mingdao-bookmarks", "mingdao-reminders"].map((key) =>
-      Preferences.remove({ key }),
-    ),
+    [
+      "mingdao-progress",
+      "mingdao-bookmarks",
+      "mingdao-reminders",
+      "mingdao-reminder-hour",
+      "mingdao-theme",
+    ].map((key) => Preferences.remove({ key })),
   )
   localStorage.removeItem("mingdao-bookmarks")
 }
@@ -54,6 +61,7 @@ export async function migrateWebPreference(key: string) {
 export async function setDailyReminder(
   enabled: boolean,
   locale: "en" | "ar" | "ary",
+  hour = 19,
 ) {
   if (!enabled) {
     await LocalNotifications.cancel({ notifications: [{ id: REMINDER_ID }] })
@@ -88,7 +96,7 @@ export async function setDailyReminder(
         title: message.title,
         body: message.body,
         schedule: {
-          on: { hour: 19, minute: 0 },
+          on: { hour, minute: 0 },
           repeats: true,
           allowWhileIdle: true,
         },
@@ -96,5 +104,6 @@ export async function setDailyReminder(
     ],
   })
   await savePreference("mingdao-reminders", "true")
+  await savePreference("mingdao-reminder-hour", String(hour))
   return true
 }

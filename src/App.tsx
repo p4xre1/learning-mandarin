@@ -19,7 +19,7 @@ import {
   setDailyReminder,
   shareLearningData,
 } from "./lib/native"
-import { useLearningProgress } from "./hooks/useLearningProgress"
+import { dayKey, useLearningProgress } from "./hooks/useLearningProgress"
 import type { LocalProfile } from "./lib/secureProfile"
 
 type Locale = "en" | "ar" | "ary"
@@ -124,6 +124,62 @@ const extraCopy: Record<string, [string, string]> = {
   ],
   Continue: ["متابعة", "كمّل"],
   "Current streak": ["السلسلة الحالية", "السلسلة دابا"],
+  day: ["يوم", "نهار"],
+  days: ["أيام", "نهارات"],
+  "Daily challenge": ["تحدّي اليوم", "تحدي اليوم"],
+  "Complete 5 review cards": [
+    "أكمل 5 بطاقات للمراجعة",
+    "كمّل 5 كارتات ديال المراجعة",
+  ],
+  "Keep your daily streak alive and finish your quick lesson": [
+    "حافظ على سلسلتك اليومية وأنهِ تمرينك السريع.",
+    "حافظ على السلسلة ديالك وكمّل التمرين السريع.",
+  ],
+  "Start review": ["ابدأ المراجعة", "بدا المراجعة"],
+  "Learning achievements": ["إنجازات التعلّم", "إنجازات التعلّم"],
+  "Download score card": ["تنزيل بطاقة النتيجة", "هبّط بطاقة النتيجة"],
+  "Score card": ["بطاقة التقدّم", "بطاقة التقدّم"],
+  "Saved to your device": ["تم حفظها على جهازك", "تحفظات فالجهاز ديالك"],
+  "Play voice": ["تشغيل الصوت", "شغّل الصوت"],
+  "Sound effects": ["المؤثرات الصوتية", "أصوات التفاعل"],
+  "Offline AI coach": ["مدرّب ذكي دون اتصال", "مدرّب ذكي بلا نت"],
+  "Start a lesson": ["ابدأ درساً", "بدا درس"],
+  "Meet your coach": ["تعرّف على مدرّبك", "تعرّف على المدرّب ديالك"],
+  "Your Mandarin coach is ready": [
+    "مدرّبك في الصينية مستعد",
+    "المدرّب ديالك فالصينية واجد",
+  ],
+  "Try a sentence and get a private correction with voice feedback.": [
+    "جرّب جملة واحصل على تصحيح خاص مع ملاحظات صوتية.",
+    "جرّب جملة وخذ تصحيح خاص مع ملاحظات بالصوت.",
+  ],
+  "Open coach": ["افتح المدرّب", "حلّ المدرّب"],
+  "Build a five-minute Mandarin habit": [
+    "ابنِ عادة صينية في خمس دقائق",
+    "بني عادة ديال الصينية فـ5 دقايق",
+  ],
+  "One small session today. A sharper you tomorrow.": [
+    "جلسة صغيرة اليوم، ونسخة أقوى منك غداً.",
+    "جلسة صغيرة اليوم، وغدا تكون أحسن.",
+  ],
+  "Start learning": ["ابدأ التعلّم", "بدا التعلّم"],
+  "Talk to coach": ["تحدث مع المدرّب", "هضر مع المدرّب"],
+  "day streak": ["يوم متواصل", "نهار متواصل"],
+  "today XP": ["نقطة اليوم", "نقط اليوم"],
+  "review cards": ["بطاقات مراجعة", "كارتات المراجعة"],
+  "lessons done": ["دروس مكتملة", "دروس كملتيهم"],
+  "words learned": ["كلمات متعلّمة", "كلمات تعلمتيهم"],
+  "Dark mode": ["الوضع الداكن", "الوضع الليلي"],
+  "Use a darker palette across the app.": [
+    "استخدم ألواناً داكنة في التطبيق كله.",
+    "استعمل ألوان غامقة فالتطبيق كامل.",
+  ],
+  "Use dark mode": ["تفعيل الوضع الداكن", "فعّل الوضع الليلي"],
+  "Use light mode": ["تفعيل الوضع الفاتح", "فعّل الوضع الفاتح"],
+  "Private, local, and ready to help": [
+    "خاص ومحلي وجاهز للمساعدة",
+    "خاص ومحلي وواجد يعاونك",
+  ],
   "Daily goal": ["الهدف اليومي", "هدف اليوم"],
   "Review due": ["مراجعة مستحقة", "خاصك تراجع"],
   "Keep words fresh": ["ثبّت الكلمات", "بقا فاكر الكلمات"],
@@ -313,7 +369,7 @@ const extraCopy: Record<string, [string, string]> = {
   "4–8 digit PIN": ["رمز من 4 إلى 8 أرقام", "كود من 4 حتى 8 أرقام"],
   "Confirm PIN": ["تأكيد الرمز", "عاود الكود"],
   "PINs do not match": ["الرمزان غير متطابقين", "الكودين ماشي بحال بحال"],
-  "Create secure profile": ["إنشاء ملف آمن", "صايب بروفايل محمي"],
+  "Create private profile": ["إنشاء ملف خاص", "صايب بروفايل خاص"],
   Unlock: ["فتح", "حلّ"],
   "PIN protects this profile on this device. It cannot recover deleted data.": [
     "يحمي الرمز هذا الملف على الجهاز، ولا يمكنه استعادة البيانات المحذوفة.",
@@ -422,24 +478,103 @@ function loadLocale(): Locale {
   return stored === "ar" || stored === "ary" ? stored : "en"
 }
 
+function loadDarkMode() {
+  return localStorage.getItem("mingdao-theme") === "dark"
+}
+
+function parseBookmarks(value: string | null) {
+  if (!value) return []
+  try {
+    const parsed = JSON.parse(value) as unknown
+    return Array.isArray(parsed)
+      ? parsed.filter(
+          (item): item is string =>
+            typeof item === "string" &&
+            lessons.some((lesson) => lesson.id === item),
+        )
+      : []
+  } catch {
+    return []
+  }
+}
+
+function escapeXml(value: string) {
+  return value.replace(/[<>&'"]/g, (character) => {
+    const entities: Record<string, string> = {
+      "<": "&lt;",
+      ">": "&gt;",
+      "&": "&amp;",
+      "'": "&apos;",
+      '"': "&quot;",
+    }
+    return entities[character]
+  })
+}
+
+function downloadScoreCard({
+  displayName,
+  locale,
+  streak,
+  xp,
+  lessonsCompleted,
+  wordsLearned,
+}: {
+  displayName: string
+  locale: Locale
+  streak: number
+  xp: number
+  lessonsCompleted: number
+  wordsLearned: number
+}) {
+  const labels = {
+    en: ["Progress card", "day streak", "today XP", "lessons", "words"],
+    ar: ["بطاقة التقدّم", "يوم متواصل", "نقطة اليوم", "دروس", "كلمات"],
+    ary: ["بطاقة التقدّم", "نهار متواصل", "نقط اليوم", "دروس", "كلمات"],
+  }[locale]
+  const name = escapeXml(displayName)
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" direction="${
+    locale === "en" ? "ltr" : "rtl"
+  }">
+  <rect width="1200" height="630" rx="42" fill="#243024"/>
+  <circle cx="1040" cy="-20" r="250" fill="#58a946" opacity=".9"/>
+  <circle cx="1130" cy="530" r="180" fill="#f5b82e" opacity=".85"/>
+  <path d="M0 520C180 420 280 610 470 500S780 380 950 500" fill="none" stroke="#ee694e" stroke-width="18" opacity=".9"/>
+  <text x="70" y="105" fill="#fff4d2" font-family="sans-serif" font-size="30" font-weight="700">MÍNGDÀO · ${escapeXml(labels[0])}</text>
+  <text x="70" y="205" fill="white" font-family="sans-serif" font-size="72" font-weight="900">${name}</text>
+  <text x="70" y="270" fill="#d8e8dc" font-family="sans-serif" font-size="28">Keep showing up. That is the skill.</text>
+  <g font-family="sans-serif" fill="white">
+    <text x="90" y="415" font-size="62" font-weight="900">${streak}</text><text x="90" y="460" font-size="24" fill="#d8e8dc">${escapeXml(labels[1])}</text>
+    <text x="360" y="415" font-size="62" font-weight="900">${xp}</text><text x="360" y="460" font-size="24" fill="#d8e8dc">${escapeXml(labels[2])}</text>
+    <text x="630" y="415" font-size="62" font-weight="900">${lessonsCompleted}</text><text x="630" y="460" font-size="24" fill="#d8e8dc">${escapeXml(labels[3])}</text>
+    <text x="870" y="415" font-size="62" font-weight="900">${wordsLearned}</text><text x="870" y="460" font-size="24" fill="#d8e8dc">${escapeXml(labels[4])}</text>
+  </g>
+  <text x="70" y="570" fill="#fff4d2" font-family="sans-serif" font-size="22">${new Date().toLocaleDateString()}</text>
+</svg>`
+  const blob = new Blob([svg], { type: "image/svg+xml;charset=utf-8" })
+  const url = URL.createObjectURL(blob)
+  const link = document.createElement("a")
+  link.href = url
+  link.download = `mingdao-score-${new Date().toISOString().slice(0, 10)}.svg`
+  link.click()
+  URL.revokeObjectURL(url)
+}
+
 function App() {
   const [locale, setLocale] = useState<Locale>(loadLocale)
+  const [darkMode, setDarkMode] = useState(loadDarkMode)
   const [view, setView] = useState<View>("home")
   const [search, setSearch] = useState("")
   const [toast, setToast] = useState("")
-  const [bookmarks, setBookmarks] = useState<string[]>(() => {
-    try {
-      return JSON.parse(localStorage.getItem("mingdao-bookmarks") ?? "[]")
-    } catch {
-      return []
-    }
-  })
+  const [bookmarks, setBookmarks] = useState<string[]>(() =>
+    parseBookmarks(localStorage.getItem("mingdao-bookmarks")),
+  )
   const [lessonOpen, setLessonOpen] = useState(false)
   const [answer, setAnswer] = useState<string | null>(null)
   const [flashIndex, setFlashIndex] = useState(0)
   const [flashRevealed, setFlashRevealed] = useState(false)
   const [reviewedCards, setReviewedCards] = useState(0)
   const [reminderEnabled, setReminderEnabled] = useState(false)
+  const [reminderHour, setReminderHour] = useState(19)
   const [preferencesReady, setPreferencesReady] = useState(false)
   const [profileExists, setProfileExists] = useState(false)
   const [localProfile, setLocalProfile] = useState<LocalProfile | null>(null)
@@ -455,10 +590,28 @@ function App() {
   const levelProgress = Math.round(
     (progress.completedLessonIds.length / lessons.length) * 100,
   )
+  const introductionsMastery = progress.lessonMastery?.introductions ?? 0
   const formattedStudyTime =
     metrics.totalSeconds < 3600
       ? `${Math.floor(metrics.totalSeconds / 60)} min`
       : `${(metrics.totalSeconds / 3600).toFixed(1)} h`
+  const todayKey = dayKey()
+  const todaysReviews = progress.dailyReviewedWords?.[todayKey]?.length ?? 0
+  const dailyChallengeGoal = 5
+  const dailyChallengeProgress = Math.min(
+    (todaysReviews / dailyChallengeGoal) * 100,
+    100,
+  )
+  const dailyChallengeXp = Math.max(0, dailyChallengeGoal - todaysReviews) * 2
+  const streakUnit = tx(metrics.currentStreak === 1 ? "day" : "days")
+  const achievementChips = [
+    { label: tx("Current streak"), value: `${metrics.currentStreak}d` },
+    { label: tx("Words learned"), value: `${progress.reviewedWords.length}` },
+    {
+      label: tx("Daily review"),
+      value: `${todaysReviews}/${dailyChallengeGoal}`,
+    },
+  ]
 
   useEffect(() => {
     localStorage.setItem("mingdao-locale", locale)
@@ -466,6 +619,14 @@ function App() {
     document.documentElement.lang = locale
     document.documentElement.dir = rtl ? "rtl" : "ltr"
   }, [locale, preferencesReady, rtl])
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = darkMode ? "dark" : "light"
+    localStorage.setItem("mingdao-theme", darkMode ? "dark" : "light")
+    if (preferencesReady) {
+      void savePreference("mingdao-theme", darkMode ? "dark" : "light")
+    }
+  }, [darkMode, preferencesReady])
 
   useEffect(() => {
     localStorage.setItem("mingdao-bookmarks", JSON.stringify(bookmarks))
@@ -480,33 +641,47 @@ function App() {
       migrateWebPreference("mingdao-locale"),
       migrateWebPreference("mingdao-bookmarks"),
       migrateWebPreference("mingdao-reminders"),
-    ]).then(([storedLocale, storedBookmarks, storedReminder]) => {
-      if (!active) return
-      if (
-        storedLocale === "en" ||
-        storedLocale === "ar" ||
-        storedLocale === "ary"
-      ) {
-        setLocale(storedLocale)
-      }
-      if (storedBookmarks) {
-        try {
-          setBookmarks(JSON.parse(storedBookmarks))
-        } catch {
-          // Keep the recoverable in-memory value when legacy data is malformed.
+      migrateWebPreference("mingdao-reminder-hour"),
+      migrateWebPreference("mingdao-theme"),
+    ]).then(
+      ([
+        storedLocale,
+        storedBookmarks,
+        storedReminder,
+        storedReminderHour,
+        storedTheme,
+      ]) => {
+        if (!active) return
+        if (
+          storedLocale === "en" ||
+          storedLocale === "ar" ||
+          storedLocale === "ary"
+        ) {
+          setLocale(storedLocale)
         }
-      }
-      setReminderEnabled(storedReminder === "true")
-      setPreferencesReady(true)
-    })
+        if (storedBookmarks) {
+          setBookmarks(parseBookmarks(storedBookmarks))
+        }
+        setReminderEnabled(storedReminder === "true")
+        const parsedReminderHour = Number(storedReminderHour)
+        if (parsedReminderHour >= 0 && parsedReminderHour <= 23) {
+          setReminderHour(parsedReminderHour)
+        }
+        setDarkMode(storedTheme === "dark")
+        setPreferencesReady(true)
+      },
+    )
     return () => {
       active = false
     }
   }, [])
 
   useEffect(() => {
+    let active = true
     void import("./lib/secureProfile").then(({ hasLocalProfile }) =>
-      hasLocalProfile().then(setProfileExists),
+      hasLocalProfile().then((exists) => {
+        if (active) setProfileExists(exists)
+      }),
     )
     let listener: { remove: () => Promise<void> } | undefined
     void CapacitorApp.addListener("appStateChange", ({ isActive }) => {
@@ -517,14 +692,17 @@ function App() {
         )
       }
     }).then((handle) => {
-      listener = handle
+      if (active) listener = handle
+      else void handle.remove()
     })
     return () => {
+      active = false
       void listener?.remove()
     }
   }, [])
 
   useEffect(() => {
+    let active = true
     let listener: { remove: () => Promise<void> } | undefined
     void CapacitorApp.addListener("backButton", () => {
       if (lessonOpen) {
@@ -551,9 +729,11 @@ function App() {
         void CapacitorApp.minimizeApp()
       }
     }).then((handle) => {
-      listener = handle
+      if (active) listener = handle
+      else void handle.remove()
     })
     return () => {
+      active = false
       void listener?.remove()
     }
   }, [lessonOpen, view])
@@ -665,14 +845,14 @@ function App() {
               role="status"
             >
               <CheckIcon />
-              <div>
+              <div className="hero-copy-block">
                 <strong>
                   {answer === "我叫林。"
                     ? tx("Exactly right")
                     : tx("Not quite yet")}
                 </strong>
                 <p>
-                  {tx("Mandarin follows subject + verb + name:")}{" "}
+                  {metrics.currentStreak} {streakUnit}
                   <b>我 + 叫 + 林</b>.
                 </p>
               </div>
@@ -754,7 +934,7 @@ function App() {
         </div>
       </header>
 
-      <main>
+      <main className={view === "home" ? "dashboard-main" : undefined}>
         {view === "legal" && (
           <Suspense
             fallback={
@@ -812,10 +992,69 @@ function App() {
                   <em>{localProfile?.displayName ?? tx("learner")}!</em>
                 </h1>
                 <p className="hero-copy">{t.intro}</p>
+                <div className="hero-actions">
+                  <Button variant="dark" onClick={() => setLessonOpen(true)}>
+                    {tx("Start a lesson")} <ArrowIcon />
+                  </Button>
+                  <Button
+                    variant="secondary"
+                    onClick={() => switchView("assistant")}
+                  >
+                    {tx("Meet your coach")} <ArrowIcon />
+                  </Button>
+                </div>
               </div>
-              <div className="hero-seal" aria-hidden="true">
-                学
+              <div className="hero-visual" aria-hidden="true">
+                <div className="hero-seal">学</div>
+                <span className="hero-float hero-float--top">
+                  你好 <small>nǐ hǎo</small>
+                </span>
+                <span className="hero-float hero-float--bottom">
+                  +{metrics.todayXp} XP
+                </span>
+                <span className="hero-orbit hero-orbit--one" />
+                <span className="hero-orbit hero-orbit--two" />
               </div>
+            </section>
+
+            <section
+              className="section coach-preview"
+              aria-label={tx("Offline AI coach")}
+            >
+              <div className="coach-preview-avatar" aria-hidden="true">
+                <span>明</span>
+                <i />
+              </div>
+              <div className="coach-preview-copy">
+                <span className="pill pill--light">
+                  {tx("Offline AI coach")}
+                </span>
+                <h2>{tx("Your Mandarin coach is ready")}</h2>
+                <p>
+                  {tx(
+                    "Try a sentence and get a private correction with voice feedback.",
+                  )}
+                </p>
+              </div>
+              <Button onClick={() => switchView("assistant")}>
+                {tx("Open coach")} <ArrowIcon />
+              </Button>
+              <Button
+                variant="secondary"
+                onClick={() => {
+                  downloadScoreCard({
+                    displayName: localProfile?.displayName ?? tx("learner"),
+                    locale,
+                    streak: metrics.currentStreak,
+                    xp: metrics.todayXp,
+                    lessonsCompleted: progress.completedLessonIds.length,
+                    wordsLearned: progress.reviewedWords.length,
+                  })
+                  setToast(tx("Saved to your device"))
+                }}
+              >
+                {tx("Score card")}
+              </Button>
             </section>
 
             <section
@@ -828,8 +1067,7 @@ function App() {
                 </span>
                 <span>
                   <b>
-                    {metrics.currentStreak}{" "}
-                    {tx("7 days").replace("7", "").trim()}
+                    {metrics.currentStreak} {streakUnit}
                   </b>
                   <small>{tx("Current streak")}</small>
                 </span>
@@ -851,6 +1089,61 @@ function App() {
             </section>
 
             <section
+              className="section challenge-panel"
+              aria-label="Daily challenge"
+            >
+              <Card className="daily-challenge">
+                <div className="challenge-header">
+                  <span className="pill pill--light">
+                    {tx("Daily challenge")}
+                  </span>
+                  <span className="challenge-xp">+{dailyChallengeXp} XP</span>
+                </div>
+                <div className="challenge-body">
+                  <div>
+                    <h2>{tx("Complete 5 review cards")}</h2>
+                    <p>
+                      {tx(
+                        "Keep your daily streak alive and finish your quick lesson",
+                      )}
+                    </p>
+                  </div>
+                  <Button onClick={() => switchView("review")}>
+                    {tx("Start review")} <ArrowIcon />
+                  </Button>
+                </div>
+                <div className="progress-line challenge-progress">
+                  <span>
+                    <i style={{ width: `${dailyChallengeProgress}%` }} />
+                  </span>
+                  <small>
+                    {todaysReviews}/{dailyChallengeGoal}
+                  </small>
+                </div>
+              </Card>
+              <div
+                className="achievement-pills"
+                aria-label={tx("Learning achievements")}
+              >
+                {achievementChips.map((chip) => (
+                  <div className="achievement-pill" key={chip.label}>
+                    <span>{chip.label}</span>
+                    <strong>{chip.value}</strong>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            <LearnerJourney
+              dueCards={dueCards}
+              locale={locale}
+              mastery={introductionsMastery}
+              onLearn={() => setLessonOpen(true)}
+              onReview={() => switchView("review")}
+              onProfile={() => switchView("profile")}
+            />
+
+            <section
               className="section focus-grid"
               aria-label={tx("Today's learning plan")}
             >
@@ -861,11 +1154,7 @@ function App() {
                 </div>
                 <div className="resume-content">
                   <span className="pill pill--light">
-                    {tx(
-                      progress.completedLessonIds.includes("introductions")
-                        ? "Completed"
-                        : "Ready",
-                    )}
+                    {tx(introductionsMastery > 0 ? "Completed" : "Ready")}
                   </span>
                   <p>HSK 1 · {tx("Module 1")}</p>
                   <h2>{tx("Introductions")}</h2>
@@ -873,23 +1162,15 @@ function App() {
                     <span>
                       <i
                         style={{
-                          width: progress.completedLessonIds.includes(
-                            "introductions",
-                          )
-                            ? "100%"
-                            : "0%",
+                          width: `${(introductionsMastery / 3) * 100}%`,
                         }}
                       />
                     </span>
-                    <small>
-                      {progress.completedLessonIds.includes("introductions")
-                        ? "100%"
-                        : "0%"}
-                    </small>
+                    <small>{introductionsMastery}/3</small>
                   </div>
                   <Button variant="dark" onClick={() => setLessonOpen(true)}>
                     {tx(
-                      progress.completedLessonIds.includes("introductions")
+                      introductionsMastery > 0
                         ? "Review lesson"
                         : "Start lesson",
                     )}{" "}
@@ -918,7 +1199,7 @@ function App() {
             </section>
 
             <LearningPath
-              completed={progress.completedLessonIds.includes("introductions")}
+              completed={introductionsMastery > 0}
               locale={locale}
               onGuide={() => switchView("guide")}
               onLesson={() => setLessonOpen(true)}
@@ -989,6 +1270,7 @@ function App() {
             <LessonSection
               bookmarks={bookmarks}
               completedLessonIds={progress.completedLessonIds}
+              lessonMastery={progress.lessonMastery}
               locale={locale}
               onBookmark={toggleBookmark}
               onOpen={() => setLessonOpen(true)}
@@ -1067,6 +1349,7 @@ function App() {
             <LessonSection
               bookmarks={bookmarks}
               completedLessonIds={progress.completedLessonIds}
+              lessonMastery={progress.lessonMastery}
               locale={locale}
               onBookmark={toggleBookmark}
               onOpen={() => setLessonOpen(true)}
@@ -1209,12 +1492,30 @@ function App() {
                 <h1>{localProfile.displayName}</h1>
                 <p>{tx("Your progress lives privately on this device.")}</p>
               </div>
-              <Button
-                variant="secondary"
-                onClick={() => switchView("settings")}
-              >
-                {tx("Manage settings")}
-              </Button>
+              <div className="profile-actions">
+                <Button
+                  variant="secondary"
+                  onClick={() => switchView("settings")}
+                >
+                  {tx("Manage settings")}
+                </Button>
+                <Button
+                  variant="dark"
+                  onClick={() => {
+                    downloadScoreCard({
+                      displayName: localProfile.displayName,
+                      locale,
+                      streak: metrics.currentStreak,
+                      xp: metrics.todayXp,
+                      lessonsCompleted: progress.completedLessonIds.length,
+                      wordsLearned: progress.reviewedWords.length,
+                    })
+                    setToast(tx("Saved to your device"))
+                  }}
+                >
+                  {tx("Download score card")}
+                </Button>
+              </div>
             </div>
             <div className="profile-stats">
               <Card>
@@ -1282,6 +1583,32 @@ function App() {
             </header>
             <div className="settings-grid">
               <Card className="settings-panel">
+                <h2>{tx("Your learning data")}</h2>
+                <p>
+                  {tx(
+                    "Everything below stays encrypted or stored locally on this device.",
+                  )}
+                </p>
+                <div className="settings-summary">
+                  <span>
+                    <strong>{progress.completedLessonIds.length}</strong>
+                    {tx("lessons")}
+                  </span>
+                  <span>
+                    <strong>{progress.reviewedWords.length}</strong>
+                    {tx("words")}
+                  </span>
+                  <span>
+                    <strong>
+                      {metrics.totalSeconds < 3600
+                        ? `${Math.floor(metrics.totalSeconds / 60)}m`
+                        : `${(metrics.totalSeconds / 3600).toFixed(1)}h`}
+                    </strong>
+                    {tx("study time")}
+                  </span>
+                </div>
+              </Card>
+              <Card className="settings-panel">
                 <h2>{tx("Interface language")}</h2>
                 <p>{tx("Stored only on this device")}</p>
                 <select
@@ -1294,8 +1621,42 @@ function App() {
                 </select>
               </Card>
               <Card className="settings-panel">
+                <h2>{tx("Dark mode")}</h2>
+                <p>{tx("Use a darker palette across the app.")}</p>
+                <Button
+                  variant={darkMode ? "secondary" : "primary"}
+                  onClick={() => setDarkMode((current) => !current)}
+                >
+                  {tx(darkMode ? "Use light mode" : "Use dark mode")}
+                </Button>
+              </Card>
+              <Card className="settings-panel">
                 <h2>{tx("Study reminders")}</h2>
-                <p>{tx("Get a local reminder every day at 7:00 PM.")}</p>
+                <p>
+                  {tx("Get a local reminder every day at your chosen time.")}
+                </p>
+                <label className="settings-field">
+                  <span>{tx("Reminder time")}</span>
+                  <select
+                    value={reminderHour}
+                    onChange={(event) => {
+                      const hour = Number(event.target.value)
+                      setReminderHour(hour)
+                      if (reminderEnabled) {
+                        void setDailyReminder(true, locale, hour).catch(() =>
+                          setToast(
+                            tx("Notifications are blocked in device settings."),
+                          ),
+                        )
+                      }
+                    }}
+                  >
+                    <option value={7}>7:00 AM</option>
+                    <option value={12}>12:00 PM</option>
+                    <option value={19}>7:00 PM</option>
+                    <option value={21}>9:00 PM</option>
+                  </select>
+                </label>
                 <Button
                   variant={reminderEnabled ? "secondary" : "primary"}
                   onClick={async () => {
@@ -1303,6 +1664,7 @@ function App() {
                       const enabled = await setDailyReminder(
                         !reminderEnabled,
                         locale,
+                        reminderHour,
                       )
                       setReminderEnabled(enabled)
                     } catch {
@@ -1379,6 +1741,7 @@ function App() {
                       resetProgress()
                       setBookmarks([])
                       setReminderEnabled(false)
+                      setDarkMode(false)
                     }}
                   >
                     {tx("Delete all learning data")}
@@ -1405,6 +1768,51 @@ function App() {
                 </Button>
               </Card>
             </div>
+            <SettingsToolbox
+              dueCards={dueCards}
+              locale={locale}
+              mastery={introductionsMastery}
+              metrics={metrics}
+              onAssistant={() => switchView("assistant")}
+              onDiscover={() => switchView("discover")}
+              onExport={() =>
+                void shareLearningData({
+                  schemaVersion: 2,
+                  exportedAt: new Date().toISOString(),
+                  locale,
+                  bookmarks,
+                  progress,
+                })
+              }
+              onGuide={() => switchView("guide")}
+              onLearn={() => setLessonOpen(true)}
+              onLock={() => {
+                setLocalProfile(null)
+                switchView("profile")
+              }}
+              onPrivacy={() => switchView("legal")}
+              onProfile={() => switchView("profile")}
+              onReset={() => {
+                if (window.confirm(tx("Reset learning progress"))) {
+                  resetProgress()
+                }
+              }}
+              onReview={() => switchView("review")}
+              onVocabulary={() => switchView("vocabulary")}
+              reminderEnabled={reminderEnabled}
+              onReminder={async () => {
+                try {
+                  const enabled = await setDailyReminder(
+                    !reminderEnabled,
+                    locale,
+                    reminderHour,
+                  )
+                  setReminderEnabled(enabled)
+                } catch {
+                  setToast(tx("Notifications are blocked in device settings."))
+                }
+              }}
+            />
           </div>
         )}
       </main>
@@ -1437,6 +1845,278 @@ function App() {
         </div>
       )}
     </div>
+  )
+}
+
+function SettingsToolbox({
+  dueCards,
+  locale,
+  mastery,
+  metrics,
+  onAssistant,
+  onDiscover,
+  onExport,
+  onGuide,
+  onLearn,
+  onLock,
+  onPrivacy,
+  onProfile,
+  onReset,
+  onReview,
+  onVocabulary,
+  onReminder,
+  reminderEnabled,
+}: {
+  dueCards: number
+  locale: Locale
+  mastery: number
+  metrics: {
+    currentStreak: number
+    todayXp: number
+    totalSeconds: number
+  }
+  onAssistant: () => void
+  onDiscover: () => void
+  onExport: () => void
+  onGuide: () => void
+  onLearn: () => void
+  onLock: () => void
+  onPrivacy: () => void
+  onProfile: () => void
+  onReset: () => void
+  onReview: () => void
+  onVocabulary: () => void
+  onReminder: () => void
+  reminderEnabled: boolean
+}) {
+  const tx = (text: string) => translate(locale, text)
+  const tools = [
+    {
+      title: "Start lesson",
+      detail: "Begin a focused practice",
+      action: onLearn,
+    },
+    {
+      title: "Review cards",
+      detail: `${dueCards} cards due`,
+      action: onReview,
+    },
+    { title: "Vocabulary", detail: "Search HSK words", action: onVocabulary },
+    { title: "Unit guide", detail: "See goals and grammar", action: onGuide },
+    {
+      title: "Language assistant",
+      detail: "Practice offline",
+      action: onAssistant,
+    },
+    {
+      title: "Discover stories",
+      detail: "Learn in context",
+      action: onDiscover,
+    },
+    { title: "Learning path", detail: "Continue your route", action: onLearn },
+    { title: "My profile", detail: "View your progress", action: onProfile },
+    { title: "Export data", detail: "Share a JSON backup", action: onExport },
+    {
+      title: "Privacy & terms",
+      detail: "Read the local data policy",
+      action: onPrivacy,
+    },
+    { title: "Lock profile", detail: "Hide private progress", action: onLock },
+    {
+      title: reminderEnabled ? "Disable reminders" : "Enable reminders",
+      detail: "Set a daily nudge",
+      action: onReminder,
+    },
+    {
+      title: "Current streak",
+      detail: `${metrics.currentStreak} active days`,
+      action: onProfile,
+      value: `${metrics.currentStreak}d`,
+    },
+    {
+      title: "Today's XP",
+      detail: "Your daily effort",
+      action: onProfile,
+      value: `${metrics.todayXp}`,
+    },
+    {
+      title: "Review queue",
+      detail: "Words waiting to return",
+      action: onReview,
+      value: `${dueCards}`,
+    },
+    {
+      title: "Lesson mastery",
+      detail: "Introductions foundation",
+      action: onLearn,
+      value: `${mastery}/3`,
+    },
+    {
+      title: "Study time",
+      detail: "All-time device total",
+      action: onProfile,
+      value:
+        metrics.totalSeconds < 3600
+          ? `${Math.floor(metrics.totalSeconds / 60)}m`
+          : `${(metrics.totalSeconds / 3600).toFixed(1)}h`,
+    },
+    {
+      title: "Lessons completed",
+      detail: "Private progress count",
+      action: onProfile,
+    },
+    {
+      title: "Words learned",
+      detail: "Private review count",
+      action: onReview,
+    },
+    {
+      title: "Reset progress",
+      detail: "Start the learning path again",
+      action: onReset,
+    },
+  ]
+
+  return (
+    <section className="settings-tools" aria-labelledby="settings-tools-title">
+      <div className="settings-tools-heading">
+        <div>
+          <p className="eyebrow">{tx("Tools")}</p>
+          <h2 id="settings-tools-title">
+            {tx("Everything you need in one place")}
+          </h2>
+        </div>
+        <span>
+          {tools.length} {tx("local tools")}
+        </span>
+      </div>
+      <div className="settings-tools-grid">
+        {tools.map((tool, index) => (
+          <button
+            className="settings-tool"
+            key={tool.title}
+            onClick={tool.action}
+            type="button"
+          >
+            <span className="settings-tool-number">
+              {String(index + 1).padStart(2, "0")}
+            </span>
+            <span className="settings-tool-copy">
+              <strong>{tx(tool.title)}</strong>
+              <small>{tool.value ?? tx(tool.detail)}</small>
+            </span>
+            <ArrowIcon />
+          </button>
+        ))}
+      </div>
+    </section>
+  )
+}
+
+function LandingHero({
+  dueCards,
+  locale,
+  metrics,
+  profileName,
+  wordsLearned,
+  lessonsCompleted,
+  onCoach,
+  onLearn,
+  onProfile,
+  onReview,
+  onScore,
+}: {
+  dueCards: number
+  locale: Locale
+  metrics: {
+    currentStreak: number
+    todayXp: number
+  }
+  profileName: string
+  wordsLearned: number
+  lessonsCompleted: number
+  onCoach: () => void
+  onLearn: () => void
+  onProfile: () => void
+  onReview: () => void
+  onScore: () => void
+}) {
+  const tx = (text: string) => translate(locale, text)
+  const date = new Intl.DateTimeFormat(
+    locale === "ary" ? "ar-MA" : locale === "ar" ? "ar" : "en",
+    { weekday: "long", month: "long", day: "numeric" },
+  ).format(new Date())
+
+  return (
+    <section className="landing-hero section">
+      <div className="landing-hero-main">
+        <p className="landing-kicker">MÍNGDÀO / 01</p>
+        <p className="date-line">{date}</p>
+        <h1>
+          {tx("Build a five-minute Mandarin habit")} <em>{profileName}.</em>
+        </h1>
+        <p className="landing-lede">
+          {tx("One small session today. A sharper you tomorrow.")}
+        </p>
+        <div className="landing-actions">
+          <Button variant="dark" onClick={onLearn}>
+            {tx("Start learning")} <ArrowIcon />
+          </Button>
+          <Button variant="secondary" onClick={onCoach}>
+            {tx("Talk to coach")} <ArrowIcon />
+          </Button>
+        </div>
+      </div>
+      <div className="landing-stage" aria-hidden="true">
+        <span className="landing-stage-label">今天</span>
+        <strong>学</strong>
+        <span className="landing-stage-pinyin">xué · learn</span>
+        <i className="landing-ring landing-ring--one" />
+        <i className="landing-ring landing-ring--two" />
+        <span className="landing-sticker landing-sticker--hello">你好</span>
+        <span className="landing-sticker landing-sticker--xp">
+          +{metrics.todayXp} XP
+        </span>
+      </div>
+      <div className="landing-scorecards" aria-label={tx("Progress")}>
+        <button
+          className="landing-score landing-score--streak"
+          onClick={onProfile}
+          type="button"
+        >
+          <span>01</span>
+          <strong>{metrics.currentStreak}</strong>
+          <small>{tx("day streak")}</small>
+        </button>
+        <button
+          className="landing-score landing-score--review"
+          onClick={onReview}
+          type="button"
+        >
+          <span>02</span>
+          <strong>{dueCards}</strong>
+          <small>{tx("review cards")}</small>
+        </button>
+        <button
+          className="landing-score landing-score--words"
+          onClick={onProfile}
+          type="button"
+        >
+          <span>03</span>
+          <strong>{wordsLearned}</strong>
+          <small>{tx("words learned")}</small>
+        </button>
+        <button
+          className="landing-score landing-score--lessons"
+          onClick={onScore}
+          type="button"
+        >
+          <span>04</span>
+          <strong>{lessonsCompleted}</strong>
+          <small>{tx("lessons done")}</small>
+        </button>
+      </div>
+    </section>
   )
 }
 
@@ -1503,7 +2183,7 @@ function ProfileAccess({
         <p className="eyebrow">
           {exists ? tx("Unlock profile") : tx("Create local profile")}
         </p>
-        <h1>{exists ? tx("Unlock profile") : tx("Create secure profile")}</h1>
+        <h1>{exists ? tx("Unlock profile") : tx("Create private profile")}</h1>
         <p>
           {tx(
             "PIN protects this profile on this device. It cannot recover deleted data.",
@@ -1555,7 +2235,7 @@ function ProfileAccess({
           </p>
         )}
         <Button disabled={busy} onClick={() => void submit()}>
-          {exists ? tx("Unlock") : tx("Create secure profile")}
+          {exists ? tx("Unlock") : tx("Create private profile")}
         </Button>
       </div>
     </div>
@@ -1570,6 +2250,7 @@ function AssistantPage({
   onBack: () => void
 }) {
   const [input, setInput] = useState("")
+  const [soundEnabled, setSoundEnabled] = useState(true)
   const [messages, setMessages] = useState<{
     input: string
     correction: string
@@ -1614,6 +2295,42 @@ function AssistantPage({
         "هاد التركيبة ما داخلاش فالمدقق بلا نت، وداكشي علاش ما صححناهاش.",
     },
   }[locale]
+
+  function speak(text: string) {
+    if (!("speechSynthesis" in window)) return
+    window.speechSynthesis.cancel()
+    const utterance = new SpeechSynthesisUtterance(text)
+    utterance.lang =
+      locale === "en" ? "zh-CN" : locale === "ar" ? "zh-CN" : "zh-CN"
+    utterance.rate = 0.82
+    window.speechSynthesis.speak(utterance)
+  }
+
+  function playFeedback(correct: boolean) {
+    if (
+      !soundEnabled ||
+      !("AudioContext" in window || "webkitAudioContext" in window)
+    )
+      return
+    const AudioContextClass =
+      window.AudioContext ||
+      (window as typeof window & { webkitAudioContext?: typeof AudioContext })
+        .webkitAudioContext
+    if (!AudioContextClass) return
+    const context = new AudioContextClass()
+    const oscillator = context.createOscillator()
+    const gain = context.createGain()
+    oscillator.type = "sine"
+    oscillator.frequency.value = correct ? 660 : 220
+    gain.gain.setValueAtTime(0.0001, context.currentTime)
+    gain.gain.exponentialRampToValueAtTime(0.08, context.currentTime + 0.02)
+    gain.gain.exponentialRampToValueAtTime(0.0001, context.currentTime + 0.18)
+    oscillator.connect(gain)
+    gain.connect(context.destination)
+    oscillator.start()
+    oscillator.stop(context.currentTime + 0.2)
+    void context.close()
+  }
 
   function checkSentence() {
     const sentence = input.trim().replace(/[。.!؟?]+$/, "")
@@ -1675,6 +2392,8 @@ function AssistantPage({
       }
     }
     setMessages((current) => [result, ...current].slice(0, 8))
+    playFeedback(result.correct)
+    speak(result.correction)
     setInput("")
   }
 
@@ -1684,11 +2403,37 @@ function AssistantPage({
         ← {tx("Back to path")}
       </Button>
       <header>
-        <span className="detail-badge">{tx("Language assistant")}</span>
+        <div className="coach-heading">
+          <div className="coach-avatar" aria-hidden="true">
+            <span>明</span>
+            <i />
+          </div>
+          <div>
+            <span className="detail-badge">{tx("Offline AI coach")}</span>
+            <p className="coach-status">
+              {tx("Private, local, and ready to help")}
+            </p>
+          </div>
+        </div>
         <h1>{content.title}</h1>
         <p>{content.intro}</p>
       </header>
       <div className="assistant-workspace">
+        <div className="coach-controls">
+          <Button
+            aria-pressed={soundEnabled}
+            variant={soundEnabled ? "secondary" : "ghost"}
+            onClick={() => setSoundEnabled((current) => !current)}
+          >
+            {tx("Sound effects")}: {soundEnabled ? "ON" : "OFF"}
+          </Button>
+          <Button
+            variant="secondary"
+            onClick={() => speak("你好，我是你的中文教练。")}
+          >
+            {tx("Play voice")}
+          </Button>
+        </div>
         <Card className="assistant-composer">
           <label>
             <span className="sr-only">{content.placeholder}</span>
@@ -1721,6 +2466,9 @@ function AssistantPage({
                 <strong>{message.correction}</strong>
               </div>
               <p>{message.explanation}</p>
+              <Button variant="ghost" onClick={() => speak(message.correction)}>
+                {tx("Play voice")}
+              </Button>
             </Card>
           ))}
         </div>
@@ -2203,9 +2951,153 @@ function LearningPath({
   )
 }
 
+function LearnerJourney({
+  dueCards,
+  locale,
+  mastery,
+  onLearn,
+  onReview,
+  onProfile,
+}: {
+  dueCards: number
+  locale: Locale
+  mastery: number
+  onLearn: () => void
+  onReview: () => void
+  onProfile: () => void
+}) {
+  const journeyCopy = {
+    en: {
+      eyebrow: "Your next step",
+      title: "A clear path from first word to confidence",
+      intro:
+        "Learn a little, review it later, and come back whenever you are ready.",
+      steps: ["Start", "Learn", "Review", "Master"],
+      firstLesson: "Begin your first lesson",
+      firstComplete: "Your first lesson is complete",
+      foundation: "Build your first foundation",
+      mastery: "lesson mastery",
+      cardsReady: "cards ready today",
+      keepFresh: "Review keeps words fresh",
+      mastered: "Foundation mastered",
+      returnLater: "Return until it feels natural",
+    },
+    ar: {
+      eyebrow: "خطوتك التالية",
+      title: "طريق واضح من أول كلمة إلى الثقة",
+      intro: "تعلّم قليلاً، راجع لاحقاً، وعد عندما تكون مستعداً.",
+      steps: ["ابدأ", "تعلّم", "راجع", "أتقن"],
+      firstLesson: "ابدأ أول درس لك",
+      firstComplete: "أكملت أول درس لك",
+      foundation: "ابنِ أساسك الأول",
+      mastery: "إتقان الدرس",
+      cardsReady: "بطاقات جاهزة اليوم",
+      keepFresh: "المراجعة تثبّت الكلمات",
+      mastered: "أتقنت الأساسيات",
+      returnLater: "عد حتى تصبح طبيعية",
+    },
+    ary: {
+      eyebrow: "الخطوة الجاية",
+      title: "طريق واضح من أول كلمة حتى تولّي واثق",
+      intro: "تعلّم شوية، راجع من بعد، ورجع ملي تكون واجد.",
+      steps: ["بدا", "تعلّم", "راجع", "تقن"],
+      firstLesson: "بدا أول درس ديالك",
+      firstComplete: "كمّلتي أول درس ديالك",
+      foundation: "بني الأساس اللول ديالك",
+      mastery: "إتقان الدرس",
+      cardsReady: "كارتات واجدين اليوم",
+      keepFresh: "المراجعة كاتثبت الكلمات",
+      mastered: "تقنت الأساسيات",
+      returnLater: "رجع حتى تولّي طبيعية",
+    },
+  }[locale]
+  const currentStep = mastery === 0 ? 0 : dueCards > 0 ? 2 : mastery < 3 ? 1 : 3
+  const steps = [
+    {
+      title: journeyCopy.steps[0],
+      detail:
+        mastery === 0 ? journeyCopy.firstLesson : journeyCopy.firstComplete,
+      action: mastery === 0 ? onLearn : undefined,
+    },
+    {
+      title: journeyCopy.steps[1],
+      detail:
+        mastery > 0
+          ? `${mastery}/3 ${journeyCopy.mastery}`
+          : journeyCopy.foundation,
+      action: mastery > 0 && mastery < 3 ? onLearn : undefined,
+    },
+    {
+      title: journeyCopy.steps[2],
+      detail:
+        dueCards > 0
+          ? `${dueCards} ${journeyCopy.cardsReady}`
+          : journeyCopy.keepFresh,
+      action: onReview,
+    },
+    {
+      title: journeyCopy.steps[3],
+      detail: mastery >= 3 ? journeyCopy.mastered : journeyCopy.returnLater,
+      action: mastery >= 3 ? onProfile : undefined,
+    },
+  ]
+
+  return (
+    <section
+      className="section learner-journey"
+      aria-labelledby="journey-title"
+    >
+      <div className="journey-intro">
+        <p className="eyebrow">{journeyCopy.eyebrow}</p>
+        <h2 id="journey-title">{journeyCopy.title}</h2>
+        <p>{journeyCopy.intro}</p>
+      </div>
+      <div className="journey-steps">
+        {steps.map((step, index) => {
+          const complete = index < currentStep
+          const current = index === currentStep
+          const content = (
+            <>
+              <span className="journey-step-number">
+                {complete ? <CheckIcon /> : index + 1}
+              </span>
+              <span>
+                <strong>{step.title}</strong>
+                <small>{step.detail}</small>
+              </span>
+            </>
+          )
+          return step.action ? (
+            <button
+              className={`journey-step ${complete ? "is-complete" : ""} ${
+                current ? "is-current" : ""
+              }`}
+              key={step.title}
+              onClick={step.action}
+              type="button"
+            >
+              {content}
+            </button>
+          ) : (
+            <div
+              className={`journey-step ${complete ? "is-complete" : ""} ${
+                current ? "is-current" : ""
+              }`}
+              key={step.title}
+            >
+              {content}
+            </div>
+          )
+        })}
+      </div>
+    </section>
+  )
+}
+
 function LessonSection({
   bookmarks,
   completedLessonIds,
+  lessonMastery,
   locale,
   onBookmark,
   onOpen,
@@ -2215,6 +3107,7 @@ function LessonSection({
 }: {
   bookmarks: string[]
   completedLessonIds: string[]
+  lessonMastery: Record<string, number>
   locale: Locale
   onBookmark: (id: string) => void
   onOpen: () => void
@@ -2259,9 +3152,13 @@ function LessonSection({
               {completedLessonIds.includes(lesson.id) ? (
                 <div className="mini-progress">
                   <i>
-                    <b style={{ width: "100%" }} />
+                    <b
+                      style={{
+                        width: `${((lessonMastery[lesson.id] ?? 1) / 3) * 100}%`,
+                      }}
+                    />
                   </i>
-                  <small>100%</small>
+                  <small>{lessonMastery[lesson.id] ?? 1}/3</small>
                 </div>
               ) : lesson.id === "introductions" ? (
                 <Button variant="ghost" onClick={onOpen}>

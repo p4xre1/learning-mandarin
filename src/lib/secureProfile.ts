@@ -17,6 +17,10 @@ type AttemptState = {
   lockedUntil: number
 }
 
+const MAX_NAME_LENGTH = 40
+const MAX_ATTEMPTS = 100
+const MAX_LOCKOUT_MS = 15 * 60_000
+
 const encoder = new TextEncoder()
 const decoder = new TextDecoder()
 const ATTEMPT_KEY = "mingdao-profile-attempts"
@@ -33,6 +37,52 @@ function bytesToBase64(bytes: Uint8Array) {
 function base64ToBytes(value: string) {
   const binary = atob(value)
   return Uint8Array.from(binary, (character) => character.charCodeAt(0))
+}
+
+function isVaultRecord(value: unknown): value is VaultRecord {
+  if (!value || typeof value !== "object") return false
+  const record = value as Partial<VaultRecord>
+  return (
+    record.version === 1 &&
+    typeof record.salt === "string" &&
+    typeof record.iv === "string" &&
+    typeof record.cipher === "string"
+  )
+}
+
+function isLocalProfile(value: unknown): value is LocalProfile {
+  if (!value || typeof value !== "object") return false
+  const profile = value as Partial<LocalProfile>
+  return (
+    typeof profile.displayName === "string" &&
+    profile.displayName.length > 0 &&
+    profile.displayName.length <= MAX_NAME_LENGTH &&
+    typeof profile.createdAt === "string" &&
+    !Number.isNaN(Date.parse(profile.createdAt))
+  )
+}
+
+function parseAttemptState(value: string | null): AttemptState {
+  if (!value) return { count: 0, lockedUntil: 0 }
+  try {
+    const parsed = JSON.parse(value) as Partial<AttemptState>
+    const count = parsed.count
+    const lockedUntil = parsed.lockedUntil
+    if (
+      typeof count === "number" &&
+      Number.isInteger(count) &&
+      count >= 0 &&
+      count <= MAX_ATTEMPTS &&
+      typeof lockedUntil === "number" &&
+      Number.isFinite(lockedUntil) &&
+      lockedUntil >= 0
+    ) {
+      return { count, lockedUntil }
+    }
+  } catch {
+    // Treat corrupted local state as a fresh lockout record.
+  }
+  return { count: 0, lockedUntil: 0 }
 }
 
 async function deriveKey(pin: string, salt: Uint8Array) {
@@ -59,15 +109,26 @@ async function deriveKey(pin: string, salt: Uint8Array) {
 
 export async function hasLocalProfile() {
   const result = await Preferences.get({ key: VAULT_KEY })
-  return result.value !== null
+  if (!result.value) return false
+  try {
+    return isVaultRecord(JSON.parse(result.value))
+  } catch {
+    return false
+  }
 }
 
 export async function createLocalProfile(displayName: string, pin: string) {
+  const normalizedName = displayName.trim()
+  if (!normalizedName || normalizedName.length > MAX_NAME_LENGTH) {
+    throw new Error("invalid-display-name")
+  }
+  if (!/^\d{4,8}$/.test(pin)) throw new Error("invalid-pin")
+
   const salt = crypto.getRandomValues(new Uint8Array(16))
   const iv = crypto.getRandomValues(new Uint8Array(12))
   const key = await deriveKey(pin, salt)
   const profile: LocalProfile = {
-    displayName: displayName.trim(),
+    displayName: normalizedName,
     createdAt: new Date().toISOString(),
   }
   const encrypted = await crypto.subtle.encrypt(
@@ -88,9 +149,7 @@ export async function createLocalProfile(displayName: string, pin: string) {
 
 export async function unlockLocalProfile(pin: string) {
   const attempts = await Preferences.get({ key: ATTEMPT_KEY })
-  const attemptState = attempts.value
-    ? JSON.parse(attempts.value) as AttemptState
-    : { count: 0, lockedUntil: 0 }
+  const attemptState = parseAttemptState(attempts.value)
 
   if (attemptState.lockedUntil > Date.now()) {
     return {
@@ -104,6 +163,7 @@ export async function unlockLocalProfile(pin: string) {
 
   try {
     const record = JSON.parse(stored.value) as VaultRecord
+    if (!isVaultRecord(record)) throw new Error("invalid-vault-record")
     const key = await deriveKey(pin, base64ToBytes(record.salt))
     const decrypted = await crypto.subtle.decrypt(
       { name: "AES-GCM", iv: base64ToBytes(record.iv) },
@@ -111,21 +171,29 @@ export async function unlockLocalProfile(pin: string) {
       base64ToBytes(record.cipher),
     )
     await Preferences.remove({ key: ATTEMPT_KEY })
+    const profile = JSON.parse(decoder.decode(decrypted)) as unknown
+    if (!isLocalProfile(profile)) throw new Error("invalid-profile")
     return {
       status: "success" as const,
-      profile: JSON.parse(decoder.decode(decrypted)) as LocalProfile,
+      profile,
     }
   } catch {
     const count = attemptState.count + 1
-    const lockedUntil = count >= 5 ? Date.now() + 30_000 : 0
+    const lockedUntil =
+      count >= 5
+        ? Date.now() +
+          Math.min(MAX_LOCKOUT_MS, 30_000 * 2 ** Math.min(count - 5, 5))
+        : 0
     await Preferences.set({
       key: ATTEMPT_KEY,
-      value: JSON.stringify({ count: lockedUntil ? 0 : count, lockedUntil }),
+      value: JSON.stringify({ count, lockedUntil }),
     })
     return {
       status: lockedUntil ? "locked" as const : "invalid" as const,
-      retryAfter: lockedUntil ? 30 : undefined,
-      attemptsRemaining: lockedUntil ? 0 : 5 - count,
+      retryAfter: lockedUntil
+        ? Math.ceil((lockedUntil - Date.now()) / 1000)
+        : undefined,
+      attemptsRemaining: lockedUntil ? 0 : Math.max(0, 5 - count),
     }
   }
 }
