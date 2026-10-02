@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Míngdào</string>
+    <string name="title_activity_main">Míngdào</string>
+    <string name="package_name">app.mingdao.learn</string>
+    <string name="custom_url_scheme">app.mingdao.learn</string>
+</resources>
