@@ -1,0 +1,4679 @@
+{
+  "metadata": {
+    "source": "Supplied Mandarin 5,000-word pack",
+    "includedEntries": 632,
+    "plannedTotal": 5000,
+    "meaningLocales": [
+      "en",
+      "ar"
+    ]
+  },
+  "entries": [
+    {
+      "id": 1,
+      "hanzi": "我",
+      "pinyin": "wǒ",
+      "meaningEn": "I / me",
+      "meaningAr": "أنا"
+    },
+    {
+      "id": 2,
+      "hanzi": "你",
+      "pinyin": "nǐ",
+      "meaningEn": "you",
+      "meaningAr": "أنت"
+    },
+    {
+      "id": 3,
+      "hanzi": "您",
+      "pinyin": "nín",
+      "meaningEn": "you (formal)",
+      "meaningAr": "حضرتك"
+    },
+    {
+      "id": 4,
+      "hanzi": "他",
+      "pinyin": "tā",
+      "meaningEn": "he / him",
+      "meaningAr": "هو"
+    },
+    {
+      "id": 5,
+      "hanzi": "她",
+      "pinyin": "tā",
+      "meaningEn": "she / her",
+      "meaningAr": "هي"
+    },
+    {
+      "id": 6,
+      "hanzi": "它",
+      "pinyin": "tā",
+      "meaningEn": "it",
+      "meaningAr": "هو/هي لغير العاقل"
+    },
+    {
+      "id": 7,
+      "hanzi": "我们",
+      "pinyin": "wǒmen",
+      "meaningEn": "we / us",
+      "meaningAr": "نحن"
+    },
+    {
+      "id": 8,
+      "hanzi": "你们",
+      "pinyin": "nǐmen",
+      "meaningEn": "you (plural)",
+      "meaningAr": "أنتم"
+    },
+    {
+      "id": 9,
+      "hanzi": "他们",
+      "pinyin": "tāmen",
+      "meaningEn": "they",
+      "meaningAr": "هم"
+    },
+    {
+      "id": 10,
+      "hanzi": "这",
+      "pinyin": "zhè",
+      "meaningEn": "this",
+      "meaningAr": "هذا"
+    },
+    {
+      "id": 11,
+      "hanzi": "那",
+      "pinyin": "nà",
+      "meaningEn": "that",
+      "meaningAr": "ذلك"
+    },
+    {
+      "id": 12,
+      "hanzi": "什么",
+      "pinyin": "shénme",
+      "meaningEn": "what",
+      "meaningAr": "ماذا"
+    },
+    {
+      "id": 13,
+      "hanzi": "谁",
+      "pinyin": "shéi",
+      "meaningEn": "who",
+      "meaningAr": "من"
+    },
+    {
+      "id": 14,
+      "hanzi": "哪",
+      "pinyin": "nǎ",
+      "meaningEn": "which",
+      "meaningAr": "أي"
+    },
+    {
+      "id": 15,
+      "hanzi": "哪里",
+      "pinyin": "nǎlǐ",
+      "meaningEn": "where",
+      "meaningAr": "أين"
+    },
+    {
+      "id": 16,
+      "hanzi": "为什么",
+      "pinyin": "wèishénme",
+      "meaningEn": "why",
+      "meaningAr": "لماذا"
+    },
+    {
+      "id": 17,
+      "hanzi": "怎么",
+      "pinyin": "zěnme",
+      "meaningEn": "how",
+      "meaningAr": "كيف"
+    },
+    {
+      "id": 18,
+      "hanzi": "多少",
+      "pinyin": "duōshao",
+      "meaningEn": "how many/much",
+      "meaningAr": "كم"
+    },
+    {
+      "id": 19,
+      "hanzi": "几",
+      "pinyin": "jǐ",
+      "meaningEn": "how many",
+      "meaningAr": "كم"
+    },
+    {
+      "id": 20,
+      "hanzi": "吗",
+      "pinyin": "ma",
+      "meaningEn": "question particle",
+      "meaningAr": "أداة استفهام"
+    },
+    {
+      "id": 21,
+      "hanzi": "呢",
+      "pinyin": "ne",
+      "meaningEn": "question/continuation particle",
+      "meaningAr": "أداة استفهام/استمرار"
+    },
+    {
+      "id": 22,
+      "hanzi": "是",
+      "pinyin": "shì",
+      "meaningEn": "to be",
+      "meaningAr": "يكون"
+    },
+    {
+      "id": 23,
+      "hanzi": "有",
+      "pinyin": "yǒu",
+      "meaningEn": "have / there is",
+      "meaningAr": "يملك / يوجد"
+    },
+    {
+      "id": 24,
+      "hanzi": "没有",
+      "pinyin": "méiyǒu",
+      "meaningEn": "don't have",
+      "meaningAr": "لا يملك / لا يوجد"
+    },
+    {
+      "id": 25,
+      "hanzi": "在",
+      "pinyin": "zài",
+      "meaningEn": "at / in / be located",
+      "meaningAr": "في / يوجد"
+    },
+    {
+      "id": 26,
+      "hanzi": "去",
+      "pinyin": "qù",
+      "meaningEn": "go",
+      "meaningAr": "يذهب"
+    },
+    {
+      "id": 27,
+      "hanzi": "来",
+      "pinyin": "lái",
+      "meaningEn": "come",
+      "meaningAr": "يأتي"
+    },
+    {
+      "id": 28,
+      "hanzi": "回",
+      "pinyin": "huí",
+      "meaningEn": "return",
+      "meaningAr": "يعود"
+    },
+    {
+      "id": 29,
+      "hanzi": "住",
+      "pinyin": "zhù",
+      "meaningEn": "live",
+      "meaningAr": "يسكن"
+    },
+    {
+      "id": 30,
+      "hanzi": "做",
+      "pinyin": "zuò",
+      "meaningEn": "do / make",
+      "meaningAr": "يفعل / يصنع"
+    },
+    {
+      "id": 31,
+      "hanzi": "吃",
+      "pinyin": "chī",
+      "meaningEn": "eat",
+      "meaningAr": "يأكل"
+    },
+    {
+      "id": 32,
+      "hanzi": "喝",
+      "pinyin": "hē",
+      "meaningEn": "drink",
+      "meaningAr": "يشرب"
+    },
+    {
+      "id": 33,
+      "hanzi": "看",
+      "pinyin": "kàn",
+      "meaningEn": "look / watch / read",
+      "meaningAr": "ينظر / يشاهد / يقرأ"
+    },
+    {
+      "id": 34,
+      "hanzi": "听",
+      "pinyin": "tīng",
+      "meaningEn": "listen",
+      "meaningAr": "يستمع"
+    },
+    {
+      "id": 35,
+      "hanzi": "说",
+      "pinyin": "shuō",
+      "meaningEn": "speak / say",
+      "meaningAr": "يتكلم / يقول"
+    },
+    {
+      "id": 36,
+      "hanzi": "读",
+      "pinyin": "dú",
+      "meaningEn": "read",
+      "meaningAr": "يقرأ"
+    },
+    {
+      "id": 37,
+      "hanzi": "写",
+      "pinyin": "xiě",
+      "meaningEn": "write",
+      "meaningAr": "يكتب"
+    },
+    {
+      "id": 38,
+      "hanzi": "学",
+      "pinyin": "xué",
+      "meaningEn": "learn / study",
+      "meaningAr": "يتعلم / يدرس"
+    },
+    {
+      "id": 39,
+      "hanzi": "学习",
+      "pinyin": "xuéxí",
+      "meaningEn": "study / learn",
+      "meaningAr": "يدرس / يتعلم"
+    },
+    {
+      "id": 40,
+      "hanzi": "教",
+      "pinyin": "jiāo",
+      "meaningEn": "teach",
+      "meaningAr": "يعلّم"
+    },
+    {
+      "id": 41,
+      "hanzi": "工作",
+      "pinyin": "gōngzuò",
+      "meaningEn": "work",
+      "meaningAr": "يعمل / عمل"
+    },
+    {
+      "id": 42,
+      "hanzi": "买",
+      "pinyin": "mǎi",
+      "meaningEn": "buy",
+      "meaningAr": "يشتري"
+    },
+    {
+      "id": 43,
+      "hanzi": "卖",
+      "pinyin": "mài",
+      "meaningEn": "sell",
+      "meaningAr": "يبيع"
+    },
+    {
+      "id": 44,
+      "hanzi": "给",
+      "pinyin": "gěi",
+      "meaningEn": "give",
+      "meaningAr": "يعطي"
+    },
+    {
+      "id": 45,
+      "hanzi": "要",
+      "pinyin": "yào",
+      "meaningEn": "want / need",
+      "meaningAr": "يريد / يحتاج"
+    },
+    {
+      "id": 46,
+      "hanzi": "想",
+      "pinyin": "xiǎng",
+      "meaningEn": "want / think",
+      "meaningAr": "يريد / يفكر"
+    },
+    {
+      "id": 47,
+      "hanzi": "喜欢",
+      "pinyin": "xǐhuan",
+      "meaningEn": "like",
+      "meaningAr": "يحب"
+    },
+    {
+      "id": 48,
+      "hanzi": "爱",
+      "pinyin": "ài",
+      "meaningEn": "love",
+      "meaningAr": "يحب"
+    },
+    {
+      "id": 49,
+      "hanzi": "知道",
+      "pinyin": "zhīdào",
+      "meaningEn": "know",
+      "meaningAr": "يعرف"
+    },
+    {
+      "id": 50,
+      "hanzi": "认识",
+      "pinyin": "rènshi",
+      "meaningEn": "know / recognize",
+      "meaningAr": "يعرف"
+    },
+    {
+      "id": 51,
+      "hanzi": "觉得",
+      "pinyin": "juéde",
+      "meaningEn": "feel / think",
+      "meaningAr": "يعتقد / يشعر"
+    },
+    {
+      "id": 52,
+      "hanzi": "明白",
+      "pinyin": "míngbai",
+      "meaningEn": "understand",
+      "meaningAr": "يفهم"
+    },
+    {
+      "id": 53,
+      "hanzi": "懂",
+      "pinyin": "dǒng",
+      "meaningEn": "understand",
+      "meaningAr": "يفهم"
+    },
+    {
+      "id": 54,
+      "hanzi": "需要",
+      "pinyin": "xūyào",
+      "meaningEn": "need",
+      "meaningAr": "يحتاج"
+    },
+    {
+      "id": 55,
+      "hanzi": "可以",
+      "pinyin": "kěyǐ",
+      "meaningEn": "can / may",
+      "meaningAr": "يستطيع / يمكن"
+    },
+    {
+      "id": 56,
+      "hanzi": "能",
+      "pinyin": "néng",
+      "meaningEn": "can / be able",
+      "meaningAr": "يستطيع"
+    },
+    {
+      "id": 57,
+      "hanzi": "会",
+      "pinyin": "huì",
+      "meaningEn": "know how to / will",
+      "meaningAr": "يعرف كيف / سوف"
+    },
+    {
+      "id": 58,
+      "hanzi": "应该",
+      "pinyin": "yīnggāi",
+      "meaningEn": "should",
+      "meaningAr": "ينبغي"
+    },
+    {
+      "id": 59,
+      "hanzi": "必须",
+      "pinyin": "bìxū",
+      "meaningEn": "must",
+      "meaningAr": "يجب"
+    },
+    {
+      "id": 60,
+      "hanzi": "帮助",
+      "pinyin": "bāngzhù",
+      "meaningEn": "help",
+      "meaningAr": "يساعد / مساعدة"
+    },
+    {
+      "id": 61,
+      "hanzi": "请",
+      "pinyin": "qǐng",
+      "meaningEn": "please / invite",
+      "meaningAr": "من فضلك / يدعو"
+    },
+    {
+      "id": 62,
+      "hanzi": "谢谢",
+      "pinyin": "xièxie",
+      "meaningEn": "thank you",
+      "meaningAr": "شكرًا"
+    },
+    {
+      "id": 63,
+      "hanzi": "不客气",
+      "pinyin": "bú kèqi",
+      "meaningEn": "you're welcome",
+      "meaningAr": "العفو"
+    },
+    {
+      "id": 64,
+      "hanzi": "对不起",
+      "pinyin": "duìbuqǐ",
+      "meaningEn": "sorry",
+      "meaningAr": "آسف"
+    },
+    {
+      "id": 65,
+      "hanzi": "没关系",
+      "pinyin": "méi guānxi",
+      "meaningEn": "no problem",
+      "meaningAr": "لا مشكلة"
+    },
+    {
+      "id": 66,
+      "hanzi": "你好",
+      "pinyin": "nǐ hǎo",
+      "meaningEn": "hello",
+      "meaningAr": "مرحبًا"
+    },
+    {
+      "id": 67,
+      "hanzi": "再见",
+      "pinyin": "zàijiàn",
+      "meaningEn": "goodbye",
+      "meaningAr": "إلى اللقاء"
+    },
+    {
+      "id": 68,
+      "hanzi": "好",
+      "pinyin": "hǎo",
+      "meaningEn": "good",
+      "meaningAr": "جيد"
+    },
+    {
+      "id": 69,
+      "hanzi": "很",
+      "pinyin": "hěn",
+      "meaningEn": "very",
+      "meaningAr": "جدًا"
+    },
+    {
+      "id": 70,
+      "hanzi": "太",
+      "pinyin": "tài",
+      "meaningEn": "too / extremely",
+      "meaningAr": "جدًا / أكثر من اللازم"
+    },
+    {
+      "id": 71,
+      "hanzi": "大",
+      "pinyin": "dà",
+      "meaningEn": "big",
+      "meaningAr": "كبير"
+    },
+    {
+      "id": 72,
+      "hanzi": "小",
+      "pinyin": "xiǎo",
+      "meaningEn": "small",
+      "meaningAr": "صغير"
+    },
+    {
+      "id": 73,
+      "hanzi": "多",
+      "pinyin": "duō",
+      "meaningEn": "many / much",
+      "meaningAr": "كثير"
+    },
+    {
+      "id": 74,
+      "hanzi": "少",
+      "pinyin": "shǎo",
+      "meaningEn": "few / little",
+      "meaningAr": "قليل"
+    },
+    {
+      "id": 75,
+      "hanzi": "高",
+      "pinyin": "gāo",
+      "meaningEn": "tall / high",
+      "meaningAr": "عالٍ / طويل"
+    },
+    {
+      "id": 76,
+      "hanzi": "低",
+      "pinyin": "dī",
+      "meaningEn": "low",
+      "meaningAr": "منخفض"
+    },
+    {
+      "id": 77,
+      "hanzi": "长",
+      "pinyin": "cháng",
+      "meaningEn": "long",
+      "meaningAr": "طويل"
+    },
+    {
+      "id": 78,
+      "hanzi": "短",
+      "pinyin": "duǎn",
+      "meaningEn": "short",
+      "meaningAr": "قصير"
+    },
+    {
+      "id": 79,
+      "hanzi": "快",
+      "pinyin": "kuài",
+      "meaningEn": "fast",
+      "meaningAr": "سريع"
+    },
+    {
+      "id": 80,
+      "hanzi": "慢",
+      "pinyin": "màn",
+      "meaningEn": "slow",
+      "meaningAr": "بطيء"
+    },
+    {
+      "id": 81,
+      "hanzi": "新",
+      "pinyin": "xīn",
+      "meaningEn": "new",
+      "meaningAr": "جديد"
+    },
+    {
+      "id": 82,
+      "hanzi": "旧",
+      "pinyin": "jiù",
+      "meaningEn": "old",
+      "meaningAr": "قديم"
+    },
+    {
+      "id": 83,
+      "hanzi": "热",
+      "pinyin": "rè",
+      "meaningEn": "hot",
+      "meaningAr": "حار"
+    },
+    {
+      "id": 84,
+      "hanzi": "冷",
+      "pinyin": "lěng",
+      "meaningEn": "cold",
+      "meaningAr": "بارد"
+    },
+    {
+      "id": 85,
+      "hanzi": "好吃",
+      "pinyin": "hǎochī",
+      "meaningEn": "delicious",
+      "meaningAr": "لذيذ"
+    },
+    {
+      "id": 86,
+      "hanzi": "漂亮",
+      "pinyin": "piàoliang",
+      "meaningEn": "beautiful",
+      "meaningAr": "جميل"
+    },
+    {
+      "id": 87,
+      "hanzi": "高兴",
+      "pinyin": "gāoxìng",
+      "meaningEn": "happy",
+      "meaningAr": "سعيد"
+    },
+    {
+      "id": 88,
+      "hanzi": "开心",
+      "pinyin": "kāixīn",
+      "meaningEn": "happy",
+      "meaningAr": "سعيد / فرحان"
+    },
+    {
+      "id": 89,
+      "hanzi": "忙",
+      "pinyin": "máng",
+      "meaningEn": "busy",
+      "meaningAr": "مشغول"
+    },
+    {
+      "id": 90,
+      "hanzi": "累",
+      "pinyin": "lèi",
+      "meaningEn": "tired",
+      "meaningAr": "متعب"
+    },
+    {
+      "id": 91,
+      "hanzi": "今天",
+      "pinyin": "jīntiān",
+      "meaningEn": "today",
+      "meaningAr": "اليوم"
+    },
+    {
+      "id": 92,
+      "hanzi": "明天",
+      "pinyin": "míngtiān",
+      "meaningEn": "tomorrow",
+      "meaningAr": "غدًا"
+    },
+    {
+      "id": 93,
+      "hanzi": "昨天",
+      "pinyin": "zuótiān",
+      "meaningEn": "yesterday",
+      "meaningAr": "أمس"
+    },
+    {
+      "id": 94,
+      "hanzi": "现在",
+      "pinyin": "xiànzài",
+      "meaningEn": "now",
+      "meaningAr": "الآن"
+    },
+    {
+      "id": 95,
+      "hanzi": "时候",
+      "pinyin": "shíhou",
+      "meaningEn": "time / moment",
+      "meaningAr": "وقت"
+    },
+    {
+      "id": 96,
+      "hanzi": "年",
+      "pinyin": "nián",
+      "meaningEn": "year",
+      "meaningAr": "سنة"
+    },
+    {
+      "id": 97,
+      "hanzi": "月",
+      "pinyin": "yuè",
+      "meaningEn": "month / moon",
+      "meaningAr": "شهر / قمر"
+    },
+    {
+      "id": 98,
+      "hanzi": "日",
+      "pinyin": "rì",
+      "meaningEn": "day",
+      "meaningAr": "يوم"
+    },
+    {
+      "id": 99,
+      "hanzi": "天",
+      "pinyin": "tiān",
+      "meaningEn": "day / sky",
+      "meaningAr": "يوم / سماء"
+    },
+    {
+      "id": 100,
+      "hanzi": "时间",
+      "pinyin": "shíjiān",
+      "meaningEn": "time",
+      "meaningAr": "الوقت"
+    },
+    {
+      "id": 101,
+      "hanzi": "零",
+      "pinyin": "líng",
+      "meaningEn": "zero",
+      "meaningAr": "صفر"
+    },
+    {
+      "id": 102,
+      "hanzi": "一",
+      "pinyin": "yī",
+      "meaningEn": "one",
+      "meaningAr": "واحد"
+    },
+    {
+      "id": 103,
+      "hanzi": "二",
+      "pinyin": "èr",
+      "meaningEn": "two",
+      "meaningAr": "اثنان"
+    },
+    {
+      "id": 104,
+      "hanzi": "三",
+      "pinyin": "sān",
+      "meaningEn": "three",
+      "meaningAr": "ثلاثة"
+    },
+    {
+      "id": 105,
+      "hanzi": "四",
+      "pinyin": "sì",
+      "meaningEn": "four",
+      "meaningAr": "أربعة"
+    },
+    {
+      "id": 106,
+      "hanzi": "五",
+      "pinyin": "wǔ",
+      "meaningEn": "five",
+      "meaningAr": "خمسة"
+    },
+    {
+      "id": 107,
+      "hanzi": "六",
+      "pinyin": "liù",
+      "meaningEn": "six",
+      "meaningAr": "ستة"
+    },
+    {
+      "id": 108,
+      "hanzi": "七",
+      "pinyin": "qī",
+      "meaningEn": "seven",
+      "meaningAr": "سبعة"
+    },
+    {
+      "id": 109,
+      "hanzi": "八",
+      "pinyin": "bā",
+      "meaningEn": "eight",
+      "meaningAr": "ثمانية"
+    },
+    {
+      "id": 110,
+      "hanzi": "九",
+      "pinyin": "jiǔ",
+      "meaningEn": "nine",
+      "meaningAr": "تسعة"
+    },
+    {
+      "id": 111,
+      "hanzi": "十",
+      "pinyin": "shí",
+      "meaningEn": "ten",
+      "meaningAr": "عشرة"
+    },
+    {
+      "id": 112,
+      "hanzi": "百",
+      "pinyin": "bǎi",
+      "meaningEn": "hundred",
+      "meaningAr": "مئة"
+    },
+    {
+      "id": 113,
+      "hanzi": "千",
+      "pinyin": "qiān",
+      "meaningEn": "thousand",
+      "meaningAr": "ألف"
+    },
+    {
+      "id": 114,
+      "hanzi": "万",
+      "pinyin": "wàn",
+      "meaningEn": "ten thousand",
+      "meaningAr": "عشرة آلاف"
+    },
+    {
+      "id": 115,
+      "hanzi": "第一",
+      "pinyin": "dì-yī",
+      "meaningEn": "first",
+      "meaningAr": "الأول"
+    },
+    {
+      "id": 116,
+      "hanzi": "第二",
+      "pinyin": "dì-èr",
+      "meaningEn": "second",
+      "meaningAr": "الثاني"
+    },
+    {
+      "id": 117,
+      "hanzi": "两",
+      "pinyin": "liǎng",
+      "meaningEn": "two",
+      "meaningAr": "اثنان"
+    },
+    {
+      "id": 118,
+      "hanzi": "半",
+      "pinyin": "bàn",
+      "meaningEn": "half",
+      "meaningAr": "نصف"
+    },
+    {
+      "id": 119,
+      "hanzi": "一点",
+      "pinyin": "yìdiǎn",
+      "meaningEn": "a little",
+      "meaningAr": "قليل"
+    },
+    {
+      "id": 120,
+      "hanzi": "一起",
+      "pinyin": "yìqǐ",
+      "meaningEn": "together",
+      "meaningAr": "معًا"
+    },
+    {
+      "id": 121,
+      "hanzi": "人",
+      "pinyin": "rén",
+      "meaningEn": "person",
+      "meaningAr": "شخص"
+    },
+    {
+      "id": 122,
+      "hanzi": "人们",
+      "pinyin": "rénmen",
+      "meaningEn": "people",
+      "meaningAr": "الناس"
+    },
+    {
+      "id": 123,
+      "hanzi": "朋友",
+      "pinyin": "péngyou",
+      "meaningEn": "friend",
+      "meaningAr": "صديق"
+    },
+    {
+      "id": 124,
+      "hanzi": "同学",
+      "pinyin": "tóngxué",
+      "meaningEn": "classmate",
+      "meaningAr": "زميل الدراسة"
+    },
+    {
+      "id": 125,
+      "hanzi": "学生",
+      "pinyin": "xuésheng",
+      "meaningEn": "student",
+      "meaningAr": "طالب"
+    },
+    {
+      "id": 126,
+      "hanzi": "老师",
+      "pinyin": "lǎoshī",
+      "meaningEn": "teacher",
+      "meaningAr": "أستاذ"
+    },
+    {
+      "id": 127,
+      "hanzi": "教授",
+      "pinyin": "jiàoshòu",
+      "meaningEn": "professor",
+      "meaningAr": "أستاذ جامعي"
+    },
+    {
+      "id": 128,
+      "hanzi": "医生",
+      "pinyin": "yīshēng",
+      "meaningEn": "doctor",
+      "meaningAr": "طبيب"
+    },
+    {
+      "id": 129,
+      "hanzi": "律师",
+      "pinyin": "lǜshī",
+      "meaningEn": "lawyer",
+      "meaningAr": "محامٍ"
+    },
+    {
+      "id": 130,
+      "hanzi": "警察",
+      "pinyin": "jǐngchá",
+      "meaningEn": "police officer",
+      "meaningAr": "شرطي"
+    },
+    {
+      "id": 131,
+      "hanzi": "家",
+      "pinyin": "jiā",
+      "meaningEn": "home / family",
+      "meaningAr": "منزل / عائلة"
+    },
+    {
+      "id": 132,
+      "hanzi": "家人",
+      "pinyin": "jiārén",
+      "meaningEn": "family members",
+      "meaningAr": "أفراد العائلة"
+    },
+    {
+      "id": 133,
+      "hanzi": "父亲",
+      "pinyin": "fùqīn",
+      "meaningEn": "father",
+      "meaningAr": "الأب"
+    },
+    {
+      "id": 134,
+      "hanzi": "母亲",
+      "pinyin": "mǔqīn",
+      "meaningEn": "mother",
+      "meaningAr": "الأم"
+    },
+    {
+      "id": 135,
+      "hanzi": "爸爸",
+      "pinyin": "bàba",
+      "meaningEn": "dad",
+      "meaningAr": "أبي"
+    },
+    {
+      "id": 136,
+      "hanzi": "妈妈",
+      "pinyin": "māma",
+      "meaningEn": "mom",
+      "meaningAr": "أمي"
+    },
+    {
+      "id": 137,
+      "hanzi": "儿子",
+      "pinyin": "érzi",
+      "meaningEn": "son",
+      "meaningAr": "ابن"
+    },
+    {
+      "id": 138,
+      "hanzi": "女儿",
+      "pinyin": "nǚ'ér",
+      "meaningEn": "daughter",
+      "meaningAr": "ابنة"
+    },
+    {
+      "id": 139,
+      "hanzi": "哥哥",
+      "pinyin": "gēge",
+      "meaningEn": "older brother",
+      "meaningAr": "الأخ الأكبر"
+    },
+    {
+      "id": 140,
+      "hanzi": "弟弟",
+      "pinyin": "dìdi",
+      "meaningEn": "younger brother",
+      "meaningAr": "الأخ الأصغر"
+    },
+    {
+      "id": 141,
+      "hanzi": "姐姐",
+      "pinyin": "jiějie",
+      "meaningEn": "older sister",
+      "meaningAr": "الأخت الكبرى"
+    },
+    {
+      "id": 142,
+      "hanzi": "妹妹",
+      "pinyin": "mèimei",
+      "meaningEn": "younger sister",
+      "meaningAr": "الأخت الصغرى"
+    },
+    {
+      "id": 143,
+      "hanzi": "丈夫",
+      "pinyin": "zhàngfu",
+      "meaningEn": "husband",
+      "meaningAr": "الزوج"
+    },
+    {
+      "id": 144,
+      "hanzi": "妻子",
+      "pinyin": "qīzi",
+      "meaningEn": "wife",
+      "meaningAr": "الزوجة"
+    },
+    {
+      "id": 145,
+      "hanzi": "男",
+      "pinyin": "nán",
+      "meaningEn": "male / man",
+      "meaningAr": "ذكر / رجل"
+    },
+    {
+      "id": 146,
+      "hanzi": "女",
+      "pinyin": "nǚ",
+      "meaningEn": "female / woman",
+      "meaningAr": "أنثى / امرأة"
+    },
+    {
+      "id": 147,
+      "hanzi": "男朋友",
+      "pinyin": "nán péngyou",
+      "meaningEn": "boyfriend",
+      "meaningAr": "حبيب"
+    },
+    {
+      "id": 148,
+      "hanzi": "女朋友",
+      "pinyin": "nǚ péngyou",
+      "meaningEn": "girlfriend",
+      "meaningAr": "حبيبة"
+    },
+    {
+      "id": 149,
+      "hanzi": "客人",
+      "pinyin": "kèrén",
+      "meaningEn": "guest",
+      "meaningAr": "ضيف"
+    },
+    {
+      "id": 150,
+      "hanzi": "老人",
+      "pinyin": "lǎorén",
+      "meaningEn": "elderly person",
+      "meaningAr": "شخص مسن"
+    },
+    {
+      "id": 151,
+      "hanzi": "阿姨",
+      "pinyin": "āyí",
+      "meaningEn": "aunt / auntie",
+      "meaningAr": "خالة / عمة"
+    },
+    {
+      "id": 152,
+      "hanzi": "爱好",
+      "pinyin": "àihào",
+      "meaningEn": "hobby",
+      "meaningAr": "هواية"
+    },
+    {
+      "id": 153,
+      "hanzi": "安静",
+      "pinyin": "ānjìng",
+      "meaningEn": "quiet",
+      "meaningAr": "هادئ"
+    },
+    {
+      "id": 154,
+      "hanzi": "把",
+      "pinyin": "bǎ",
+      "meaningEn": "disposal marker",
+      "meaningAr": "أداة نحوية"
+    },
+    {
+      "id": 155,
+      "hanzi": "搬",
+      "pinyin": "bān",
+      "meaningEn": "move",
+      "meaningAr": "ينقل / ينتقل"
+    },
+    {
+      "id": 156,
+      "hanzi": "办法",
+      "pinyin": "bànfǎ",
+      "meaningEn": "method / way",
+      "meaningAr": "طريقة / حل"
+    },
+    {
+      "id": 157,
+      "hanzi": "办公室",
+      "pinyin": "bàngōngshì",
+      "meaningEn": "office",
+      "meaningAr": "مكتب"
+    },
+    {
+      "id": 158,
+      "hanzi": "半天",
+      "pinyin": "bàntiān",
+      "meaningEn": "half a day",
+      "meaningAr": "نصف يوم"
+    },
+    {
+      "id": 159,
+      "hanzi": "帮忙",
+      "pinyin": "bāngmáng",
+      "meaningEn": "help",
+      "meaningAr": "يساعد"
+    },
+    {
+      "id": 160,
+      "hanzi": "包",
+      "pinyin": "bāo",
+      "meaningEn": "bag",
+      "meaningAr": "حقيبة"
+    },
+    {
+      "id": 161,
+      "hanzi": "饱",
+      "pinyin": "bǎo",
+      "meaningEn": "full",
+      "meaningAr": "شبعان"
+    },
+    {
+      "id": 162,
+      "hanzi": "被",
+      "pinyin": "bèi",
+      "meaningEn": "passive marker",
+      "meaningAr": "أداة المبني للمجهول"
+    },
+    {
+      "id": 163,
+      "hanzi": "比较",
+      "pinyin": "bǐjiào",
+      "meaningEn": "compare / relatively",
+      "meaningAr": "يقارن / نسبيًا"
+    },
+    {
+      "id": 164,
+      "hanzi": "比赛",
+      "pinyin": "bǐsài",
+      "meaningEn": "competition",
+      "meaningAr": "مسابقة"
+    },
+    {
+      "id": 165,
+      "hanzi": "变化",
+      "pinyin": "biànhuà",
+      "meaningEn": "change",
+      "meaningAr": "تغيير"
+    },
+    {
+      "id": 166,
+      "hanzi": "表示",
+      "pinyin": "biǎoshì",
+      "meaningEn": "express / indicate",
+      "meaningAr": "يعبّر / يدل"
+    },
+    {
+      "id": 167,
+      "hanzi": "表演",
+      "pinyin": "biǎoyǎn",
+      "meaningEn": "perform",
+      "meaningAr": "يؤدي / عرض"
+    },
+    {
+      "id": 168,
+      "hanzi": "别人",
+      "pinyin": "biérén",
+      "meaningEn": "other people",
+      "meaningAr": "الآخرون"
+    },
+    {
+      "id": 169,
+      "hanzi": "宾馆",
+      "pinyin": "bīnguǎn",
+      "meaningEn": "hotel",
+      "meaningAr": "فندق"
+    },
+    {
+      "id": 170,
+      "hanzi": "冰箱",
+      "pinyin": "bīngxiāng",
+      "meaningEn": "refrigerator",
+      "meaningAr": "ثلاجة"
+    },
+    {
+      "id": 171,
+      "hanzi": "不但",
+      "pinyin": "búdàn",
+      "meaningEn": "not only",
+      "meaningAr": "ليس فقط"
+    },
+    {
+      "id": 172,
+      "hanzi": "部",
+      "pinyin": "bù",
+      "meaningEn": "measure word for films/books",
+      "meaningAr": "أداة عد"
+    },
+    {
+      "id": 173,
+      "hanzi": "才",
+      "pinyin": "cái",
+      "meaningEn": "only then / just",
+      "meaningAr": "فقط / حينها"
+    },
+    {
+      "id": 174,
+      "hanzi": "菜单",
+      "pinyin": "càidān",
+      "meaningEn": "menu",
+      "meaningAr": "قائمة الطعام"
+    },
+    {
+      "id": 175,
+      "hanzi": "参加",
+      "pinyin": "cānjiā",
+      "meaningEn": "participate",
+      "meaningAr": "يشارك"
+    },
+    {
+      "id": 176,
+      "hanzi": "草",
+      "pinyin": "cǎo",
+      "meaningEn": "grass",
+      "meaningAr": "عشب"
+    },
+    {
+      "id": 177,
+      "hanzi": "层",
+      "pinyin": "céng",
+      "meaningEn": "floor / layer",
+      "meaningAr": "طابق / طبقة"
+    },
+    {
+      "id": 178,
+      "hanzi": "差",
+      "pinyin": "chà",
+      "meaningEn": "poor / bad / differ",
+      "meaningAr": "سيئ / يختلف"
+    },
+    {
+      "id": 179,
+      "hanzi": "超市",
+      "pinyin": "chāoshì",
+      "meaningEn": "supermarket",
+      "meaningAr": "متجر كبير"
+    },
+    {
+      "id": 180,
+      "hanzi": "衬衫",
+      "pinyin": "chènshān",
+      "meaningEn": "shirt",
+      "meaningAr": "قميص"
+    },
+    {
+      "id": 181,
+      "hanzi": "成绩",
+      "pinyin": "chéngjì",
+      "meaningEn": "grade / result",
+      "meaningAr": "نقطة / نتيجة"
+    },
+    {
+      "id": 182,
+      "hanzi": "城市",
+      "pinyin": "chéngshì",
+      "meaningEn": "city",
+      "meaningAr": "مدينة"
+    },
+    {
+      "id": 183,
+      "hanzi": "迟到",
+      "pinyin": "chídào",
+      "meaningEn": "be late",
+      "meaningAr": "يتأخر"
+    },
+    {
+      "id": 184,
+      "hanzi": "出发",
+      "pinyin": "chūfā",
+      "meaningEn": "set off",
+      "meaningAr": "ينطلق"
+    },
+    {
+      "id": 185,
+      "hanzi": "除了",
+      "pinyin": "chúle",
+      "meaningEn": "besides / except",
+      "meaningAr": "بالإضافة إلى / باستثناء"
+    },
+    {
+      "id": 186,
+      "hanzi": "船",
+      "pinyin": "chuán",
+      "meaningEn": "boat",
+      "meaningAr": "قارب"
+    },
+    {
+      "id": 187,
+      "hanzi": "春",
+      "pinyin": "chūn",
+      "meaningEn": "spring",
+      "meaningAr": "الربيع"
+    },
+    {
+      "id": 188,
+      "hanzi": "词典",
+      "pinyin": "cídiǎn",
+      "meaningEn": "dictionary",
+      "meaningAr": "قاموس"
+    },
+    {
+      "id": 189,
+      "hanzi": "聪明",
+      "pinyin": "cōngming",
+      "meaningEn": "clever",
+      "meaningAr": "ذكي"
+    },
+    {
+      "id": 190,
+      "hanzi": "打扫",
+      "pinyin": "dǎsǎo",
+      "meaningEn": "clean",
+      "meaningAr": "ينظف"
+    },
+    {
+      "id": 191,
+      "hanzi": "打算",
+      "pinyin": "dǎsuàn",
+      "meaningEn": "plan / intend",
+      "meaningAr": "يخطط / ينوي"
+    },
+    {
+      "id": 192,
+      "hanzi": "带",
+      "pinyin": "dài",
+      "meaningEn": "bring / take",
+      "meaningAr": "يأخذ / يحمل"
+    },
+    {
+      "id": 193,
+      "hanzi": "担心",
+      "pinyin": "dānxīn",
+      "meaningEn": "worry",
+      "meaningAr": "يقلق"
+    },
+    {
+      "id": 194,
+      "hanzi": "蛋糕",
+      "pinyin": "dàngāo",
+      "meaningEn": "cake",
+      "meaningAr": "كعكة"
+    },
+    {
+      "id": 195,
+      "hanzi": "当然",
+      "pinyin": "dāngrán",
+      "meaningEn": "of course",
+      "meaningAr": "بالطبع"
+    },
+    {
+      "id": 196,
+      "hanzi": "地",
+      "pinyin": "de",
+      "meaningEn": "adverbial particle",
+      "meaningAr": "أداة نحوية"
+    },
+    {
+      "id": 197,
+      "hanzi": "地铁",
+      "pinyin": "dìtiě",
+      "meaningEn": "subway",
+      "meaningAr": "مترو"
+    },
+    {
+      "id": 198,
+      "hanzi": "地图",
+      "pinyin": "dìtú",
+      "meaningEn": "map",
+      "meaningAr": "خريطة"
+    },
+    {
+      "id": 199,
+      "hanzi": "电梯",
+      "pinyin": "diàntī",
+      "meaningEn": "elevator",
+      "meaningAr": "مصعد"
+    },
+    {
+      "id": 200,
+      "hanzi": "电子",
+      "pinyin": "diànzǐ",
+      "meaningEn": "electronic",
+      "meaningAr": "إلكتروني"
+    },
+    {
+      "id": 201,
+      "hanzi": "东西",
+      "pinyin": "dōngxi",
+      "meaningEn": "thing / object",
+      "meaningAr": "شيء"
+    },
+    {
+      "id": 202,
+      "hanzi": "动物",
+      "pinyin": "dòngwù",
+      "meaningEn": "animal",
+      "meaningAr": "حيوان"
+    },
+    {
+      "id": 203,
+      "hanzi": "段",
+      "pinyin": "duàn",
+      "meaningEn": "section / period",
+      "meaningAr": "مقطع / فترة"
+    },
+    {
+      "id": 204,
+      "hanzi": "锻炼",
+      "pinyin": "duànliàn",
+      "meaningEn": "exercise",
+      "meaningAr": "يتمرن"
+    },
+    {
+      "id": 205,
+      "hanzi": "多么",
+      "pinyin": "duōme",
+      "meaningEn": "how / so",
+      "meaningAr": "كم / إلى أي درجة"
+    },
+    {
+      "id": 206,
+      "hanzi": "饿",
+      "pinyin": "è",
+      "meaningEn": "hungry",
+      "meaningAr": "جائع"
+    },
+    {
+      "id": 207,
+      "hanzi": "而且",
+      "pinyin": "érqiě",
+      "meaningEn": "moreover",
+      "meaningAr": "بالإضافة إلى ذلك"
+    },
+    {
+      "id": 208,
+      "hanzi": "耳朵",
+      "pinyin": "ěrduo",
+      "meaningEn": "ear",
+      "meaningAr": "أذن"
+    },
+    {
+      "id": 209,
+      "hanzi": "发",
+      "pinyin": "fā",
+      "meaningEn": "send / issue",
+      "meaningAr": "يرسل"
+    },
+    {
+      "id": 210,
+      "hanzi": "发烧",
+      "pinyin": "fāshāo",
+      "meaningEn": "have a fever",
+      "meaningAr": "يصاب بالحمى"
+    },
+    {
+      "id": 211,
+      "hanzi": "发现",
+      "pinyin": "fāxiàn",
+      "meaningEn": "discover",
+      "meaningAr": "يكتشف"
+    },
+    {
+      "id": 212,
+      "hanzi": "方便",
+      "pinyin": "fāngbiàn",
+      "meaningEn": "convenient",
+      "meaningAr": "مريح / مناسب"
+    },
+    {
+      "id": 213,
+      "hanzi": "放",
+      "pinyin": "fàng",
+      "meaningEn": "put / place",
+      "meaningAr": "يضع"
+    },
+    {
+      "id": 214,
+      "hanzi": "放心",
+      "pinyin": "fàngxīn",
+      "meaningEn": "don't worry",
+      "meaningAr": "اطمئن"
+    },
+    {
+      "id": 215,
+      "hanzi": "分",
+      "pinyin": "fēn",
+      "meaningEn": "minute / point",
+      "meaningAr": "دقيقة / نقطة"
+    },
+    {
+      "id": 216,
+      "hanzi": "复习",
+      "pinyin": "fùxí",
+      "meaningEn": "review",
+      "meaningAr": "يراجع"
+    },
+    {
+      "id": 217,
+      "hanzi": "该",
+      "pinyin": "gāi",
+      "meaningEn": "should",
+      "meaningAr": "ينبغي"
+    },
+    {
+      "id": 218,
+      "hanzi": "干净",
+      "pinyin": "gānjìng",
+      "meaningEn": "clean",
+      "meaningAr": "نظيف"
+    },
+    {
+      "id": 219,
+      "hanzi": "感兴趣",
+      "pinyin": "gǎn xìngqù",
+      "meaningEn": "be interested",
+      "meaningAr": "مهتم"
+    },
+    {
+      "id": 220,
+      "hanzi": "感冒",
+      "pinyin": "gǎnmào",
+      "meaningEn": "cold",
+      "meaningAr": "زكام"
+    },
+    {
+      "id": 221,
+      "hanzi": "刚才",
+      "pinyin": "gāngcái",
+      "meaningEn": "just now",
+      "meaningAr": "منذ قليل"
+    },
+    {
+      "id": 222,
+      "hanzi": "个子",
+      "pinyin": "gèzi",
+      "meaningEn": "height / stature",
+      "meaningAr": "قامة"
+    },
+    {
+      "id": 223,
+      "hanzi": "根据",
+      "pinyin": "gēnjù",
+      "meaningEn": "according to",
+      "meaningAr": "بناءً على"
+    },
+    {
+      "id": 224,
+      "hanzi": "更",
+      "pinyin": "gèng",
+      "meaningEn": "even more",
+      "meaningAr": "أكثر"
+    },
+    {
+      "id": 225,
+      "hanzi": "公园",
+      "pinyin": "gōngyuán",
+      "meaningEn": "park",
+      "meaningAr": "حديقة"
+    },
+    {
+      "id": 226,
+      "hanzi": "故事",
+      "pinyin": "gùshi",
+      "meaningEn": "story",
+      "meaningAr": "قصة"
+    },
+    {
+      "id": 227,
+      "hanzi": "刮风",
+      "pinyin": "guāfēng",
+      "meaningEn": "wind blows",
+      "meaningAr": "تهب الرياح"
+    },
+    {
+      "id": 228,
+      "hanzi": "关心",
+      "pinyin": "guānxīn",
+      "meaningEn": "care about",
+      "meaningAr": "يهتم بـ"
+    },
+    {
+      "id": 229,
+      "hanzi": "关系",
+      "pinyin": "guānxi",
+      "meaningEn": "relationship",
+      "meaningAr": "علاقة"
+    },
+    {
+      "id": 230,
+      "hanzi": "关于",
+      "pinyin": "guānyú",
+      "meaningEn": "about / regarding",
+      "meaningAr": "حول / بشأن"
+    },
+    {
+      "id": 231,
+      "hanzi": "国家",
+      "pinyin": "guójiā",
+      "meaningEn": "country",
+      "meaningAr": "دولة"
+    },
+    {
+      "id": 232,
+      "hanzi": "过去",
+      "pinyin": "guòqù",
+      "meaningEn": "past / pass",
+      "meaningAr": "الماضي / يمر"
+    },
+    {
+      "id": 233,
+      "hanzi": "还是",
+      "pinyin": "háishi",
+      "meaningEn": "or / still",
+      "meaningAr": "أم / لا يزال"
+    },
+    {
+      "id": 234,
+      "hanzi": "害怕",
+      "pinyin": "hàipà",
+      "meaningEn": "afraid",
+      "meaningAr": "خائف"
+    },
+    {
+      "id": 235,
+      "hanzi": "黑",
+      "pinyin": "hēi",
+      "meaningEn": "black",
+      "meaningAr": "أسود"
+    },
+    {
+      "id": 236,
+      "hanzi": "后来",
+      "pinyin": "hòulái",
+      "meaningEn": "later",
+      "meaningAr": "لاحقًا"
+    },
+    {
+      "id": 237,
+      "hanzi": "护照",
+      "pinyin": "hùzhào",
+      "meaningEn": "passport",
+      "meaningAr": "جواز سفر"
+    },
+    {
+      "id": 238,
+      "hanzi": "花",
+      "pinyin": "huā",
+      "meaningEn": "flower / spend",
+      "meaningAr": "زهرة / ينفق"
+    },
+    {
+      "id": 239,
+      "hanzi": "花园",
+      "pinyin": "huāyuán",
+      "meaningEn": "garden",
+      "meaningAr": "حديقة"
+    },
+    {
+      "id": 240,
+      "hanzi": "画",
+      "pinyin": "huà",
+      "meaningEn": "draw / painting",
+      "meaningAr": "يرسم / لوحة"
+    },
+    {
+      "id": 241,
+      "hanzi": "坏",
+      "pinyin": "huài",
+      "meaningEn": "bad / broken",
+      "meaningAr": "سيئ / معطل"
+    },
+    {
+      "id": 242,
+      "hanzi": "欢迎",
+      "pinyin": "huānyíng",
+      "meaningEn": "welcome",
+      "meaningAr": "يرحب"
+    },
+    {
+      "id": 243,
+      "hanzi": "环境",
+      "pinyin": "huánjìng",
+      "meaningEn": "environment",
+      "meaningAr": "بيئة"
+    },
+    {
+      "id": 244,
+      "hanzi": "换",
+      "pinyin": "huàn",
+      "meaningEn": "change / exchange",
+      "meaningAr": "يغير / يستبدل"
+    },
+    {
+      "id": 245,
+      "hanzi": "黄河",
+      "pinyin": "Huáng Hé",
+      "meaningEn": "Yellow River",
+      "meaningAr": "النهر الأصفر"
+    },
+    {
+      "id": 246,
+      "hanzi": "回答",
+      "pinyin": "huídá",
+      "meaningEn": "answer",
+      "meaningAr": "يجيب"
+    },
+    {
+      "id": 247,
+      "hanzi": "会议",
+      "pinyin": "huìyì",
+      "meaningEn": "meeting",
+      "meaningAr": "اجتماع"
+    },
+    {
+      "id": 248,
+      "hanzi": "或者",
+      "pinyin": "huòzhě",
+      "meaningEn": "or",
+      "meaningAr": "أو"
+    },
+    {
+      "id": 249,
+      "hanzi": "几乎",
+      "pinyin": "jīhū",
+      "meaningEn": "almost",
+      "meaningAr": "تقريبًا"
+    },
+    {
+      "id": 250,
+      "hanzi": "机会",
+      "pinyin": "jīhuì",
+      "meaningEn": "opportunity",
+      "meaningAr": "فرصة"
+    },
+    {
+      "id": 251,
+      "hanzi": "极",
+      "pinyin": "jí",
+      "meaningEn": "extremely",
+      "meaningAr": "للغاية"
+    },
+    {
+      "id": 252,
+      "hanzi": "记得",
+      "pinyin": "jìde",
+      "meaningEn": "remember",
+      "meaningAr": "يتذكر"
+    },
+    {
+      "id": 253,
+      "hanzi": "季节",
+      "pinyin": "jìjié",
+      "meaningEn": "season",
+      "meaningAr": "فصل"
+    },
+    {
+      "id": 254,
+      "hanzi": "检查",
+      "pinyin": "jiǎnchá",
+      "meaningEn": "check / examine",
+      "meaningAr": "يفحص"
+    },
+    {
+      "id": 255,
+      "hanzi": "简单",
+      "pinyin": "jiǎndān",
+      "meaningEn": "simple",
+      "meaningAr": "بسيط"
+    },
+    {
+      "id": 256,
+      "hanzi": "健康",
+      "pinyin": "jiànkāng",
+      "meaningEn": "healthy / health",
+      "meaningAr": "صحة / صحي"
+    },
+    {
+      "id": 257,
+      "hanzi": "见面",
+      "pinyin": "jiànmiàn",
+      "meaningEn": "meet",
+      "meaningAr": "يلتقي"
+    },
+    {
+      "id": 258,
+      "hanzi": "讲",
+      "pinyin": "jiǎng",
+      "meaningEn": "speak / explain",
+      "meaningAr": "يتحدث / يشرح"
+    },
+    {
+      "id": 259,
+      "hanzi": "脚",
+      "pinyin": "jiǎo",
+      "meaningEn": "foot",
+      "meaningAr": "قدم"
+    },
+    {
+      "id": 260,
+      "hanzi": "角",
+      "pinyin": "jiǎo",
+      "meaningEn": "corner / angle",
+      "meaningAr": "زاوية"
+    },
+    {
+      "id": 261,
+      "hanzi": "接",
+      "pinyin": "jiē",
+      "meaningEn": "receive / pick up",
+      "meaningAr": "يستقبل"
+    },
+    {
+      "id": 262,
+      "hanzi": "街道",
+      "pinyin": "jiēdào",
+      "meaningEn": "street",
+      "meaningAr": "شارع"
+    },
+    {
+      "id": 263,
+      "hanzi": "节目",
+      "pinyin": "jiémù",
+      "meaningEn": "program / show",
+      "meaningAr": "برنامج"
+    },
+    {
+      "id": 264,
+      "hanzi": "节日",
+      "pinyin": "jiérì",
+      "meaningEn": "festival",
+      "meaningAr": "عيد / مناسبة"
+    },
+    {
+      "id": 265,
+      "hanzi": "解决",
+      "pinyin": "jiějué",
+      "meaningEn": "solve",
+      "meaningAr": "يحل"
+    },
+    {
+      "id": 266,
+      "hanzi": "借",
+      "pinyin": "jiè",
+      "meaningEn": "borrow / lend",
+      "meaningAr": "يستعير / يُعير"
+    },
+    {
+      "id": 267,
+      "hanzi": "经常",
+      "pinyin": "jīngcháng",
+      "meaningEn": "often",
+      "meaningAr": "غالبًا"
+    },
+    {
+      "id": 268,
+      "hanzi": "经过",
+      "pinyin": "jīngguò",
+      "meaningEn": "pass through",
+      "meaningAr": "يمر عبر"
+    },
+    {
+      "id": 269,
+      "hanzi": "经理",
+      "pinyin": "jīnglǐ",
+      "meaningEn": "manager",
+      "meaningAr": "مدير"
+    },
+    {
+      "id": 270,
+      "hanzi": "久",
+      "pinyin": "jiǔ",
+      "meaningEn": "long time",
+      "meaningAr": "مدة طويلة"
+    },
+    {
+      "id": 271,
+      "hanzi": "举行",
+      "pinyin": "jǔxíng",
+      "meaningEn": "hold / conduct",
+      "meaningAr": "يقيم"
+    },
+    {
+      "id": 272,
+      "hanzi": "句子",
+      "pinyin": "jùzi",
+      "meaningEn": "sentence",
+      "meaningAr": "جملة"
+    },
+    {
+      "id": 273,
+      "hanzi": "决定",
+      "pinyin": "juédìng",
+      "meaningEn": "decide / decision",
+      "meaningAr": "يقرر / قرار"
+    },
+    {
+      "id": 274,
+      "hanzi": "可爱",
+      "pinyin": "kě'ài",
+      "meaningEn": "cute / lovely",
+      "meaningAr": "لطيف"
+    },
+    {
+      "id": 275,
+      "hanzi": "渴",
+      "pinyin": "kě",
+      "meaningEn": "thirsty",
+      "meaningAr": "عطشان"
+    },
+    {
+      "id": 276,
+      "hanzi": "刻",
+      "pinyin": "kè",
+      "meaningEn": "quarter of an hour",
+      "meaningAr": "ربع ساعة"
+    },
+    {
+      "id": 277,
+      "hanzi": "空调",
+      "pinyin": "kōngtiáo",
+      "meaningEn": "air conditioner",
+      "meaningAr": "مكيف الهواء"
+    },
+    {
+      "id": 278,
+      "hanzi": "口",
+      "pinyin": "kǒu",
+      "meaningEn": "mouth",
+      "meaningAr": "فم"
+    },
+    {
+      "id": 279,
+      "hanzi": "哭",
+      "pinyin": "kū",
+      "meaningEn": "cry",
+      "meaningAr": "يبكي"
+    },
+    {
+      "id": 280,
+      "hanzi": "裤子",
+      "pinyin": "kùzi",
+      "meaningEn": "trousers",
+      "meaningAr": "سروال"
+    },
+    {
+      "id": 281,
+      "hanzi": "快乐",
+      "pinyin": "kuàilè",
+      "meaningEn": "happy",
+      "meaningAr": "سعيد"
+    },
+    {
+      "id": 282,
+      "hanzi": "筷子",
+      "pinyin": "kuàizi",
+      "meaningEn": "chopsticks",
+      "meaningAr": "عيدان الطعام"
+    },
+    {
+      "id": 283,
+      "hanzi": "蓝",
+      "pinyin": "lán",
+      "meaningEn": "blue",
+      "meaningAr": "أزرق"
+    },
+    {
+      "id": 284,
+      "hanzi": "老",
+      "pinyin": "lǎo",
+      "meaningEn": "old",
+      "meaningAr": "قديم / كبير السن"
+    },
+    {
+      "id": 285,
+      "hanzi": "离",
+      "pinyin": "lí",
+      "meaningEn": "away from",
+      "meaningAr": "بعيد عن"
+    },
+    {
+      "id": 286,
+      "hanzi": "礼物",
+      "pinyin": "lǐwù",
+      "meaningEn": "gift",
+      "meaningAr": "هدية"
+    },
+    {
+      "id": 287,
+      "hanzi": "历史",
+      "pinyin": "lìshǐ",
+      "meaningEn": "history",
+      "meaningAr": "تاريخ"
+    },
+    {
+      "id": 288,
+      "hanzi": "脸",
+      "pinyin": "liǎn",
+      "meaningEn": "face",
+      "meaningAr": "وجه"
+    },
+    {
+      "id": 289,
+      "hanzi": "练习",
+      "pinyin": "liànxí",
+      "meaningEn": "practice",
+      "meaningAr": "تمرين / يتدرب"
+    },
+    {
+      "id": 290,
+      "hanzi": "聊天",
+      "pinyin": "liáotiān",
+      "meaningEn": "chat",
+      "meaningAr": "يتحدث / دردشة"
+    },
+    {
+      "id": 291,
+      "hanzi": "邻居",
+      "pinyin": "línjū",
+      "meaningEn": "neighbor",
+      "meaningAr": "جار"
+    },
+    {
+      "id": 292,
+      "hanzi": "留学",
+      "pinyin": "liúxué",
+      "meaningEn": "study abroad",
+      "meaningAr": "يدرس بالخارج"
+    },
+    {
+      "id": 293,
+      "hanzi": "旅游",
+      "pinyin": "lǚyóu",
+      "meaningEn": "travel",
+      "meaningAr": "يسافر / سياحة"
+    },
+    {
+      "id": 294,
+      "hanzi": "旅行",
+      "pinyin": "lǚxíng",
+      "meaningEn": "travel / trip",
+      "meaningAr": "سفر / رحلة"
+    },
+    {
+      "id": 295,
+      "hanzi": "满",
+      "pinyin": "mǎn",
+      "meaningEn": "full",
+      "meaningAr": "ممتلئ"
+    },
+    {
+      "id": 296,
+      "hanzi": "满意",
+      "pinyin": "mǎnyì",
+      "meaningEn": "satisfied",
+      "meaningAr": "راضٍ"
+    },
+    {
+      "id": 297,
+      "hanzi": "帽子",
+      "pinyin": "màozi",
+      "meaningEn": "hat",
+      "meaningAr": "قبعة"
+    },
+    {
+      "id": 298,
+      "hanzi": "米",
+      "pinyin": "mǐ",
+      "meaningEn": "rice / meter",
+      "meaningAr": "أرز / متر"
+    },
+    {
+      "id": 299,
+      "hanzi": "面包",
+      "pinyin": "miànbāo",
+      "meaningEn": "bread",
+      "meaningAr": "خبز"
+    },
+    {
+      "id": 300,
+      "hanzi": "面条",
+      "pinyin": "miàntiáo",
+      "meaningEn": "noodles",
+      "meaningAr": "معكرونة / نودلز"
+    },
+    {
+      "id": 301,
+      "hanzi": "拿",
+      "pinyin": "ná",
+      "meaningEn": "take / hold",
+      "meaningAr": "يأخذ / يمسك"
+    },
+    {
+      "id": 302,
+      "hanzi": "南方",
+      "pinyin": "nánfāng",
+      "meaningEn": "south",
+      "meaningAr": "الجنوب"
+    },
+    {
+      "id": 303,
+      "hanzi": "年级",
+      "pinyin": "niánjí",
+      "meaningEn": "grade / year",
+      "meaningAr": "مستوى دراسي"
+    },
+    {
+      "id": 304,
+      "hanzi": "年轻",
+      "pinyin": "niánqīng",
+      "meaningEn": "young",
+      "meaningAr": "شاب"
+    },
+    {
+      "id": 305,
+      "hanzi": "鸟",
+      "pinyin": "niǎo",
+      "meaningEn": "bird",
+      "meaningAr": "طائر"
+    },
+    {
+      "id": 306,
+      "hanzi": "努力",
+      "pinyin": "nǔlì",
+      "meaningEn": "work hard",
+      "meaningAr": "يجتهد"
+    },
+    {
+      "id": 307,
+      "hanzi": "爬山",
+      "pinyin": "páshān",
+      "meaningEn": "climb a mountain",
+      "meaningAr": "يتسلق الجبل"
+    },
+    {
+      "id": 308,
+      "hanzi": "盘子",
+      "pinyin": "pánzi",
+      "meaningEn": "plate",
+      "meaningAr": "صحن"
+    },
+    {
+      "id": 309,
+      "hanzi": "胖",
+      "pinyin": "pàng",
+      "meaningEn": "fat",
+      "meaningAr": "سمين"
+    },
+    {
+      "id": 310,
+      "hanzi": "啤酒",
+      "pinyin": "píjiǔ",
+      "meaningEn": "beer",
+      "meaningAr": "بيرة"
+    },
+    {
+      "id": 311,
+      "hanzi": "皮鞋",
+      "pinyin": "píxié",
+      "meaningEn": "leather shoes",
+      "meaningAr": "حذاء جلدي"
+    },
+    {
+      "id": 312,
+      "hanzi": "瓶子",
+      "pinyin": "píngzi",
+      "meaningEn": "bottle",
+      "meaningAr": "زجاجة"
+    },
+    {
+      "id": 313,
+      "hanzi": "其实",
+      "pinyin": "qíshí",
+      "meaningEn": "actually",
+      "meaningAr": "في الواقع"
+    },
+    {
+      "id": 314,
+      "hanzi": "其他",
+      "pinyin": "qítā",
+      "meaningEn": "other",
+      "meaningAr": "آخر / أخرى"
+    },
+    {
+      "id": 315,
+      "hanzi": "奇怪",
+      "pinyin": "qíguài",
+      "meaningEn": "strange",
+      "meaningAr": "غريب"
+    },
+    {
+      "id": 316,
+      "hanzi": "骑",
+      "pinyin": "qí",
+      "meaningEn": "ride",
+      "meaningAr": "يركب"
+    },
+    {
+      "id": 317,
+      "hanzi": "起飞",
+      "pinyin": "qǐfēi",
+      "meaningEn": "take off",
+      "meaningAr": "تقلع الطائرة"
+    },
+    {
+      "id": 318,
+      "hanzi": "清楚",
+      "pinyin": "qīngchu",
+      "meaningEn": "clear",
+      "meaningAr": "واضح"
+    },
+    {
+      "id": 319,
+      "hanzi": "秋",
+      "pinyin": "qiū",
+      "meaningEn": "autumn",
+      "meaningAr": "الخريف"
+    },
+    {
+      "id": 320,
+      "hanzi": "裙子",
+      "pinyin": "qúnzi",
+      "meaningEn": "skirt",
+      "meaningAr": "تنورة"
+    },
+    {
+      "id": 321,
+      "hanzi": "然后",
+      "pinyin": "ránhòu",
+      "meaningEn": "then",
+      "meaningAr": "ثم"
+    },
+    {
+      "id": 322,
+      "hanzi": "热情",
+      "pinyin": "rèqíng",
+      "meaningEn": "enthusiastic / warm",
+      "meaningAr": "ودود / حماسي"
+    },
+    {
+      "id": 323,
+      "hanzi": "认真",
+      "pinyin": "rènzhēn",
+      "meaningEn": "serious / conscientious",
+      "meaningAr": "جاد"
+    },
+    {
+      "id": 324,
+      "hanzi": "容易",
+      "pinyin": "róngyì",
+      "meaningEn": "easy",
+      "meaningAr": "سهل"
+    },
+    {
+      "id": 325,
+      "hanzi": "如果",
+      "pinyin": "rúguǒ",
+      "meaningEn": "if",
+      "meaningAr": "إذا"
+    },
+    {
+      "id": 326,
+      "hanzi": "伞",
+      "pinyin": "sǎn",
+      "meaningEn": "umbrella",
+      "meaningAr": "مظلة"
+    },
+    {
+      "id": 327,
+      "hanzi": "上网",
+      "pinyin": "shàngwǎng",
+      "meaningEn": "go online",
+      "meaningAr": "يدخل الإنترنت"
+    },
+    {
+      "id": 328,
+      "hanzi": "生气",
+      "pinyin": "shēngqì",
+      "meaningEn": "angry",
+      "meaningAr": "غاضب"
+    },
+    {
+      "id": 329,
+      "hanzi": "声音",
+      "pinyin": "shēngyīn",
+      "meaningEn": "sound / voice",
+      "meaningAr": "صوت"
+    },
+    {
+      "id": 330,
+      "hanzi": "市",
+      "pinyin": "shì",
+      "meaningEn": "city",
+      "meaningAr": "مدينة"
+    },
+    {
+      "id": 331,
+      "hanzi": "世界",
+      "pinyin": "shìjiè",
+      "meaningEn": "world",
+      "meaningAr": "العالم"
+    },
+    {
+      "id": 332,
+      "hanzi": "试",
+      "pinyin": "shì",
+      "meaningEn": "try",
+      "meaningAr": "يجرب"
+    },
+    {
+      "id": 333,
+      "hanzi": "瘦",
+      "pinyin": "shòu",
+      "meaningEn": "thin",
+      "meaningAr": "نحيف"
+    },
+    {
+      "id": 334,
+      "hanzi": "舒服",
+      "pinyin": "shūfu",
+      "meaningEn": "comfortable",
+      "meaningAr": "مريح"
+    },
+    {
+      "id": 335,
+      "hanzi": "数学",
+      "pinyin": "shùxué",
+      "meaningEn": "mathematics",
+      "meaningAr": "الرياضيات"
+    },
+    {
+      "id": 336,
+      "hanzi": "刷牙",
+      "pinyin": "shuāyá",
+      "meaningEn": "brush teeth",
+      "meaningAr": "ينظف الأسنان"
+    },
+    {
+      "id": 337,
+      "hanzi": "双",
+      "pinyin": "shuāng",
+      "meaningEn": "pair",
+      "meaningAr": "زوج"
+    },
+    {
+      "id": 338,
+      "hanzi": "水平",
+      "pinyin": "shuǐpíng",
+      "meaningEn": "level",
+      "meaningAr": "مستوى"
+    },
+    {
+      "id": 339,
+      "hanzi": "司机",
+      "pinyin": "sījī",
+      "meaningEn": "driver",
+      "meaningAr": "سائق"
+    },
+    {
+      "id": 340,
+      "hanzi": "特别",
+      "pinyin": "tèbié",
+      "meaningEn": "especially / special",
+      "meaningAr": "خصوصًا / خاص"
+    },
+    {
+      "id": 341,
+      "hanzi": "体育",
+      "pinyin": "tǐyù",
+      "meaningEn": "sports / PE",
+      "meaningAr": "الرياضة"
+    },
+    {
+      "id": 342,
+      "hanzi": "同事",
+      "pinyin": "tóngshì",
+      "meaningEn": "colleague",
+      "meaningAr": "زميل العمل"
+    },
+    {
+      "id": 343,
+      "hanzi": "同意",
+      "pinyin": "tóngyì",
+      "meaningEn": "agree",
+      "meaningAr": "يوافق"
+    },
+    {
+      "id": 344,
+      "hanzi": "头发",
+      "pinyin": "tóufa",
+      "meaningEn": "hair",
+      "meaningAr": "شعر"
+    },
+    {
+      "id": 345,
+      "hanzi": "突然",
+      "pinyin": "tūrán",
+      "meaningEn": "suddenly",
+      "meaningAr": "فجأة"
+    },
+    {
+      "id": 346,
+      "hanzi": "图书馆",
+      "pinyin": "túshūguǎn",
+      "meaningEn": "library",
+      "meaningAr": "مكتبة"
+    },
+    {
+      "id": 347,
+      "hanzi": "腿",
+      "pinyin": "tuǐ",
+      "meaningEn": "leg",
+      "meaningAr": "ساق"
+    },
+    {
+      "id": 348,
+      "hanzi": "完成",
+      "pinyin": "wánchéng",
+      "meaningEn": "complete",
+      "meaningAr": "يكمل"
+    },
+    {
+      "id": 349,
+      "hanzi": "忘记",
+      "pinyin": "wàngjì",
+      "meaningEn": "forget",
+      "meaningAr": "ينسى"
+    },
+    {
+      "id": 350,
+      "hanzi": "为",
+      "pinyin": "wèi",
+      "meaningEn": "for",
+      "meaningAr": "من أجل"
+    },
+    {
+      "id": 351,
+      "hanzi": "为了",
+      "pinyin": "wèile",
+      "meaningEn": "in order to",
+      "meaningAr": "من أجل"
+    },
+    {
+      "id": 352,
+      "hanzi": "位",
+      "pinyin": "wèi",
+      "meaningEn": "polite measure word",
+      "meaningAr": "أداة عد للأشخاص"
+    },
+    {
+      "id": 353,
+      "hanzi": "无",
+      "pinyin": "wú",
+      "meaningEn": "without / none",
+      "meaningAr": "بدون"
+    },
+    {
+      "id": 354,
+      "hanzi": "西方",
+      "pinyin": "xīfāng",
+      "meaningEn": "West",
+      "meaningAr": "الغرب"
+    },
+    {
+      "id": 355,
+      "hanzi": "洗澡",
+      "pinyin": "xǐzǎo",
+      "meaningEn": "take a shower",
+      "meaningAr": "يستحم"
+    },
+    {
+      "id": 356,
+      "hanzi": "夏",
+      "pinyin": "xià",
+      "meaningEn": "summer",
+      "meaningAr": "الصيف"
+    },
+    {
+      "id": 357,
+      "hanzi": "先",
+      "pinyin": "xiān",
+      "meaningEn": "first",
+      "meaningAr": "أولًا"
+    },
+    {
+      "id": 358,
+      "hanzi": "香蕉",
+      "pinyin": "xiāngjiāo",
+      "meaningEn": "banana",
+      "meaningAr": "موز"
+    },
+    {
+      "id": 359,
+      "hanzi": "相信",
+      "pinyin": "xiāngxìn",
+      "meaningEn": "believe / trust",
+      "meaningAr": "يصدق / يثق"
+    },
+    {
+      "id": 360,
+      "hanzi": "像",
+      "pinyin": "xiàng",
+      "meaningEn": "resemble / like",
+      "meaningAr": "يشبه"
+    },
+    {
+      "id": 361,
+      "hanzi": "小心",
+      "pinyin": "xiǎoxīn",
+      "meaningEn": "be careful",
+      "meaningAr": "انتبه"
+    },
+    {
+      "id": 362,
+      "hanzi": "校长",
+      "pinyin": "xiàozhǎng",
+      "meaningEn": "principal",
+      "meaningAr": "مدير المدرسة"
+    },
+    {
+      "id": 363,
+      "hanzi": "鞋",
+      "pinyin": "xié",
+      "meaningEn": "shoes",
+      "meaningAr": "حذاء"
+    },
+    {
+      "id": 364,
+      "hanzi": "心情",
+      "pinyin": "xīnqíng",
+      "meaningEn": "mood",
+      "meaningAr": "مزاج"
+    },
+    {
+      "id": 365,
+      "hanzi": "新闻",
+      "pinyin": "xīnwén",
+      "meaningEn": "news",
+      "meaningAr": "أخبار"
+    },
+    {
+      "id": 366,
+      "hanzi": "新闻记者",
+      "pinyin": "xīnwén jìzhě",
+      "meaningEn": "journalist",
+      "meaningAr": "صحفي"
+    },
+    {
+      "id": 367,
+      "hanzi": "选择",
+      "pinyin": "xuǎnzé",
+      "meaningEn": "choose",
+      "meaningAr": "يختار"
+    },
+    {
+      "id": 368,
+      "hanzi": "眼睛",
+      "pinyin": "yǎnjing",
+      "meaningEn": "eyes",
+      "meaningAr": "عيون"
+    },
+    {
+      "id": 369,
+      "hanzi": "要求",
+      "pinyin": "yāoqiú",
+      "meaningEn": "require / demand",
+      "meaningAr": "يطلب / متطلبات"
+    },
+    {
+      "id": 370,
+      "hanzi": "一共",
+      "pinyin": "yígòng",
+      "meaningEn": "altogether",
+      "meaningAr": "إجمالًا"
+    },
+    {
+      "id": 371,
+      "hanzi": "一定",
+      "pinyin": "yídìng",
+      "meaningEn": "certainly / definitely",
+      "meaningAr": "بالتأكيد"
+    },
+    {
+      "id": 372,
+      "hanzi": "一直",
+      "pinyin": "yìzhí",
+      "meaningEn": "continuously / always",
+      "meaningAr": "دائمًا / باستمرار"
+    },
+    {
+      "id": 373,
+      "hanzi": "一边",
+      "pinyin": "yìbiān",
+      "meaningEn": "while",
+      "meaningAr": "بينما"
+    },
+    {
+      "id": 374,
+      "hanzi": "音乐",
+      "pinyin": "yīnyuè",
+      "meaningEn": "music",
+      "meaningAr": "موسيقى"
+    },
+    {
+      "id": 375,
+      "hanzi": "银行",
+      "pinyin": "yínháng",
+      "meaningEn": "bank",
+      "meaningAr": "بنك"
+    },
+    {
+      "id": 376,
+      "hanzi": "饮料",
+      "pinyin": "yǐnliào",
+      "meaningEn": "beverage",
+      "meaningAr": "مشروب"
+    },
+    {
+      "id": 377,
+      "hanzi": "用",
+      "pinyin": "yòng",
+      "meaningEn": "use",
+      "meaningAr": "يستخدم"
+    },
+    {
+      "id": 378,
+      "hanzi": "邮件",
+      "pinyin": "yóujiàn",
+      "meaningEn": "mail / email",
+      "meaningAr": "بريد"
+    },
+    {
+      "id": 379,
+      "hanzi": "有名",
+      "pinyin": "yǒumíng",
+      "meaningEn": "famous",
+      "meaningAr": "مشهور"
+    },
+    {
+      "id": 380,
+      "hanzi": "又",
+      "pinyin": "yòu",
+      "meaningEn": "again / both",
+      "meaningAr": "مرة أخرى / أيضًا"
+    },
+    {
+      "id": 381,
+      "hanzi": "遇到",
+      "pinyin": "yùdào",
+      "meaningEn": "encounter",
+      "meaningAr": "يصادف"
+    },
+    {
+      "id": 382,
+      "hanzi": "愿意",
+      "pinyin": "yuànyì",
+      "meaningEn": "be willing",
+      "meaningAr": "يرغب / مستعد"
+    },
+    {
+      "id": 383,
+      "hanzi": "越",
+      "pinyin": "yuè",
+      "meaningEn": "increasingly / more",
+      "meaningAr": "أكثر / كلما"
+    },
+    {
+      "id": 384,
+      "hanzi": "越来越",
+      "pinyin": "yuèláiyuè",
+      "meaningEn": "more and more",
+      "meaningAr": "أكثر فأكثر"
+    },
+    {
+      "id": 385,
+      "hanzi": "站",
+      "pinyin": "zhàn",
+      "meaningEn": "station / stand",
+      "meaningAr": "محطة / يقف"
+    },
+    {
+      "id": 386,
+      "hanzi": "着急",
+      "pinyin": "zháojí",
+      "meaningEn": "anxious / worried",
+      "meaningAr": "قلق / مستعجل"
+    },
+    {
+      "id": 387,
+      "hanzi": "照顾",
+      "pinyin": "zhàogù",
+      "meaningEn": "take care of",
+      "meaningAr": "يعتني بـ"
+    },
+    {
+      "id": 388,
+      "hanzi": "照片",
+      "pinyin": "zhàopiàn",
+      "meaningEn": "photo",
+      "meaningAr": "صورة"
+    },
+    {
+      "id": 389,
+      "hanzi": "重要",
+      "pinyin": "zhòngyào",
+      "meaningEn": "important",
+      "meaningAr": "مهم"
+    },
+    {
+      "id": 390,
+      "hanzi": "注意",
+      "pinyin": "zhùyì",
+      "meaningEn": "pay attention",
+      "meaningAr": "ينتبه"
+    },
+    {
+      "id": 391,
+      "hanzi": "爱情",
+      "pinyin": "àiqíng",
+      "meaningEn": "love",
+      "meaningAr": "الحب",
+      "approx": "آي تشينغ"
+    },
+    {
+      "id": 392,
+      "hanzi": "安全",
+      "pinyin": "ānquán",
+      "meaningEn": "safe/safety",
+      "meaningAr": "آمن/أمان",
+      "approx": "آن تشيوان"
+    },
+    {
+      "id": 393,
+      "hanzi": "按时",
+      "pinyin": "ànshí",
+      "meaningEn": "on time",
+      "meaningAr": "في الموعد",
+      "approx": "آن شِ"
+    },
+    {
+      "id": 394,
+      "hanzi": "按照",
+      "pinyin": "ànzhào",
+      "meaningEn": "according to",
+      "meaningAr": "وفقًا لـ",
+      "approx": "آن جاو"
+    },
+    {
+      "id": 395,
+      "hanzi": "百分之",
+      "pinyin": "bǎifēnzhī",
+      "meaningEn": "percent",
+      "meaningAr": "بالمئة",
+      "approx": "باي فِن جِ"
+    },
+    {
+      "id": 396,
+      "hanzi": "棒",
+      "pinyin": "bàng",
+      "meaningEn": "excellent",
+      "meaningAr": "ممتاز",
+      "approx": "بانغ"
+    },
+    {
+      "id": 397,
+      "hanzi": "保证",
+      "pinyin": "bǎozhèng",
+      "meaningEn": "guarantee",
+      "meaningAr": "يضمن",
+      "approx": "باو جِنغ"
+    },
+    {
+      "id": 398,
+      "hanzi": "抱",
+      "pinyin": "bào",
+      "meaningEn": "hug/hold",
+      "meaningAr": "يعانق/يحمل",
+      "approx": "باو"
+    },
+    {
+      "id": 399,
+      "hanzi": "抱歉",
+      "pinyin": "bàoqiàn",
+      "meaningEn": "sorry",
+      "meaningAr": "آسف",
+      "approx": "باو تشيِن"
+    },
+    {
+      "id": 400,
+      "hanzi": "保护",
+      "pinyin": "bǎohù",
+      "meaningEn": "protect",
+      "meaningAr": "يحمي",
+      "approx": "باو خو"
+    },
+    {
+      "id": 401,
+      "hanzi": "保留",
+      "pinyin": "bǎoliú",
+      "meaningEn": "keep/reserve",
+      "meaningAr": "يحتفظ",
+      "approx": "باو ليو"
+    },
+    {
+      "id": 402,
+      "hanzi": "报道",
+      "pinyin": "bàodào",
+      "meaningEn": "report",
+      "meaningAr": "تقرير/يُبلغ",
+      "approx": "باو داو"
+    },
+    {
+      "id": 403,
+      "hanzi": "报名",
+      "pinyin": "bàomíng",
+      "meaningEn": "register",
+      "meaningAr": "يسجل",
+      "approx": "باو مينغ"
+    },
+    {
+      "id": 404,
+      "hanzi": "倍",
+      "pinyin": "bèi",
+      "meaningEn": "times",
+      "meaningAr": "ضعف/مرات",
+      "approx": "باي"
+    },
+    {
+      "id": 405,
+      "hanzi": "本来",
+      "pinyin": "běnlái",
+      "meaningEn": "originally",
+      "meaningAr": "في الأصل",
+      "approx": "بِن لاي"
+    },
+    {
+      "id": 406,
+      "hanzi": "笨",
+      "pinyin": "bèn",
+      "meaningEn": "stupid",
+      "meaningAr": "غبي",
+      "approx": "بِن"
+    },
+    {
+      "id": 407,
+      "hanzi": "比如",
+      "pinyin": "bǐrú",
+      "meaningEn": "for example",
+      "meaningAr": "مثلًا",
+      "approx": "بي رو"
+    },
+    {
+      "id": 408,
+      "hanzi": "毕业",
+      "pinyin": "bìyè",
+      "meaningEn": "graduate",
+      "meaningAr": "يتخرج",
+      "approx": "بي يِه"
+    },
+    {
+      "id": 409,
+      "hanzi": "遍",
+      "pinyin": "biàn",
+      "meaningEn": "time (occurrence)",
+      "meaningAr": "مرة",
+      "approx": "بيِن"
+    },
+    {
+      "id": 410,
+      "hanzi": "标准",
+      "pinyin": "biāozhǔn",
+      "meaningEn": "standard",
+      "meaningAr": "معيار",
+      "approx": "بياو جون"
+    },
+    {
+      "id": 411,
+      "hanzi": "表格",
+      "pinyin": "biǎogé",
+      "meaningEn": "form/table",
+      "meaningAr": "جدول/استمارة",
+      "approx": "بياو قه"
+    },
+    {
+      "id": 412,
+      "hanzi": "表扬",
+      "pinyin": "biǎoyáng",
+      "meaningEn": "praise",
+      "meaningAr": "يمدح",
+      "approx": "بياو يانغ"
+    },
+    {
+      "id": 413,
+      "hanzi": "饼干",
+      "pinyin": "bǐnggān",
+      "meaningEn": "biscuit",
+      "meaningAr": "بسكويت",
+      "approx": "بينغ غان"
+    },
+    {
+      "id": 414,
+      "hanzi": "博士",
+      "pinyin": "bóshì",
+      "meaningEn": "doctorate/PhD",
+      "meaningAr": "دكتوراه",
+      "approx": "بوه شِ"
+    },
+    {
+      "id": 415,
+      "hanzi": "不得不",
+      "pinyin": "bùdébù",
+      "meaningEn": "have to",
+      "meaningAr": "مضطر إلى",
+      "approx": "بو ده بو"
+    },
+    {
+      "id": 416,
+      "hanzi": "不管",
+      "pinyin": "bùguǎn",
+      "meaningEn": "no matter",
+      "meaningAr": "مهما",
+      "approx": "بو قوان"
+    },
+    {
+      "id": 417,
+      "hanzi": "不仅",
+      "pinyin": "bùjǐn",
+      "meaningEn": "not only",
+      "meaningAr": "ليس فقط",
+      "approx": "بو جين"
+    },
+    {
+      "id": 418,
+      "hanzi": "部门",
+      "pinyin": "bùmén",
+      "meaningEn": "department",
+      "meaningAr": "قسم",
+      "approx": "بو مِن"
+    },
+    {
+      "id": 419,
+      "hanzi": "材料",
+      "pinyin": "cáiliào",
+      "meaningEn": "material",
+      "meaningAr": "مادة/وثيقة",
+      "approx": "تساي لياو"
+    },
+    {
+      "id": 420,
+      "hanzi": "参观",
+      "pinyin": "cānguān",
+      "meaningEn": "visit",
+      "meaningAr": "يزور",
+      "approx": "تسان قوان"
+    },
+    {
+      "id": 421,
+      "hanzi": "差不多",
+      "pinyin": "chàbuduō",
+      "meaningEn": "almost/about",
+      "meaningAr": "تقريبًا",
+      "approx": "تشا بو دوو"
+    },
+    {
+      "id": 422,
+      "hanzi": "长城",
+      "pinyin": "Chángchéng",
+      "meaningEn": "Great Wall",
+      "meaningAr": "سور الصين العظيم",
+      "approx": "تشانغ تشنغ"
+    },
+    {
+      "id": 423,
+      "hanzi": "长江",
+      "pinyin": "Chángjiāng",
+      "meaningEn": "Yangtze River",
+      "meaningAr": "نهر اليانغتسي",
+      "approx": "تشانغ جيانغ"
+    },
+    {
+      "id": 424,
+      "hanzi": "尝",
+      "pinyin": "cháng",
+      "meaningEn": "taste",
+      "meaningAr": "يتذوق",
+      "approx": "تشانغ"
+    },
+    {
+      "id": 425,
+      "hanzi": "超过",
+      "pinyin": "chāoguò",
+      "meaningEn": "exceed",
+      "meaningAr": "يتجاوز",
+      "approx": "تشاو قوه"
+    },
+    {
+      "id": 426,
+      "hanzi": "成功",
+      "pinyin": "chénggōng",
+      "meaningEn": "succeed",
+      "meaningAr": "ينجح",
+      "approx": "تشنغ غونغ"
+    },
+    {
+      "id": 427,
+      "hanzi": "成为",
+      "pinyin": "chéngwéi",
+      "meaningEn": "become",
+      "meaningAr": "يصبح",
+      "approx": "تشنغ وي"
+    },
+    {
+      "id": 428,
+      "hanzi": "诚实",
+      "pinyin": "chéngshí",
+      "meaningEn": "honest",
+      "meaningAr": "صادق",
+      "approx": "تشنغ شِ"
+    },
+    {
+      "id": 429,
+      "hanzi": "吃惊",
+      "pinyin": "chījīng",
+      "meaningEn": "surprised",
+      "meaningAr": "متفاجئ",
+      "approx": "تشِ جينغ"
+    },
+    {
+      "id": 430,
+      "hanzi": "重新",
+      "pinyin": "chóngxīn",
+      "meaningEn": "again/重新",
+      "meaningAr": "من جديد",
+      "approx": "تشونغ شين"
+    },
+    {
+      "id": 431,
+      "hanzi": "抽烟",
+      "pinyin": "chōuyān",
+      "meaningEn": "smoke",
+      "meaningAr": "يدخن",
+      "approx": "تشو يان"
+    },
+    {
+      "id": 432,
+      "hanzi": "出差",
+      "pinyin": "chūchāi",
+      "meaningEn": "business trip",
+      "meaningAr": "سفر عمل",
+      "approx": "تشو تشاي"
+    },
+    {
+      "id": 433,
+      "hanzi": "出现",
+      "pinyin": "chūxiàn",
+      "meaningEn": "appear",
+      "meaningAr": "يظهر",
+      "approx": "تشو شيان"
+    },
+    {
+      "id": 434,
+      "hanzi": "出生",
+      "pinyin": "chūshēng",
+      "meaningEn": "be born",
+      "meaningAr": "يولد",
+      "approx": "تشو شنغ"
+    },
+    {
+      "id": 435,
+      "hanzi": "出门",
+      "pinyin": "chūmén",
+      "meaningEn": "go out",
+      "meaningAr": "يخرج",
+      "approx": "تشو مِن"
+    },
+    {
+      "id": 436,
+      "hanzi": "传真",
+      "pinyin": "chuánzhēn",
+      "meaningEn": "fax",
+      "meaningAr": "فاكس",
+      "approx": "تشوان جِن"
+    },
+    {
+      "id": 437,
+      "hanzi": "从来",
+      "pinyin": "cónglái",
+      "meaningEn": "always/ever",
+      "meaningAr": "أبدًا/دائمًا",
+      "approx": "تسونغ لاي"
+    },
+    {
+      "id": 438,
+      "hanzi": "粗心",
+      "pinyin": "cūxīn",
+      "meaningEn": "careless",
+      "meaningAr": "مهمل",
+      "approx": "تسو شين"
+    },
+    {
+      "id": 439,
+      "hanzi": "答案",
+      "pinyin": "dá'àn",
+      "meaningEn": "answer",
+      "meaningAr": "إجابة",
+      "approx": "دا آن"
+    },
+    {
+      "id": 440,
+      "hanzi": "打扮",
+      "pinyin": "dǎban",
+      "meaningEn": "dress up",
+      "meaningAr": "يتأنق",
+      "approx": "دا بان"
+    },
+    {
+      "id": 441,
+      "hanzi": "打扰",
+      "pinyin": "dǎrǎo",
+      "meaningEn": "disturb",
+      "meaningAr": "يزعج",
+      "approx": "دا راو"
+    },
+    {
+      "id": 442,
+      "hanzi": "打印",
+      "pinyin": "dǎyìn",
+      "meaningEn": "print",
+      "meaningAr": "يطبع",
+      "approx": "دا يين"
+    },
+    {
+      "id": 443,
+      "hanzi": "打折",
+      "pinyin": "dǎzhé",
+      "meaningEn": "discount",
+      "meaningAr": "تخفيض",
+      "approx": "دا جِه"
+    },
+    {
+      "id": 444,
+      "hanzi": "打针",
+      "pinyin": "dǎzhēn",
+      "meaningEn": "get injection",
+      "meaningAr": "يأخذ حقنة",
+      "approx": "دا جِن"
+    },
+    {
+      "id": 445,
+      "hanzi": "大概",
+      "pinyin": "dàgài",
+      "meaningEn": "approximately",
+      "meaningAr": "تقريبًا",
+      "approx": "دا غاي"
+    },
+    {
+      "id": 446,
+      "hanzi": "大使馆",
+      "pinyin": "dàshǐguǎn",
+      "meaningEn": "embassy",
+      "meaningAr": "سفارة",
+      "approx": "دا شِ قوان"
+    },
+    {
+      "id": 447,
+      "hanzi": "大约",
+      "pinyin": "dàyuē",
+      "meaningEn": "about",
+      "meaningAr": "حوالي",
+      "approx": "دا يويه"
+    },
+    {
+      "id": 448,
+      "hanzi": "戴",
+      "pinyin": "dài",
+      "meaningEn": "wear",
+      "meaningAr": "يرتدي",
+      "approx": "داي"
+    },
+    {
+      "id": 449,
+      "hanzi": "代表",
+      "pinyin": "dàibiǎo",
+      "meaningEn": "represent",
+      "meaningAr": "يمثل",
+      "approx": "داي بياو"
+    },
+    {
+      "id": 450,
+      "hanzi": "代替",
+      "pinyin": "dàitì",
+      "meaningEn": "replace",
+      "meaningAr": "يستبدل",
+      "approx": "داي تي"
+    },
+    {
+      "id": 451,
+      "hanzi": "当时",
+      "pinyin": "dāngshí",
+      "meaningEn": "at that time",
+      "meaningAr": "في ذلك الوقت",
+      "approx": "دانغ شِ"
+    },
+    {
+      "id": 452,
+      "hanzi": "当心",
+      "pinyin": "dāngxīn",
+      "meaningEn": "be careful",
+      "meaningAr": "انتبه",
+      "approx": "دانغ شين"
+    },
+    {
+      "id": 453,
+      "hanzi": "导游",
+      "pinyin": "dǎoyóu",
+      "meaningEn": "tour guide",
+      "meaningAr": "مرشد سياحي",
+      "approx": "داو يو"
+    },
+    {
+      "id": 454,
+      "hanzi": "到处",
+      "pinyin": "dàochù",
+      "meaningEn": "everywhere",
+      "meaningAr": "في كل مكان",
+      "approx": "داو تشو"
+    },
+    {
+      "id": 455,
+      "hanzi": "到底",
+      "pinyin": "dàodǐ",
+      "meaningEn": "after all/exactly",
+      "meaningAr": "في النهاية/بالضبط",
+      "approx": "داو دي"
+    },
+    {
+      "id": 456,
+      "hanzi": "道歉",
+      "pinyin": "dàoqiàn",
+      "meaningEn": "apologize",
+      "meaningAr": "يعتذر",
+      "approx": "داو تشيِن"
+    },
+    {
+      "id": 457,
+      "hanzi": "得意",
+      "pinyin": "déyì",
+      "meaningEn": "proud/satisfied",
+      "meaningAr": "مغرور/مسرور",
+      "approx": "ده يي"
+    },
+    {
+      "id": 458,
+      "hanzi": "登机牌",
+      "pinyin": "dēngjīpái",
+      "meaningEn": "boarding pass",
+      "meaningAr": "بطاقة الصعود",
+      "approx": "دنغ جي باي"
+    },
+    {
+      "id": 459,
+      "hanzi": "等等",
+      "pinyin": "děngděng",
+      "meaningEn": "etc./wait",
+      "meaningAr": "إلخ/انتظر",
+      "approx": "دنغ دنغ"
+    },
+    {
+      "id": 460,
+      "hanzi": "底",
+      "pinyin": "dǐ",
+      "meaningEn": "bottom",
+      "meaningAr": "أسفل",
+      "approx": "دي"
+    },
+    {
+      "id": 461,
+      "hanzi": "地球",
+      "pinyin": "dìqiú",
+      "meaningEn": "Earth",
+      "meaningAr": "الأرض",
+      "approx": "دي تشيو"
+    },
+    {
+      "id": 462,
+      "hanzi": "地址",
+      "pinyin": "dìzhǐ",
+      "meaningEn": "address",
+      "meaningAr": "عنوان",
+      "approx": "دي جِ"
+    },
+    {
+      "id": 463,
+      "hanzi": "掉",
+      "pinyin": "diào",
+      "meaningEn": "fall/drop",
+      "meaningAr": "يسقط",
+      "approx": "دياو"
+    },
+    {
+      "id": 464,
+      "hanzi": "调查",
+      "pinyin": "diàochá",
+      "meaningEn": "investigate",
+      "meaningAr": "يحقق/يستطلع",
+      "approx": "دياو تشا"
+    },
+    {
+      "id": 465,
+      "hanzi": "丢",
+      "pinyin": "diū",
+      "meaningEn": "lose/throw away",
+      "meaningAr": "يضيع",
+      "approx": "ديو"
+    },
+    {
+      "id": 466,
+      "hanzi": "动作",
+      "pinyin": "dòngzuò",
+      "meaningEn": "movement/action",
+      "meaningAr": "حركة",
+      "approx": "دونغ زووه"
+    },
+    {
+      "id": 467,
+      "hanzi": "堵车",
+      "pinyin": "dǔchē",
+      "meaningEn": "traffic jam",
+      "meaningAr": "ازدحام المرور",
+      "approx": "دو تشه"
+    },
+    {
+      "id": 468,
+      "hanzi": "肚子",
+      "pinyin": "dùzi",
+      "meaningEn": "belly/stomach",
+      "meaningAr": "بطن",
+      "approx": "دو زِ"
+    },
+    {
+      "id": 469,
+      "hanzi": "短信",
+      "pinyin": "duǎnxìn",
+      "meaningEn": "text message",
+      "meaningAr": "رسالة نصية",
+      "approx": "دوان شين"
+    },
+    {
+      "id": 470,
+      "hanzi": "对话",
+      "pinyin": "duìhuà",
+      "meaningEn": "dialogue",
+      "meaningAr": "حوار",
+      "approx": "دوي هوا"
+    },
+    {
+      "id": 471,
+      "hanzi": "对于",
+      "pinyin": "duìyú",
+      "meaningEn": "regarding",
+      "meaningAr": "بالنسبة إلى",
+      "approx": "دوي يو"
+    },
+    {
+      "id": 472,
+      "hanzi": "儿童",
+      "pinyin": "értóng",
+      "meaningEn": "child",
+      "meaningAr": "طفل",
+      "approx": "أر تونغ"
+    },
+    {
+      "id": 473,
+      "hanzi": "法律",
+      "pinyin": "fǎlǜ",
+      "meaningEn": "law",
+      "meaningAr": "قانون",
+      "approx": "فا لوي"
+    },
+    {
+      "id": 474,
+      "hanzi": "翻译",
+      "pinyin": "fānyì",
+      "meaningEn": "translate/translation",
+      "meaningAr": "ترجمة",
+      "approx": "فان يي"
+    },
+    {
+      "id": 475,
+      "hanzi": "烦恼",
+      "pinyin": "fánnǎo",
+      "meaningEn": "worry/trouble",
+      "meaningAr": "قلق/مشكلة",
+      "approx": "فان ناو"
+    },
+    {
+      "id": 476,
+      "hanzi": "反对",
+      "pinyin": "fǎnduì",
+      "meaningEn": "oppose",
+      "meaningAr": "يعارض",
+      "approx": "فان دوي"
+    },
+    {
+      "id": 477,
+      "hanzi": "方法",
+      "pinyin": "fāngfǎ",
+      "meaningEn": "method",
+      "meaningAr": "طريقة",
+      "approx": "فانغ فا"
+    },
+    {
+      "id": 478,
+      "hanzi": "方面",
+      "pinyin": "fāngmiàn",
+      "meaningEn": "aspect",
+      "meaningAr": "جانب",
+      "approx": "فانغ ميان"
+    },
+    {
+      "id": 479,
+      "hanzi": "房东",
+      "pinyin": "fángdōng",
+      "meaningEn": "landlord",
+      "meaningAr": "مالك العقار",
+      "approx": "فانغ دونغ"
+    },
+    {
+      "id": 480,
+      "hanzi": "放弃",
+      "pinyin": "fàngqì",
+      "meaningEn": "give up",
+      "meaningAr": "يستسلم/يتخلى",
+      "approx": "فانغ تشي"
+    },
+    {
+      "id": 481,
+      "hanzi": "放暑假",
+      "pinyin": "fàng shǔjià",
+      "meaningEn": "have summer vacation",
+      "meaningAr": "عطلة صيفية",
+      "approx": "فانغ شو جيا"
+    },
+    {
+      "id": 482,
+      "hanzi": "分之",
+      "pinyin": "fēnzhī",
+      "meaningEn": "fraction/percent",
+      "meaningAr": "من",
+      "approx": "فِن جِ"
+    },
+    {
+      "id": 483,
+      "hanzi": "丰富",
+      "pinyin": "fēngfù",
+      "meaningEn": "rich/abundant",
+      "meaningAr": "غني/وفير",
+      "approx": "فنغ فو"
+    },
+    {
+      "id": 484,
+      "hanzi": "否则",
+      "pinyin": "fǒuzé",
+      "meaningEn": "otherwise",
+      "meaningAr": "وإلا",
+      "approx": "فوو زه"
+    },
+    {
+      "id": 485,
+      "hanzi": "复印",
+      "pinyin": "fùyìn",
+      "meaningEn": "photocopy",
+      "meaningAr": "يصور/ينسخ",
+      "approx": "فو يين"
+    },
+    {
+      "id": 486,
+      "hanzi": "复杂",
+      "pinyin": "fùzá",
+      "meaningEn": "complicated",
+      "meaningAr": "معقد",
+      "approx": "فو تسا"
+    },
+    {
+      "id": 487,
+      "hanzi": "负责",
+      "pinyin": "fùzé",
+      "meaningEn": "responsible",
+      "meaningAr": "مسؤول",
+      "approx": "فو زه"
+    },
+    {
+      "id": 488,
+      "hanzi": "改变",
+      "pinyin": "gǎibiàn",
+      "meaningEn": "change",
+      "meaningAr": "يغير",
+      "approx": "غاي بيِن"
+    },
+    {
+      "id": 489,
+      "hanzi": "干杯",
+      "pinyin": "gānbēi",
+      "meaningEn": "cheers",
+      "meaningAr": "نخب",
+      "approx": "غان باي"
+    },
+    {
+      "id": 490,
+      "hanzi": "感动",
+      "pinyin": "gǎndòng",
+      "meaningEn": "moved/touched",
+      "meaningAr": "متأثر",
+      "approx": "غان دونغ"
+    },
+    {
+      "id": 491,
+      "hanzi": "感谢",
+      "pinyin": "gǎnxiè",
+      "meaningEn": "thank",
+      "meaningAr": "يشكر",
+      "approx": "غان شيِه"
+    },
+    {
+      "id": 492,
+      "hanzi": "高级",
+      "pinyin": "gāojí",
+      "meaningEn": "advanced/high-level",
+      "meaningAr": "متقدم",
+      "approx": "غاو جي"
+    },
+    {
+      "id": 493,
+      "hanzi": "高速公路",
+      "pinyin": "gāosù gōnglù",
+      "meaningEn": "highway",
+      "meaningAr": "طريق سريع",
+      "approx": "غاو سو غونغ لو"
+    },
+    {
+      "id": 494,
+      "hanzi": "各",
+      "pinyin": "gè",
+      "meaningEn": "each",
+      "meaningAr": "كل/كل واحد",
+      "approx": "غه"
+    },
+    {
+      "id": 495,
+      "hanzi": "工资",
+      "pinyin": "gōngzī",
+      "meaningEn": "salary",
+      "meaningAr": "راتب",
+      "approx": "غونغ زِ"
+    },
+    {
+      "id": 496,
+      "hanzi": "公里",
+      "pinyin": "gōnglǐ",
+      "meaningEn": "kilometer",
+      "meaningAr": "كيلومتر",
+      "approx": "غونغ لي"
+    },
+    {
+      "id": 497,
+      "hanzi": "共同",
+      "pinyin": "gòngtóng",
+      "meaningEn": "common/together",
+      "meaningAr": "مشترك",
+      "approx": "غونغ تونغ"
+    },
+    {
+      "id": 498,
+      "hanzi": "购物",
+      "pinyin": "gòuwù",
+      "meaningEn": "shopping",
+      "meaningAr": "تسوق",
+      "approx": "غوو وو"
+    },
+    {
+      "id": 499,
+      "hanzi": "估计",
+      "pinyin": "gūjì",
+      "meaningEn": "estimate",
+      "meaningAr": "يقدّر",
+      "approx": "غو جي"
+    },
+    {
+      "id": 500,
+      "hanzi": "鼓励",
+      "pinyin": "gǔlì",
+      "meaningEn": "encourage",
+      "meaningAr": "يشجع",
+      "approx": "غو لي"
+    },
+    {
+      "id": 501,
+      "hanzi": "顾客",
+      "pinyin": "gùkè",
+      "meaningEn": "customer",
+      "meaningAr": "زبون",
+      "approx": "غو كه"
+    },
+    {
+      "id": 502,
+      "hanzi": "故意",
+      "pinyin": "gùyì",
+      "meaningEn": "deliberately",
+      "meaningAr": "عمدًا",
+      "approx": "غو يي"
+    },
+    {
+      "id": 503,
+      "hanzi": "关键",
+      "pinyin": "guānjiàn",
+      "meaningEn": "key/crucial",
+      "meaningAr": "أساسي",
+      "approx": "غوان جيِن"
+    },
+    {
+      "id": 504,
+      "hanzi": "管理",
+      "pinyin": "guǎnlǐ",
+      "meaningEn": "manage",
+      "meaningAr": "يدير",
+      "approx": "غوان لي"
+    },
+    {
+      "id": 505,
+      "hanzi": "广播",
+      "pinyin": "guǎngbō",
+      "meaningEn": "broadcast",
+      "meaningAr": "إذاعة",
+      "approx": "غوانغ بو"
+    },
+    {
+      "id": 506,
+      "hanzi": "广告",
+      "pinyin": "guǎnggào",
+      "meaningEn": "advertisement",
+      "meaningAr": "إعلان",
+      "approx": "غوانغ غاو"
+    },
+    {
+      "id": 507,
+      "hanzi": "规定",
+      "pinyin": "guīdìng",
+      "meaningEn": "regulation",
+      "meaningAr": "قانون/قاعدة",
+      "approx": "غوي دينغ"
+    },
+    {
+      "id": 508,
+      "hanzi": "国际",
+      "pinyin": "guójì",
+      "meaningEn": "international",
+      "meaningAr": "دولي",
+      "approx": "غوو جي"
+    },
+    {
+      "id": 509,
+      "hanzi": "过程",
+      "pinyin": "guòchéng",
+      "meaningEn": "process",
+      "meaningAr": "عملية/مسار",
+      "approx": "قوه تشنغ"
+    },
+    {
+      "id": 510,
+      "hanzi": "海洋",
+      "pinyin": "hǎiyáng",
+      "meaningEn": "ocean",
+      "meaningAr": "محيط",
+      "approx": "هاي يانغ"
+    },
+    {
+      "id": 511,
+      "hanzi": "汗",
+      "pinyin": "hàn",
+      "meaningEn": "sweat",
+      "meaningAr": "عرق",
+      "approx": "هان"
+    },
+    {
+      "id": 512,
+      "hanzi": "航班",
+      "pinyin": "hángbān",
+      "meaningEn": "flight",
+      "meaningAr": "رحلة جوية",
+      "approx": "هانغ بان"
+    },
+    {
+      "id": 513,
+      "hanzi": "好处",
+      "pinyin": "hǎochù",
+      "meaningEn": "benefit",
+      "meaningAr": "فائدة",
+      "approx": "هاو تشو"
+    },
+    {
+      "id": 514,
+      "hanzi": "好像",
+      "pinyin": "hǎoxiàng",
+      "meaningEn": "seem like",
+      "meaningAr": "يبدو مثل",
+      "approx": "هاو شيانغ"
+    },
+    {
+      "id": 515,
+      "hanzi": "合格",
+      "pinyin": "hégé",
+      "meaningEn": "qualified",
+      "meaningAr": "مؤهل/مطابق",
+      "approx": "هه قه"
+    },
+    {
+      "id": 516,
+      "hanzi": "合适",
+      "pinyin": "héshì",
+      "meaningEn": "suitable",
+      "meaningAr": "مناسب",
+      "approx": "هه شِ"
+    },
+    {
+      "id": 517,
+      "hanzi": "盒子",
+      "pinyin": "hézi",
+      "meaningEn": "box",
+      "meaningAr": "علبة",
+      "approx": "هه زِ"
+    },
+    {
+      "id": 518,
+      "hanzi": "厚",
+      "pinyin": "hòu",
+      "meaningEn": "thick",
+      "meaningAr": "سميك",
+      "approx": "هوو"
+    },
+    {
+      "id": 519,
+      "hanzi": "后悔",
+      "pinyin": "hòuhuǐ",
+      "meaningEn": "regret",
+      "meaningAr": "يندم",
+      "approx": "هوو هوي"
+    },
+    {
+      "id": 520,
+      "hanzi": "护士",
+      "pinyin": "hùshi",
+      "meaningEn": "nurse",
+      "meaningAr": "ممرض",
+      "approx": "خو شِ"
+    },
+    {
+      "id": 521,
+      "hanzi": "互相",
+      "pinyin": "hùxiāng",
+      "meaningEn": "each other",
+      "meaningAr": "بعضهم بعضًا",
+      "approx": "خو شيانغ"
+    },
+    {
+      "id": 522,
+      "hanzi": "怀疑",
+      "pinyin": "huáiyí",
+      "meaningEn": "doubt",
+      "meaningAr": "يشك",
+      "approx": "هواي يي"
+    },
+    {
+      "id": 523,
+      "hanzi": "回忆",
+      "pinyin": "huíyì",
+      "meaningEn": "memory/recall",
+      "meaningAr": "ذكرى/يتذكر",
+      "approx": "هوي يي"
+    },
+    {
+      "id": 524,
+      "hanzi": "活泼",
+      "pinyin": "huópō",
+      "meaningEn": "lively",
+      "meaningAr": "مرح/نشيط",
+      "approx": "خوو بوه"
+    },
+    {
+      "id": 525,
+      "hanzi": "获得",
+      "pinyin": "huòdé",
+      "meaningEn": "obtain",
+      "meaningAr": "يحصل على",
+      "approx": "خوو ده"
+    },
+    {
+      "id": 526,
+      "hanzi": "基础",
+      "pinyin": "jīchǔ",
+      "meaningEn": "foundation",
+      "meaningAr": "أساس",
+      "approx": "جي تشو"
+    },
+    {
+      "id": 527,
+      "hanzi": "激动",
+      "pinyin": "jīdòng",
+      "meaningEn": "excited",
+      "meaningAr": "متحمس",
+      "approx": "جي دونغ"
+    },
+    {
+      "id": 528,
+      "hanzi": "及时",
+      "pinyin": "jíshí",
+      "meaningEn": "timely",
+      "meaningAr": "في الوقت المناسب",
+      "approx": "جي شِ"
+    },
+    {
+      "id": 529,
+      "hanzi": "即使",
+      "pinyin": "jíshǐ",
+      "meaningEn": "even if",
+      "meaningAr": "حتى لو",
+      "approx": "جي شِ"
+    },
+    {
+      "id": 530,
+      "hanzi": "计划",
+      "pinyin": "jìhuà",
+      "meaningEn": "plan",
+      "meaningAr": "خطة",
+      "approx": "جي هوا"
+    },
+    {
+      "id": 531,
+      "hanzi": "加班",
+      "pinyin": "jiābān",
+      "meaningEn": "work overtime",
+      "meaningAr": "يعمل إضافيًا",
+      "approx": "جيا بان"
+    },
+    {
+      "id": 532,
+      "hanzi": "加油",
+      "pinyin": "jiāyóu",
+      "meaningEn": "cheer/keep going",
+      "meaningAr": "هيا/بالتوفيق",
+      "approx": "جيا يو"
+    },
+    {
+      "id": 533,
+      "hanzi": "家具",
+      "pinyin": "jiājù",
+      "meaningEn": "furniture",
+      "meaningAr": "أثاث",
+      "approx": "جيا جو"
+    },
+    {
+      "id": 534,
+      "hanzi": "坚持",
+      "pinyin": "jiānchí",
+      "meaningEn": "persist",
+      "meaningAr": "يصر/يستمر",
+      "approx": "جيان تشِ"
+    },
+    {
+      "id": 535,
+      "hanzi": "减少",
+      "pinyin": "jiǎnshǎo",
+      "meaningEn": "reduce",
+      "meaningAr": "يقلل",
+      "approx": "جيان شاو"
+    },
+    {
+      "id": 536,
+      "hanzi": "建议",
+      "pinyin": "jiànyì",
+      "meaningEn": "suggest/advice",
+      "meaningAr": "يقترح/نصيحة",
+      "approx": "جيان يي"
+    },
+    {
+      "id": 537,
+      "hanzi": "将来",
+      "pinyin": "jiānglái",
+      "meaningEn": "future",
+      "meaningAr": "المستقبل",
+      "approx": "جيانغ لاي"
+    },
+    {
+      "id": 538,
+      "hanzi": "奖学金",
+      "pinyin": "jiǎngxuéjīn",
+      "meaningEn": "scholarship",
+      "meaningAr": "منحة دراسية",
+      "approx": "جيانغ شوي جين"
+    },
+    {
+      "id": 539,
+      "hanzi": "降低",
+      "pinyin": "jiàngdī",
+      "meaningEn": "lower/reduce",
+      "meaningAr": "يخفض",
+      "approx": "جيانغ دي"
+    },
+    {
+      "id": 540,
+      "hanzi": "降落",
+      "pinyin": "jiàngluò",
+      "meaningEn": "land",
+      "meaningAr": "يهبط",
+      "approx": "جيانغ لوو"
+    },
+    {
+      "id": 541,
+      "hanzi": "交",
+      "pinyin": "jiāo",
+      "meaningEn": "hand over/pay",
+      "meaningAr": "يسلم/يدفع",
+      "approx": "جياو"
+    },
+    {
+      "id": 542,
+      "hanzi": "交流",
+      "pinyin": "jiāoliú",
+      "meaningEn": "communicate/exchange",
+      "meaningAr": "يتبادل/يتواصل",
+      "approx": "جياو ليو"
+    },
+    {
+      "id": 543,
+      "hanzi": "交通",
+      "pinyin": "jiāotōng",
+      "meaningEn": "transportation",
+      "meaningAr": "مواصلات",
+      "approx": "جياو تونغ"
+    },
+    {
+      "id": 544,
+      "hanzi": "骄傲",
+      "pinyin": "jiāo'ào",
+      "meaningEn": "proud",
+      "meaningAr": "فخور",
+      "approx": "جياو آو"
+    },
+    {
+      "id": 545,
+      "hanzi": "接受",
+      "pinyin": "jiēshòu",
+      "meaningEn": "accept",
+      "meaningAr": "يقبل",
+      "approx": "جيه شوو"
+    },
+    {
+      "id": 546,
+      "hanzi": "节约",
+      "pinyin": "jiéyuē",
+      "meaningEn": "save/conserve",
+      "meaningAr": "يوفر",
+      "approx": "جيه يويه"
+    },
+    {
+      "id": 547,
+      "hanzi": "解释",
+      "pinyin": "jiěshì",
+      "meaningEn": "explain",
+      "meaningAr": "يشرح",
+      "approx": "جيه شِ"
+    },
+    {
+      "id": 548,
+      "hanzi": "尽管",
+      "pinyin": "jǐnguǎn",
+      "meaningEn": "although",
+      "meaningAr": "رغم أن",
+      "approx": "جين قوان"
+    },
+    {
+      "id": 549,
+      "hanzi": "禁止",
+      "pinyin": "jìnzhǐ",
+      "meaningEn": "prohibit",
+      "meaningAr": "يمنع",
+      "approx": "جين جِ"
+    },
+    {
+      "id": 550,
+      "hanzi": "进行",
+      "pinyin": "jìnxíng",
+      "meaningEn": "carry out",
+      "meaningAr": "يقوم بـ",
+      "approx": "جين شينغ"
+    },
+    {
+      "id": 551,
+      "hanzi": "紧张",
+      "pinyin": "jǐnzhāng",
+      "meaningEn": "nervous/tense",
+      "meaningAr": "متوتر",
+      "approx": "جين جانغ"
+    },
+    {
+      "id": 552,
+      "hanzi": "经济",
+      "pinyin": "jīngjì",
+      "meaningEn": "economy",
+      "meaningAr": "اقتصاد",
+      "approx": "جينغ جي"
+    },
+    {
+      "id": 553,
+      "hanzi": "经历",
+      "pinyin": "jīnglì",
+      "meaningEn": "experience",
+      "meaningAr": "تجربة",
+      "approx": "جينغ لي"
+    },
+    {
+      "id": 554,
+      "hanzi": "经验",
+      "pinyin": "jīngyàn",
+      "meaningEn": "experience",
+      "meaningAr": "خبرة",
+      "approx": "جينغ يان"
+    },
+    {
+      "id": 555,
+      "hanzi": "竞争",
+      "pinyin": "jìngzhēng",
+      "meaningEn": "compete/competition",
+      "meaningAr": "منافسة",
+      "approx": "جينغ جِنگ"
+    },
+    {
+      "id": 556,
+      "hanzi": "镜子",
+      "pinyin": "jìngzi",
+      "meaningEn": "mirror",
+      "meaningAr": "مرآة",
+      "approx": "جينغ زِ"
+    },
+    {
+      "id": 557,
+      "hanzi": "究竟",
+      "pinyin": "jiūjìng",
+      "meaningEn": "exactly/after all",
+      "meaningAr": "بالضبط/في النهاية",
+      "approx": "جيو جينغ"
+    },
+    {
+      "id": 558,
+      "hanzi": "举",
+      "pinyin": "jǔ",
+      "meaningEn": "lift/raise",
+      "meaningAr": "يرفع",
+      "approx": "جيو"
+    },
+    {
+      "id": 559,
+      "hanzi": "举办",
+      "pinyin": "jǔbàn",
+      "meaningEn": "hold/organize",
+      "meaningAr": "ينظم",
+      "approx": "جيو بان"
+    },
+    {
+      "id": 560,
+      "hanzi": "拒绝",
+      "pinyin": "jùjué",
+      "meaningEn": "refuse",
+      "meaningAr": "يرفض",
+      "approx": "جيو جويه"
+    },
+    {
+      "id": 561,
+      "hanzi": "距离",
+      "pinyin": "jùlí",
+      "meaningEn": "distance",
+      "meaningAr": "مسافة",
+      "approx": "جيو لي"
+    },
+    {
+      "id": 562,
+      "hanzi": "开玩笑",
+      "pinyin": "kāi wánxiào",
+      "meaningEn": "joke",
+      "meaningAr": "يمزح",
+      "approx": "كاي وان شياو"
+    },
+    {
+      "id": 563,
+      "hanzi": "看法",
+      "pinyin": "kànfǎ",
+      "meaningEn": "opinion/view",
+      "meaningAr": "وجهة نظر",
+      "approx": "كان فا"
+    },
+    {
+      "id": 564,
+      "hanzi": "考虑",
+      "pinyin": "kǎolǜ",
+      "meaningEn": "consider",
+      "meaningAr": "يفكر في",
+      "approx": "كاو لوي"
+    },
+    {
+      "id": 565,
+      "hanzi": "棵",
+      "pinyin": "kē",
+      "meaningEn": "measure word for trees",
+      "meaningAr": "وحدة للأشجار",
+      "approx": "كه"
+    },
+    {
+      "id": 566,
+      "hanzi": "科学",
+      "pinyin": "kēxué",
+      "meaningEn": "science",
+      "meaningAr": "علم",
+      "approx": "كه شوي"
+    },
+    {
+      "id": 567,
+      "hanzi": "可怜",
+      "pinyin": "kělián",
+      "meaningEn": "pitiful",
+      "meaningAr": "مسكين",
+      "approx": "كه ليان"
+    },
+    {
+      "id": 568,
+      "hanzi": "可是",
+      "pinyin": "kěshì",
+      "meaningEn": "but",
+      "meaningAr": "لكن",
+      "approx": "كه شِ"
+    },
+    {
+      "id": 569,
+      "hanzi": "肯定",
+      "pinyin": "kěndìng",
+      "meaningEn": "certainly/affirm",
+      "meaningAr": "بالتأكيد",
+      "approx": "كن دينغ"
+    },
+    {
+      "id": 570,
+      "hanzi": "空",
+      "pinyin": "kōng",
+      "meaningEn": "empty",
+      "meaningAr": "فارغ",
+      "approx": "كونغ"
+    },
+    {
+      "id": 571,
+      "hanzi": "空气",
+      "pinyin": "kōngqì",
+      "meaningEn": "air",
+      "meaningAr": "هواء",
+      "approx": "كونغ تشي"
+    },
+    {
+      "id": 572,
+      "hanzi": "恐怕",
+      "pinyin": "kǒngpà",
+      "meaningEn": "I'm afraid",
+      "meaningAr": "أخشى أن",
+      "approx": "كونغ با"
+    },
+    {
+      "id": 573,
+      "hanzi": "苦",
+      "pinyin": "kǔ",
+      "meaningEn": "bitter/hard",
+      "meaningAr": "مر/صعب",
+      "approx": "كو"
+    },
+    {
+      "id": 574,
+      "hanzi": "矿泉水",
+      "pinyin": "kuàngquánshuǐ",
+      "meaningEn": "mineral water",
+      "meaningAr": "ماء معدني",
+      "approx": "كوانغ تشيوان شوي"
+    },
+    {
+      "id": 575,
+      "hanzi": "困",
+      "pinyin": "kùn",
+      "meaningEn": "sleepy",
+      "meaningAr": "نعسان",
+      "approx": "كون"
+    },
+    {
+      "id": 576,
+      "hanzi": "困难",
+      "pinyin": "kùnnan",
+      "meaningEn": "difficult",
+      "meaningAr": "صعب/صعوبة",
+      "approx": "كون نان"
+    },
+    {
+      "id": 577,
+      "hanzi": "拉",
+      "pinyin": "lā",
+      "meaningEn": "pull",
+      "meaningAr": "يسحب",
+      "approx": "لا"
+    },
+    {
+      "id": 578,
+      "hanzi": "浪费",
+      "pinyin": "làngfèi",
+      "meaningEn": "waste",
+      "meaningAr": "يهدر",
+      "approx": "لانغ فاي"
+    },
+    {
+      "id": 579,
+      "hanzi": "浪漫",
+      "pinyin": "làngmàn",
+      "meaningEn": "romantic",
+      "meaningAr": "رومانسي",
+      "approx": "لانغ مان"
+    },
+    {
+      "id": 580,
+      "hanzi": "老板",
+      "pinyin": "lǎobǎn",
+      "meaningEn": "boss",
+      "meaningAr": "مدير/رئيس",
+      "approx": "لاو بان"
+    },
+    {
+      "id": 581,
+      "hanzi": "厉害",
+      "pinyin": "lìhai",
+      "meaningEn": "awesome/severe",
+      "meaningAr": "قوي/خطير",
+      "approx": "لي هاي"
+    },
+    {
+      "id": 582,
+      "hanzi": "理解",
+      "pinyin": "lǐjiě",
+      "meaningEn": "understand",
+      "meaningAr": "يفهم",
+      "approx": "لي جيه"
+    },
+    {
+      "id": 583,
+      "hanzi": "理想",
+      "pinyin": "lǐxiǎng",
+      "meaningEn": "ideal",
+      "meaningAr": "مثالي/طموح",
+      "approx": "لي شيانغ"
+    },
+    {
+      "id": 584,
+      "hanzi": "礼貌",
+      "pinyin": "lǐmào",
+      "meaningEn": "polite",
+      "meaningAr": "أدب/لباقة",
+      "approx": "لي ماو"
+    },
+    {
+      "id": 585,
+      "hanzi": "利用",
+      "pinyin": "lìyòng",
+      "meaningEn": "use/utilize",
+      "meaningAr": "يستغل/يستخدم",
+      "approx": "لي يونغ"
+    },
+    {
+      "id": 586,
+      "hanzi": "连",
+      "pinyin": "lián",
+      "meaningEn": "even",
+      "meaningAr": "حتى",
+      "approx": "ليان"
+    },
+    {
+      "id": 587,
+      "hanzi": "联系",
+      "pinyin": "liánxì",
+      "meaningEn": "contact",
+      "meaningAr": "يتصل/تواصل",
+      "approx": "ليان شي"
+    },
+    {
+      "id": 588,
+      "hanzi": "凉快",
+      "pinyin": "liángkuai",
+      "meaningEn": "cool",
+      "meaningAr": "بارد/منعش",
+      "approx": "ليانغ كواي"
+    },
+    {
+      "id": 589,
+      "hanzi": "留",
+      "pinyin": "liú",
+      "meaningEn": "stay/keep",
+      "meaningAr": "يبقى/يحتفظ",
+      "approx": "ليو"
+    },
+    {
+      "id": 590,
+      "hanzi": "流利",
+      "pinyin": "liúlì",
+      "meaningEn": "fluent",
+      "meaningAr": "بطلاقة",
+      "approx": "ليو لي"
+    },
+    {
+      "id": 591,
+      "hanzi": "流行",
+      "pinyin": "liúxíng",
+      "meaningEn": "popular",
+      "meaningAr": "شائع",
+      "approx": "ليو شينغ"
+    },
+    {
+      "id": 592,
+      "hanzi": "旅行社",
+      "pinyin": "lǚxíngshè",
+      "meaningEn": "travel agency",
+      "meaningAr": "وكالة سفر",
+      "approx": "لوي شينغ شه"
+    },
+    {
+      "id": 593,
+      "hanzi": "麻烦",
+      "pinyin": "máfan",
+      "meaningEn": "trouble",
+      "meaningAr": "إزعاج/مشكلة",
+      "approx": "ما فان"
+    },
+    {
+      "id": 594,
+      "hanzi": "马虎",
+      "pinyin": "mǎhu",
+      "meaningEn": "careless",
+      "meaningAr": "مهمل",
+      "approx": "ما خو"
+    },
+    {
+      "id": 595,
+      "hanzi": "毛",
+      "pinyin": "máo",
+      "meaningEn": "cent/yuan fraction",
+      "meaningAr": "ماو",
+      "approx": "ماو"
+    },
+    {
+      "id": 596,
+      "hanzi": "美丽",
+      "pinyin": "měilì",
+      "meaningEn": "beautiful",
+      "meaningAr": "جميل",
+      "approx": "مي لي"
+    },
+    {
+      "id": 597,
+      "hanzi": "梦",
+      "pinyin": "mèng",
+      "meaningEn": "dream",
+      "meaningAr": "حلم",
+      "approx": "منغ"
+    },
+    {
+      "id": 598,
+      "hanzi": "密码",
+      "pinyin": "mìmǎ",
+      "meaningEn": "password",
+      "meaningAr": "كلمة المرور",
+      "approx": "مي ما"
+    },
+    {
+      "id": 599,
+      "hanzi": "免费",
+      "pinyin": "miǎnfèi",
+      "meaningEn": "free",
+      "meaningAr": "مجاني",
+      "approx": "ميان فاي"
+    },
+    {
+      "id": 600,
+      "hanzi": "民族",
+      "pinyin": "mínzú",
+      "meaningEn": "nationality/ethnic group",
+      "meaningAr": "قومية",
+      "approx": "مين زو"
+    },
+    {
+      "id": 601,
+      "hanzi": "目的",
+      "pinyin": "mùdì",
+      "meaningEn": "purpose",
+      "meaningAr": "هدف",
+      "approx": "مو دي"
+    },
+    {
+      "id": 602,
+      "hanzi": "耐心",
+      "pinyin": "nàixīn",
+      "meaningEn": "patient",
+      "meaningAr": "صبور",
+      "approx": "ناي شين"
+    },
+    {
+      "id": 603,
+      "hanzi": "难道",
+      "pinyin": "nándào",
+      "meaningEn": "could it be...?",
+      "meaningAr": "هل يعقل أن؟",
+      "approx": "نان داو"
+    },
+    {
+      "id": 604,
+      "hanzi": "难受",
+      "pinyin": "nánshòu",
+      "meaningEn": "uncomfortable",
+      "meaningAr": "غير مرتاح",
+      "approx": "نان شوو"
+    },
+    {
+      "id": 605,
+      "hanzi": "内容",
+      "pinyin": "nèiróng",
+      "meaningEn": "content",
+      "meaningAr": "محتوى",
+      "approx": "ني رونغ"
+    },
+    {
+      "id": 606,
+      "hanzi": "能够",
+      "pinyin": "nénggòu",
+      "meaningEn": "be able to",
+      "meaningAr": "يستطيع",
+      "approx": "نِنغ غوو"
+    },
+    {
+      "id": 607,
+      "hanzi": "年龄",
+      "pinyin": "niánlíng",
+      "meaningEn": "age",
+      "meaningAr": "عمر",
+      "approx": "نيان لينغ"
+    },
+    {
+      "id": 608,
+      "hanzi": "偶尔",
+      "pinyin": "ǒu'ěr",
+      "meaningEn": "occasionally",
+      "meaningAr": "أحيانًا",
+      "approx": "أو أر"
+    },
+    {
+      "id": 609,
+      "hanzi": "排队",
+      "pinyin": "páiduì",
+      "meaningEn": "queue",
+      "meaningAr": "يصطف",
+      "approx": "باي دوي"
+    },
+    {
+      "id": 610,
+      "hanzi": "判断",
+      "pinyin": "pànduàn",
+      "meaningEn": "judge/determine",
+      "meaningAr": "يحكم/يحدد",
+      "approx": "بان دوان"
+    },
+    {
+      "id": 611,
+      "hanzi": "陪",
+      "pinyin": "péi",
+      "meaningEn": "accompany",
+      "meaningAr": "يرافق",
+      "approx": "بي"
+    },
+    {
+      "id": 612,
+      "hanzi": "批评",
+      "pinyin": "pīpíng",
+      "meaningEn": "criticize",
+      "meaningAr": "ينتقد",
+      "approx": "بي بينغ"
+    },
+    {
+      "id": 613,
+      "hanzi": "皮肤",
+      "pinyin": "pífū",
+      "meaningEn": "skin",
+      "meaningAr": "جلد",
+      "approx": "بي فو"
+    },
+    {
+      "id": 614,
+      "hanzi": "脾气",
+      "pinyin": "píqi",
+      "meaningEn": "temper",
+      "meaningAr": "طبع/مزاج",
+      "approx": "بي تشي"
+    },
+    {
+      "id": 615,
+      "hanzi": "乒乓球",
+      "pinyin": "pīngpāngqiú",
+      "meaningEn": "table tennis",
+      "meaningAr": "تنس الطاولة",
+      "approx": "بينغ بانغ تشيو"
+    },
+    {
+      "id": 616,
+      "hanzi": "普遍",
+      "pinyin": "pǔbiàn",
+      "meaningEn": "common/universal",
+      "meaningAr": "شائع",
+      "approx": "بو بيِن"
+    },
+    {
+      "id": 617,
+      "hanzi": "普通话",
+      "pinyin": "pǔtōnghuà",
+      "meaningEn": "Mandarin",
+      "meaningAr": "اللغة الصينية المعيارية",
+      "approx": "بو تونغ هوا"
+    },
+    {
+      "id": 618,
+      "hanzi": "其中",
+      "pinyin": "qízhōng",
+      "meaningEn": "among them",
+      "meaningAr": "من بينها",
+      "approx": "تشي جونغ"
+    },
+    {
+      "id": 619,
+      "hanzi": "千万",
+      "pinyin": "qiānwàn",
+      "meaningEn": "by all means",
+      "meaningAr": "أبدًا/بالتأكيد",
+      "approx": "تشيان وان"
+    },
+    {
+      "id": 620,
+      "hanzi": "轻",
+      "pinyin": "qīng",
+      "meaningEn": "light",
+      "meaningAr": "خفيف",
+      "approx": "تشينغ"
+    },
+    {
+      "id": 621,
+      "hanzi": "轻松",
+      "pinyin": "qīngsōng",
+      "meaningEn": "relaxed",
+      "meaningAr": "مرتاح/سهل",
+      "approx": "تشينغ سونغ"
+    },
+    {
+      "id": 622,
+      "hanzi": "穷",
+      "pinyin": "qióng",
+      "meaningEn": "poor",
+      "meaningAr": "فقير",
+      "approx": "تشيونغ"
+    },
+    {
+      "id": 623,
+      "hanzi": "取",
+      "pinyin": "qǔ",
+      "meaningEn": "take/get",
+      "meaningAr": "يأخذ",
+      "approx": "تشو"
+    },
+    {
+      "id": 624,
+      "hanzi": "全部",
+      "pinyin": "quánbù",
+      "meaningEn": "all",
+      "meaningAr": "الجميع/كامل",
+      "approx": "تشيوان بو"
+    },
+    {
+      "id": 625,
+      "hanzi": "缺点",
+      "pinyin": "quēdiǎn",
+      "meaningEn": "disadvantage",
+      "meaningAr": "عيب",
+      "approx": "تشويه ديان"
+    },
+    {
+      "id": 626,
+      "hanzi": "缺少",
+      "pinyin": "quēshǎo",
+      "meaningEn": "lack",
+      "meaningAr": "يفتقر إلى",
+      "approx": "تشويه شاو"
+    },
+    {
+      "id": 627,
+      "hanzi": "却",
+      "pinyin": "què",
+      "meaningEn": "however",
+      "meaningAr": "لكن/مع ذلك",
+      "approx": "تشويه"
+    },
+    {
+      "id": 628,
+      "hanzi": "确实",
+      "pinyin": "quèshí",
+      "meaningEn": "indeed",
+      "meaningAr": "فعلًا",
+      "approx": "تشويه شِ"
+    },
+    {
+      "id": 629,
+      "hanzi": "然而",
+      "pinyin": "rán'ér",
+      "meaningEn": "however",
+      "meaningAr": "ومع ذلك",
+      "approx": "ران أر"
+    },
+    {
+      "id": 630,
+      "hanzi": "任何",
+      "pinyin": "rènhé",
+      "meaningEn": "any",
+      "meaningAr": "أيّ",
+      "approx": "رِن خه"
+    },
+    {
+      "id": 631,
+      "hanzi": "任务",
+      "pinyin": "rènwu",
+      "meaningEn": "task",
+      "meaningAr": "مهمة",
+      "approx": "رِن وو"
+    },
+    {
+      "id": 632,
+      "hanzi": "申请",
+      "pinyin": "shēnqǐng",
+      "meaningEn": "apply",
+      "meaningAr": "يتقدم بطلب",
+      "approx": "شِن تشينغ"
+    }
+  ]
+}

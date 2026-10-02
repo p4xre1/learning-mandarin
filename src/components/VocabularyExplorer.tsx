@@ -1,9 +1,11 @@
 import { useEffect, useMemo, useState } from "react"
 import data from "../data/hsk-packs.json"
+import suppliedPack from "../data/mandarin-pack.json"
 import { Button, TextInput } from "./ui"
 
 type Locale = "en" | "ar" | "ary"
 type Level = keyof typeof data.packs
+type Pack = "hsk" | "supplied"
 
 const levels = ["1", "2", "3", "4", "5", "6", "7-9"] as const
 const pageSize = 25
@@ -12,6 +14,8 @@ const content = {
   en: {
     eyebrow: "HSK 3.1 vocabulary",
     title: "250 words for every level.",
+    suppliedEyebrow: "Supplied Mandarin study pack",
+    suppliedTitle: "Build toward 5,000 words.",
     intro:
       "Browse seven focused study packs drawn from the official syllabus sequence. Search by Hanzi or tone-marked pinyin.",
     back: "Back to review",
@@ -33,10 +37,17 @@ const content = {
     part: "Part of speech",
     traditional: "Traditional",
     englishMeaning: "English source definition",
+    hskPack: "HSK 3.1 packs",
+    suppliedPack: "Supplied 5,000-word pack",
+    suppliedIntro:
+      "Search the vocabulary included in the supplied study plan. The full plan targets 5,000 words; this source currently includes 632 entries across the core, HSK 3, and HSK 4 sections.",
+    arabicMeaning: "Arabic meaning",
   },
   ar: {
     eyebrow: "مفردات HSK 3.1",
     title: "250 كلمة لكل مستوى.",
+    suppliedEyebrow: "حزمة دراسة الصينية المرفقة",
+    suppliedTitle: "ابنِ رصيدك حتى 5000 كلمة.",
     intro:
       "تصفّح سبع حزم دراسية مأخوذة من ترتيب المنهج الرسمي. ابحث بالحروف الصينية أو البينيين المشكول بالنبرات.",
     back: "العودة إلى المراجعة",
@@ -57,10 +68,17 @@ const content = {
     part: "قسم الكلام",
     traditional: "التقليدية",
     englishMeaning: "تعريف المصدر بالإنجليزية",
+    hskPack: "حزم HSK 3.1",
+    suppliedPack: "حزمة 5000 كلمة المرفقة",
+    suppliedIntro:
+      "ابحث في المفردات الموجودة في خطة الدراسة المرفقة. تهدف الخطة الكاملة إلى 5000 كلمة، ويضم هذا المصدر حالياً 632 مدخلاً من الأقسام الأساسية وHSK 3 وHSK 4.",
+    arabicMeaning: "المعنى بالعربية",
   },
   ary: {
     eyebrow: "كلمات HSK 3.1",
     title: "250 كلمة فكل مستوى.",
+    suppliedEyebrow: "حزمة دراسة الصينية المرفقة",
+    suppliedTitle: "بني الرصيد ديالك حتى 5000 كلمة.",
     intro:
       "تصفّح سبعة ديال الحزم من الترتيب الرسمي. قلّب بالحروف الصينية ولا البينيين بالنغمات.",
     back: "رجع للمراجعة",
@@ -81,6 +99,11 @@ const content = {
     part: "قسم الكلمة",
     traditional: "التقليدية",
     englishMeaning: "التعريف بالإنجليزية",
+    hskPack: "حزم HSK 3.1",
+    suppliedPack: "حزمة 5000 كلمة المرفقة",
+    suppliedIntro:
+      "قلّب فالكلمات اللي فخطة القراية المرفقة. الخطة كاملة كاتستهدف 5000 كلمة، ودابا هاد المصدر فيه 632 مدخل من الأقسام الأساسية وHSK 3 وHSK 4.",
+    arabicMeaning: "المعنى بالعربية",
   },
 } as const
 
@@ -92,19 +115,25 @@ export function VocabularyExplorer({
   onBack: () => void
 }) {
   const [level, setLevel] = useState<Level>("1")
+  const [pack, setPack] = useState<Pack>("hsk")
   const [query, setQuery] = useState("")
   const [page, setPage] = useState(1)
   const t = content[locale]
 
   const filtered = useMemo(() => {
     const normalized = query.trim().toLocaleLowerCase()
-    if (!normalized) return data.packs[level]
-    return data.packs[level].filter((word) =>
-      `${word.hanzi} ${word.pinyin}`.toLocaleLowerCase().includes(normalized),
+    const source = pack === "hsk" ? data.packs[level] : suppliedPack.entries
+    if (!normalized) return source
+    return source.filter((word) =>
+      `${word.hanzi} ${word.pinyin} ${
+        pack === "hsk" ? word.meaningsEn.join(" ") : `${word.meaningEn} ${word.meaningAr}`
+      }`
+        .toLocaleLowerCase()
+        .includes(normalized),
     )
-  }, [level, query])
+  }, [level, pack, query])
 
-  useEffect(() => setPage(1), [level, query])
+  useEffect(() => setPage(1), [level, pack, query])
 
   const pageCount = Math.max(1, Math.ceil(filtered.length / pageSize))
   const words = filtered.slice((page - 1) * pageSize, page * pageSize)
@@ -115,23 +144,45 @@ export function VocabularyExplorer({
         ← {t.back}
       </Button>
       <header>
-        <p className="eyebrow">{t.eyebrow}</p>
-        <h1>{t.title}</h1>
-        <p>{t.intro}</p>
+        <p className="eyebrow">
+          {pack === "hsk" ? t.eyebrow : t.suppliedEyebrow}
+        </p>
+        <h1>{pack === "hsk" ? t.title : t.suppliedTitle}</h1>
+        <p>{pack === "hsk" ? t.intro : t.suppliedIntro}</p>
       </header>
-      <div className="level-tabs" aria-label={t.eyebrow}>
-        {levels.map((item) => (
-          <button
-            aria-pressed={level === item}
-            key={item}
-            onClick={() => setLevel(item)}
-            type="button"
-          >
-            HSK {item}
-            <small>250 {t.words}</small>
-          </button>
-        ))}
+      <div className="level-tabs" aria-label={t.title}>
+        <button
+          aria-pressed={pack === "hsk"}
+          onClick={() => setPack("hsk")}
+          type="button"
+        >
+          {t.hskPack}
+        </button>
+        <button
+          aria-pressed={pack === "supplied"}
+          onClick={() => setPack("supplied")}
+          type="button"
+        >
+          {t.suppliedPack}
+          <small>{suppliedPack.metadata.includedEntries} {t.words}</small>
+        </button>
       </div>
+      {pack === "hsk" && (
+        <div className="level-tabs" aria-label={t.eyebrow}>
+          {levels.map((item) => (
+            <button
+              aria-pressed={level === item}
+              key={item}
+              onClick={() => setLevel(item)}
+              type="button"
+            >
+              HSK {item}
+              <small>250 {t.words}</small>
+            </button>
+          ))}
+        </div>
+      )}
+      {pack === "supplied" && <p className="pack-note">{t.suppliedIntro}</p>}
       <div className="explorer-toolbar">
         <TextInput
           label={t.search}
@@ -143,14 +194,18 @@ export function VocabularyExplorer({
           {filtered.length} {t.words}
         </span>
       </div>
-      {level === "2" && <p className="pack-note">{t.level2}</p>}
-      {level === "7-9" && <p className="pack-note">{t.combined}</p>}
+      {pack === "hsk" && level === "2" && (
+        <p className="pack-note">{t.level2}</p>
+      )}
+      {pack === "hsk" && level === "7-9" && (
+        <p className="pack-note">{t.combined}</p>
+      )}
       {words.length ? (
         <div className="hsk-word-grid">
           {words.map((word) => (
             <article key={`${word.level}-${word.id}`}>
               <span className="word-sequence">#{word.id}</span>
-              {word.level !== level && (
+              {pack === "hsk" && word.level !== level && (
                 <span className="review-badge">
                   {t.review} {word.level}
                 </span>
@@ -164,13 +219,24 @@ export function VocabularyExplorer({
               <b>{word.pinyin}</b>
               <p className="source-meaning">
                 <span>{t.englishMeaning}</span>
-                {word.meaningsEn.join("; ")}
+                {pack === "hsk" ? word.meaningsEn.join("; ") : word.meaningEn}
               </p>
+              {pack === "supplied" && (
+                <p className="source-meaning">
+                  <span>{t.arabicMeaning}</span>
+                  {word.meaningAr}
+                </p>
+              )}
               <small>
-                {t.part}:{" "}
-                {word.partsOfSpeech.length
-                  ? word.partsOfSpeech.join(" · ")
-                  : "—"}
+                {pack === "hsk"
+                  ? `${t.part}: ${
+                      word.partsOfSpeech.length
+                        ? word.partsOfSpeech.join(" · ")
+                        : "—"
+                    }`
+                  : word.approx
+                    ? `${word.approx}`
+                    : t.suppliedPack}
               </small>
             </article>
           ))}

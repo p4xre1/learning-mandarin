@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react"
 import { ArrowIcon, Button } from "./ui"
 import { basicChineseUnits } from "../data/basicChineseUnits"
+import { suppliedGrammarNotes } from "../data/suppliedGrammarNotes"
 
 type Locale = "en" | "ar" | "ary"
 type LocalText = {
@@ -542,6 +543,9 @@ function BookGrammarPath({ locale }: { locale: Locale }) {
         "A concise map of the supplied book's progression. Use each unit as a study target, then practise it in your own sentences.",
       source: "Source: Basic Chinese: A Grammar and Workbook",
       unit: "Unit",
+      grammarTitle: "Grammar notes from the supplied pack",
+      grammarIntro:
+        "Start with pronunciation, then practise the sentence patterns that appear in the supplied HSK vocabulary sections.",
     },
     ar: {
       eyebrow: "مسار قواعد الكتاب",
@@ -550,6 +554,9 @@ function BookGrammarPath({ locale }: { locale: Locale }) {
         "خريطة مختصرة لتدرّج الكتاب المرفق. اجعل كل وحدة هدفاً للدراسة ثم طبّقها في جملك.",
       source: "المصدر: Basic Chinese: A Grammar and Workbook",
       unit: "الوحدة",
+      grammarTitle: "ملاحظات القواعد من الحزمة المرفقة",
+      grammarIntro:
+        "ابدأ بالنطق ثم طبّق أنماط الجمل التي تظهر في أقسام مفردات HSK المرفقة.",
     },
     ary: {
       eyebrow: "مسار قواعد الكتاب",
@@ -558,6 +565,9 @@ function BookGrammarPath({ locale }: { locale: Locale }) {
         "خريطة مختصرة للتدرّج ديال الكتاب المرفق. خذ كل وحدة كهدف وطبّقها فجملك.",
       source: "المصدر: Basic Chinese: A Grammar and Workbook",
       unit: "الوحدة",
+      grammarTitle: "ملاحظات القواعد من الحزمة المرفقة",
+      grammarIntro:
+        "بدا بالنطق ومن بعد طبّق تراكيب الجمل اللي كاينة فالأقسام ديال كلمات HSK المرفقة.",
     },
   }[locale]
 
@@ -581,6 +591,24 @@ function BookGrammarPath({ locale }: { locale: Locale }) {
           </article>
         ))}
       </div>
+      <section className="supplied-grammar-notes">
+        <header>
+          <p className="eyebrow">{copy.eyebrow}</p>
+          <h2>{copy.grammarTitle}</h2>
+          <p>{copy.grammarIntro}</p>
+        </header>
+        <div className="book-unit-grid">
+          {suppliedGrammarNotes.map((note) => (
+            <article className="book-unit-card" key={note.title}>
+              <small>{note.pattern}</small>
+              <h3>{note.title}</h3>
+              <p>{note.explanation}</p>
+              <strong>{note.example}</strong>
+              <small>{note.pinyin}</small>
+            </article>
+          ))}
+        </div>
+      </section>
     </section>
   )
 }

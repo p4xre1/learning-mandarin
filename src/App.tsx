@@ -163,6 +163,8 @@ const extraCopy: Record<string, [string, string]> = {
     "جلسة صغيرة اليوم، وغدا تكون أحسن.",
   ],
   "Start learning": ["ابدأ التعلّم", "بدا التعلّم"],
+  "Add review": ["أضف مراجعة", "زيد المراجعة"],
+  "Add grammar": ["أضف قواعد", "زيد القواعد"],
   "Talk to coach": ["تحدث مع المدرّب", "هضر مع المدرّب"],
   "day streak": ["يوم متواصل", "نهار متواصل"],
   "today XP": ["نقطة اليوم", "نقط اليوم"],
@@ -993,14 +995,20 @@ function App() {
                 </h1>
                 <p className="hero-copy">{t.intro}</p>
                 <div className="hero-actions">
-                  <Button variant="dark" onClick={() => setLessonOpen(true)}>
-                    {tx("Start a lesson")} <ArrowIcon />
+                  <Button variant="dark" onClick={() => switchView("learn")}>
+                    {tx("Start learning")} <ArrowIcon />
                   </Button>
                   <Button
                     variant="secondary"
-                    onClick={() => switchView("assistant")}
+                    onClick={() => switchView("review")}
                   >
-                    {tx("Meet your coach")} <ArrowIcon />
+                    {tx("Add review")} <ArrowIcon />
+                  </Button>
+                  <Button
+                    variant="secondary"
+                    onClick={() => switchView("learn")}
+                  >
+                    {tx("Add grammar")} <ArrowIcon />
                   </Button>
                 </div>
               </div>
@@ -1036,25 +1044,6 @@ function App() {
                   )}
                 </p>
               </div>
-              <Button onClick={() => switchView("assistant")}>
-                {tx("Open coach")} <ArrowIcon />
-              </Button>
-              <Button
-                variant="secondary"
-                onClick={() => {
-                  downloadScoreCard({
-                    displayName: localProfile?.displayName ?? tx("learner"),
-                    locale,
-                    streak: metrics.currentStreak,
-                    xp: metrics.todayXp,
-                    lessonsCompleted: progress.completedLessonIds.length,
-                    wordsLearned: progress.reviewedWords.length,
-                  })
-                  setToast(tx("Saved to your device"))
-                }}
-              >
-                {tx("Score card")}
-              </Button>
             </section>
 
             <section
@@ -1108,9 +1097,6 @@ function App() {
                       )}
                     </p>
                   </div>
-                  <Button onClick={() => switchView("review")}>
-                    {tx("Start review")} <ArrowIcon />
-                  </Button>
                 </div>
                 <div className="progress-line challenge-progress">
                   <span>
@@ -1168,14 +1154,7 @@ function App() {
                     </span>
                     <small>{introductionsMastery}/3</small>
                   </div>
-                  <Button variant="dark" onClick={() => setLessonOpen(true)}>
-                    {tx(
-                      introductionsMastery > 0
-                        ? "Review lesson"
-                        : "Start lesson",
-                    )}{" "}
-                    <ArrowIcon />
-                  </Button>
+                  <span className="pill">{tx("Start learning")}</span>
                 </div>
               </Card>
 
@@ -1192,9 +1171,7 @@ function App() {
                     {dueCards} <span>{t.due}</span>
                   </h2>
                 </div>
-                <Button onClick={() => switchView("review")}>
-                  {t.begin} <ArrowIcon />
-                </Button>
+                <span className="pill">{tx("Add review")}</span>
               </Card>
             </section>
 
