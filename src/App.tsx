@@ -21,6 +21,7 @@ import {
 } from "./lib/native"
 import { dayKey, useLearningProgress } from "./hooks/useLearningProgress"
 import type { LocalProfile } from "./lib/secureProfile"
+import { StudyHub } from "./components/StudyHub"
 
 type Locale = "en" | "ar" | "ary"
 type View = "home" | "learn" | "review" | "discover" | "profile" | "article" | "guide" | "assistant" | "vocabulary" | "settings" | "legal"
@@ -1313,6 +1314,7 @@ function App() {
                 "Structured lessons connect useful vocabulary, grammar, listening, and practice. This preview includes one complete interactive exercise.",
               )}
             </p>
+            <StudyHub locale={locale} />
             <Card className="assistant-callout">
               <div className="assistant-orb">正</div>
               <div>
